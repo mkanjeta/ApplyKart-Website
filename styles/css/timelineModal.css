@@ -1,0 +1,268 @@
+.modalScrollBar::-webkit-scrollbar{width: 6px;}
+.modalScrollBar::-webkit-scrollbar-track{background-color: #4E4E4E4A; border-radius: 10px;}
+.modalScrollBar::-webkit-scrollbar-thumb{outline: none; background-color: #4E4E4E; border-radius: 10px;}
+.resize-none{
+    resize: none;
+}
+.timeline-modal.modal-md {
+    max-width: 650px;
+}
+.timeline-modal.modal-sm {
+    max-width: 350px;
+}
+
+.timeline-modal .modal-content {
+    border-radius: 5px;
+    box-shadow: 0px 3px 20px #0000000D;
+}
+
+.timeline-modal .modal-body {
+    padding: 0px;
+}
+
+.timeline-modal .modal-body .title-header {
+    border-bottom: 1px solid #D3D3D3;
+    color: #1D1D1D;
+    font-size: 18px;
+    text-align: left;
+    padding: 15px 20px;
+    font-weight: 600;
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+.timeline-modal .modal-body .title-header .back-button>i{
+    font-weight: 500;
+    padding: 0 10px 0 0;
+}
+.timeline-modal .modal-body .tag-area {
+    padding: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #D3D3D3;
+}
+
+.timeline-modal-layout .tag-area .tag-title {
+    margin-bottom: 25px;
+    font-size: 17px;
+    background: transparent linear-gradient(97deg, #001BFE 0%, #19A9E1 100%) 0% 0% no-repeat padding-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.tags .tag {
+    position: relative;
+    margin-bottom: 10px;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.tags .tag>input {
+    display: none;
+}
+
+.tags .tag>input+span {
+    background-color: #fff;
+    border: 1px solid #1F47E3;
+    font-size: 14px;
+    color: #1F47E3;
+    border-radius: 50px;
+    display: inline-grid;
+    padding: 7px 15px;
+    font-weight: 500;
+    place-items: center;
+    line-height: initial;
+    transition: 0.3s all;
+}
+
+.tags .tag>input:checked+span,
+.tags .tag:hover input+span {
+    background-color: #1F47E3;
+    color: #fff;
+}
+.timeline-modal-layout .user-box{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 4px;
+}
+.timeline-modal-layout .user-box>img{
+    width: 45px;
+    height: 45px;
+    border-radius: 0!important;
+}
+.timeline-modal-layout .buttons-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timeline-modal-layout .buttons-area .attach-list li {
+    border: 0;
+    border-radius: 0;
+    color: #505050;
+    padding: 22px 20px;
+    line-height: 20px;
+    display: inline-flex;
+    place-content: center;
+    place-items: center;
+    cursor: pointer;
+}
+
+.timeline-modal-layout .buttons-area .attach-list li>i {
+    color: #1F47E3;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.timeline-modal-layout .buttons-area .action-buttons .btn {
+    width: 130px;
+    border: 0;
+    border-radius: 0;
+    background-color: #fff;
+    color: #1D1D1D;
+    padding: 22px 0;
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.timeline-modal-layout .buttons-area .action-buttons .btn-primary {
+    background-color: #1F47E3;
+    color: #fff;
+    font-weight: 500;
+    border-bottom-right-radius: 4px;
+}
+.timeline-modal-layout textarea{
+    font-size: 20px!important;
+    font-weight: 500;
+    color: #1D1D1D;
+    caret-color: #1F47E3;
+    border: none;
+}
+.timeline-modal-layout .textarea{
+    height: 200px;
+    overflow: auto;
+}
+.timeline-modal-layout textarea::placeholder{
+    color: #505050;
+    opacity: 0.5;
+}
+.timeline-modal-layout .image-area{
+    height: 320px;
+    overflow-y: auto;
+}
+.timeline-modal-layout .image-area .image-box{
+    position: relative;
+    aspect-ratio: 2.5 / 1;
+}
+.timeline-modal-layout .image-area .image-box>img{
+    border-radius: 5px;
+}
+.timeline-modal-layout .image-area .remove-image{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background: #b3b1b2;
+    display: grid;
+    place-content: center;
+}
+.timeline-modal-layout .success-modal{
+    text-align: center;
+    max-width: 450px;
+    margin: 0 auto;
+
+}
+.timeline-modal-layout .success-modal .icon{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+}
+.timeline-modal-layout .success-modal .title{
+    font-size: 18px;
+}
+.dropzone .dropzone-area{
+    border: 1.5px dashed #8675D5;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f6f5fb;
+    width: 100%;
+    position: relative;
+    min-height: 280px;
+    cursor: pointer;
+}
+.dropzone .dropzone-area .icon{
+    border: 1px dashed #1F47E357;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: grid;
+    place-content: center;
+    margin: 0 auto 10px;
+    background-color: #ced8ff;
+    color: #1F47E3;
+    font-size: 28px;
+}
+.dropzone .dropzone-area .title{
+    color: #1F47E3;
+    font-size: 22px;
+    font-weight: 600;
+    max-width: 350px;
+    margin-bottom: 0;
+}
+.dropzone-small .dropzone-area{
+    min-height: 150px;
+}
+.dropzone-small .dropzone-area .title{
+    font-size: 14px;
+}
+.dropzone-small .dropzone-area .icon{
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+}
+.dropzone-image-box{
+    position: relative;
+    /* overflow: hidden; */
+    border-radius: 5px;
+    height: 160px;
+}
+.dropzone-image-box>img{
+    border-radius: 5px;
+}
+.dropzone-image-box .remove-image{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #2c3038;
+    font-size: 14px;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #fff;
+    z-index: 1;
+}
+.dropzone-image-box .remove-image i {
+    color: #313132;
+}
+.reposted-post{
+    padding: 0 30px;
+}
+.reposted-post .timeline-footer .lcs>li{
+    pointer-events: none;
+}
+.reposted-post .t-more,
+.reposted-post .t-comment-wrap{
+    display: none;
+}
+.timeline-item .timeline-body .t-post-content .preview-url-ui:not(:last-child){
+    margin-bottom: 30px;
+}
+

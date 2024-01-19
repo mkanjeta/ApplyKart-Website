@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+  <g id="more" transform="translate(-0.083 0)">
+    <g id="Ellipse_319" data-name="Ellipse 319" transform="translate(0.083 0)" fill="#fff" stroke="#313132" stroke-width="1">
+      <circle cx="22" cy="22" r="22" stroke="none"/>
+      <circle cx="22" cy="22" r="21.5" fill="none"/>
+    </g>
+    <g id="Icon_feather-more-horizontal" data-name="Icon feather-more-horizontal" transform="translate(9.719 19.521)">
+      <path id="Path_28120" data-name="Path 28120" d="M17.717,15A2.717,2.717,0,1,1,15,17.717,2.72,2.72,0,0,1,17.717,15Z" transform="translate(-5.489 -15)"/>
+      <path id="Path_28121" data-name="Path 28121" d="M28.217,15A2.717,2.717,0,1,1,25.5,17.717,2.72,2.72,0,0,1,28.217,15Z" transform="translate(-6.478 -15)"/>
+      <path id="Path_28122" data-name="Path 28122" d="M7.217,15A2.717,2.717,0,1,1,4.5,17.717,2.72,2.72,0,0,1,7.217,15Z" transform="translate(-4.5 -15)"/>
+    </g>
+  </g>
+</svg>

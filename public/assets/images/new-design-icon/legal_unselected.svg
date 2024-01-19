@@ -1,0 +1,7 @@
+<svg id="legal_unselected" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path id="Path_24292" data-name="Path 24292" d="M0,0H24V24H0Z" fill="none"/>
+  <path id="Path_24293" data-name="Path 24293" d="M16,6h3a1,1,0,0,1,1,1V18a2,2,0,0,1-4,0V5a1,1,0,0,0-1-1H5A1,1,0,0,0,4,5V17a3,3,0,0,0,3,3H18" fill="none" stroke="#505050" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <line id="Line_396" data-name="Line 396" x2="4" transform="translate(8 8)" fill="none" stroke="#505050" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <line id="Line_397" data-name="Line 397" x2="4" transform="translate(8 12)" fill="none" stroke="#505050" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <line id="Line_398" data-name="Line 398" x2="4" transform="translate(8 16)" fill="none" stroke="#505050" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+</svg>

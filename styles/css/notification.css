@@ -1,0 +1,26 @@
+.fixed-sidebar{
+    position: fixed;
+    z-index: 1;
+    width: 33.33%;
+    top: 0;
+    height: 100%;
+    transition: 0.3s all;
+    right: -33.33%;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #fff;
+}
+.fixed-sidebar.active{
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+}
+.fixed-sidebar.timeline-modal .modal-body .title-header{
+    padding: 34px 20px;
+}
+.fixed-sidebar.timeline-modal .modal-body .title-header .cross-button{
+    padding-right: 0;
+}
+.fixed-sidebar.timeline-modal .modal-content{
+    height: 100%;
+}

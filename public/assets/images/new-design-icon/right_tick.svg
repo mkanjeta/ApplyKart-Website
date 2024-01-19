@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="right_tick" transform="translate(-578 -524.038)">
+    <g id="Ellipse_1446" data-name="Ellipse 1446" transform="translate(578 524.038)" fill="#e8edff" stroke="#fff" stroke-width="2">
+      <circle cx="15" cy="15" r="15" stroke="none"/>
+      <circle cx="15" cy="15" r="14" fill="none"/>
+    </g>
+    <path id="Icon_awesome-check" data-name="Icon awesome-check" d="M4.543,14.357.2,10.009a.669.669,0,0,1,0-.946l.946-.946a.669.669,0,0,1,.946,0l2.929,2.929,6.273-6.273a.669.669,0,0,1,.946,0l.946.946a.669.669,0,0,1,0,.946L5.489,14.357A.669.669,0,0,1,4.543,14.357Z" transform="translate(586 529.461)" fill="#1f47e3"/>
+  </g>
+</svg>

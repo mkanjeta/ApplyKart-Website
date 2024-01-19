@@ -1,0 +1,164 @@
+.main_wrapper.wrapper_style_two{
+    background-color:hsla(0,0%,100%,1); background-image: radial-gradient(at 4% 13%, hsla(236,94%,92%,1) 0px, transparent 50%), radial-gradient(at 14% 78%, hsla(216,76%,88%,1) 0px, transparent 50%), radial-gradient(at 48% 47%, hsla(202,85%,89%,1) 0px, transparent 50%), radial-gradient(at 88% 17%, hsla(237,77%,94%,1) 0px, transparent 50%), radial-gradient(at 92% 87%, hsla(27,28%,92%,1) 0px, transparent 50%);
+}
+.network-tabs{
+    border-bottom: 2px solid #bdc8e1;
+    margin-bottom: -2px;
+}
+.network-tabs .nav-item .nav-link{
+    color: rgb(29 29 29 / 50%);
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px 25px;
+    border: none;
+    position: relative;
+    transition: 0.3s all;
+    border-radius: 0;
+    margin-right: 10px;
+}
+.network-tabs .nav-item .nav-link::before{
+    content: '';
+    background-color: transparent;
+    border-radius: 5px 5px 0px 0px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    left: 0;
+}
+.network-tabs .nav-item:hover .nav-link,
+.network-tabs .nav-item .nav-link.active{
+    color: #1D1D1D;
+    font-weight: 600;
+    background: transparent;
+}
+
+.network-tabs .nav-item .nav-link.active::before{
+    background-color: #1F47E3;
+}
+.trending-sidebar{
+    box-shadow: 0px 10px 20px #00000029; 
+    border-radius: 5px;
+    position: relative;
+    background: transparent linear-gradient(180deg, #FFFFFF88 0%, #FFFFFFD0 100%) 0% 0% no-repeat padding-box;
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+.trending-sidebar .sidebar-title{
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 18px;
+    background: transparent linear-gradient(90deg, #0000FF 0%, #1CB5E0 100%) 0% 0% no-repeat padding-box;
+    border-radius: 0px 100px 100px 0px;
+    margin: 0;
+    display: inline-block;
+    padding: 10px 40px 10px 20px;
+}
+.trending-sidebar .trending-tags{
+    padding: 20px;
+    padding-bottom: 5px;
+}
+.trending-sidebar .trending-tags li a{
+    color: #1D1D1D;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    transition: 0.3s all;
+}
+.trending-sidebar .trending-tags li a:hover{
+    color: #1F47E3;
+}
+.network-items .network-item-inner{
+    background: transparent linear-gradient(180deg, #FFFFFF88 0%, #FFFFFFD0 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 10px 20px #00000029;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+    padding-bottom: 7px;
+}
+.network-items .network-item-inner>*{
+    margin-bottom: 7px;
+    text-transform: capitalize;
+}
+.network-items .network-item-inner .image{
+    width: 80px;
+    height: 80px;    
+}
+.network-items .network-item-inner .name{
+    font-size: 15px;
+    font-weight: 600;
+    color: #1D1D1D;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.network-items .network-item-inner .designation{
+    font-size: 12px;
+    font-weight: 400;
+    color: #505050;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.network-items .network-item-inner .location{
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(80 80 80 / 50%);
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.connect-btn{
+   position: relative;
+   display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 15px;
+    transition: 0.3s all;
+    max-height: 34px;
+    min-height: 34px;
+    min-width: 110px;
+    margin-inline: 3px;
+}
+.connect-btn.primary{
+    border: 1px solid #1F47E3;
+    color: #1F47E3;
+}
+.connect-btn.primary.active,
+.connect-btn.primary:hover,
+.connect-btn.primary:focus{
+    color: #fff;
+    background-color: #1F47E3;
+}
+.connect-btn.danger{
+    border: 1px solid #D91931;
+    color: #D91931;
+}
+.connect-btn.danger.active,
+.connect-btn.danger:hover,
+.connect-btn.danger:focus{
+    color: #fff;
+    background-color: #D91931;
+}
+.connect-btn.success{
+    border: 1px solid #2AA520;
+    color: #2AA520;
+}
+.connect-btn.success.active,
+.connect-btn.success:hover,
+.connect-btn.success:focus{
+    color: #fff;
+    background-color: #2AA520;
+}
+.connect-btn>i{
+    margin-right: 5px;
+}

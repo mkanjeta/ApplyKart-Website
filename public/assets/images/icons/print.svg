@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56">
+  <g id="print" transform="translate(-1283 -1633)">
+    <circle id="Ellipse_1440" data-name="Ellipse 1440" cx="28" cy="28" r="28" transform="translate(1283 1633)" fill="#435db4"/>
+    <g id="noun-print-1066578" transform="translate(1299 1649)">
+      <path id="Path_160" data-name="Path 160" d="M192.525,36.752A1.753,1.753,0,0,0,190.772,35h-14.02A1.753,1.753,0,0,0,175,36.752V38.5h17.525Z" transform="translate(-171.495 -35)" fill="#fff"/>
+      <path id="Path_161" data-name="Path 161" d="M127.782,140h-21.03A1.753,1.753,0,0,0,105,141.752v10.515a1.753,1.753,0,0,0,1.752,1.752H108.5v3.5a1.753,1.753,0,0,0,1.752,1.752h14.02a1.753,1.753,0,0,0,1.752-1.752v-3.5h1.752a1.753,1.753,0,0,0,1.752-1.752V141.752A1.753,1.753,0,0,0,127.782,140Zm-3.5,17.525h-14.02v-8.762h14.02Zm1.752-12.267h-3.5V143.5h3.5Z" transform="translate(-105 -134.743)" fill="#fff"/>
+      <path id="Path_162" data-name="Path 162" d="M245,420h5.257v1.752H245Z" transform="translate(-237.99 -400.723)" fill="#fff"/>
+      <path id="Path_163" data-name="Path 163" d="M245,350h10.515v1.752H245Z" transform="translate(-237.99 -334.228)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

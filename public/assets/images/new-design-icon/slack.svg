@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+  <g id="slack" transform="translate(0 0)">
+    <circle id="Ellipse_316" data-name="Ellipse 316" cx="22" cy="22" r="22" transform="translate(0 0)" fill="#fff"/>
+    <g id="Group_21744" data-name="Group 21744" transform="translate(11.269 11.598)">
+      <path id="Icon_simple-slack" data-name="Icon simple-slack" d="M17.981,7.836a2.237,2.237,0,1,1,2.237,2.236H17.981Zm-1.125,0a2.237,2.237,0,0,1-4.473,0v-5.6a2.237,2.237,0,1,1,4.473,0Z" transform="translate(-1.167 0)" fill="#2eb67d"/>
+      <path id="Icon_simple-slack-2" data-name="Icon simple-slack" d="M7.836,4.472a2.236,2.236,0,1,1,2.236-2.235V4.472H7.836Zm0,1.127a2.236,2.236,0,1,1,0,4.472h-5.6a2.236,2.236,0,1,1,0-4.472h5.6Z" transform="translate(0)" fill="#36c5f1"/>
+      <path id="Icon_simple-slack-3" data-name="Icon simple-slack" d="M4.472,14.618a2.236,2.236,0,1,1-2.235-2.235H4.472v2.235Zm1.127,0a2.236,2.236,0,0,1,4.472,0v5.6a2.236,2.236,0,1,1-4.472,0v-5.6Z" transform="translate(0 -1.167)" fill="#e11d5a"/>
+      <path id="Icon_simple-slack-4" data-name="Icon simple-slack" d="M14.618,17.981a2.237,2.237,0,1,1-2.235,2.237V17.981Zm0-1.125a2.237,2.237,0,0,1,0-4.473h5.6a2.237,2.237,0,1,1,0,4.473Z" transform="translate(-1.167 -1.167)" fill="#ecb33d"/>
+    </g>
+  </g>
+</svg>

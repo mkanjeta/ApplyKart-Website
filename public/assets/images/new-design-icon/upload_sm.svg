@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
+  <g id="upload_sm" transform="translate(-933 -484)">
+    <circle id="Ellipse_1474" data-name="Ellipse 1474" cx="27" cy="27" r="27" transform="translate(933 484)" fill="#ced8ff"/>
+    <g id="image" transform="translate(948.41 499.41)">
+      <g id="Ellipse_1476" data-name="Ellipse 1476" transform="translate(-15.41 -15.41)" fill="none" stroke="rgba(31,71,227,0.34)" stroke-linecap="round" stroke-width="0.7" stroke-dasharray="2">
+        <circle cx="27" cy="27" r="27" stroke="none"/>
+        <circle cx="27" cy="27" r="26.65" fill="none"/>
+      </g>
+    </g>
+    <g id="upload-cloud" transform="translate(950.485 502.143)">
+      <path id="Path_24344" data-name="Path 24344" d="M14.2,15.1,11.1,12,8,15.1" transform="translate(-1.58 -2.029)" fill="none" stroke="#1f47e3" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+      <line id="Line_440" data-name="Line 440" y2="6.74" transform="translate(9.514 9.972)" fill="none" stroke="#1f47e3" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+      <path id="Path_24345" data-name="Path 24345" d="M16.016,14.92a3.872,3.872,0,0,0-1.851-7.272h-.976A6.2,6.2,0,1,0,2.548,13.3" transform="translate(0 0)" fill="none" stroke="#1f47e3" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+      <path id="Path_24346" data-name="Path 24346" d="M14.2,15.1,11.1,12,8,15.1" transform="translate(-1.58 -2.029)" fill="none" stroke="#1f47e3" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+    </g>
+  </g>
+</svg>
