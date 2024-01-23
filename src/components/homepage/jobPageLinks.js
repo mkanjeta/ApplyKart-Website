@@ -98,7 +98,7 @@ const JobPageLinks = () => {
               </div>
             </div> */}
             <div className="px-3 py-2 d-flex flex-column">
-              <div className="fs-6 fw-600 text-black">Jobs by Location:</div>
+              <h4 className="fs-6 fw-600 text-white">Jobs by Location:</h4>
               <div className="d-flex justify-content-between mt-3">
                 <div className="col-md-4">
                   <ul className="flink">
@@ -149,7 +149,7 @@ const JobPageLinks = () => {
             </div>
 
             <div className="px-3 py-2 d-flex flex-column">
-              <div className="fs-6 fw-600 text-black">Jobs by Category:</div>
+              <h4 className="fs-6 fw-600 text-white">Jobs by Category:</h4>
               <div className="d-flex justify-content-between mt-3">
                 <div className="col-md-4">
                   <ul className="flink">
