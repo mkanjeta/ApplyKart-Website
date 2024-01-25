@@ -258,10 +258,10 @@ const WhyChoose = () => {
              view-timeline-name: --fourth-lockup;
            }
            .FifthLockup {
-             view-timeline-name: --fourth-lockup;
+             view-timeline-name: --fifth-lockup;
            }
            .SixLockup {
-             view-timeline-name: --fourth-lockup;
+             view-timeline-name: --six-lockup;
            }
          }
        }
