@@ -41,7 +41,7 @@ const HomePage = () => {
       <ChooseJob />
       <HowItWork />
       <SearchJob />
-      <AdvertisingJob />
+      {/* <AdvertisingJob /> */}
       <DownloadApp />
       <JobPageLinks />
       <AppFooter />
