@@ -110,7 +110,7 @@ const Banner = () => {
                   </div>
                 </form>
 
-                <div className="tabs-content">
+                {/* <div className="tabs-content">
                   <div className="tabs-btn">
                     <a href="#" className="find-job-btn1">
                       Find Jobs
@@ -123,7 +123,7 @@ const Banner = () => {
                     <span className="p-bars1 d-block"></span>
                     <span className="p-bars2 d-block"></span>
                   </div>
-                </div>
+                </div> */}
               </div>
             </Col>
             <Col lg={6} md={8}>
