@@ -7971,7 +7971,7 @@ main {
 #cards .card-content > figure > img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: .4em;
 }
 
@@ -8036,5 +8036,18 @@ p {
         ));
     }
   }
+}
+@media screen and (max-width:768px){
+  #cards .card-content{
+    display: block;
+  }
+  #cards .card-content h2{
+    font-size: 1.5rem;
+  }
+  #cards .card-content h5{font-size: 20px;}
+  .section1{
+  overflow: hidden;
+  }
+  
 }
 

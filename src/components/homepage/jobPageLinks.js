@@ -99,7 +99,7 @@ const JobPageLinks = () => {
             </div> */}
             <div className="px-3 py-2 d-flex flex-column">
               <h4 className="fs-3 fw-600 text-white mb-0">Jobs by Location:</h4>
-              <div className="d-flex justify-content-between mt-3">
+              <div className="d-flex justify-content-between mt-3 flex-wrap">
                 <div className="col-md-4">
                   <ul className="flink">
                     <li>
@@ -150,8 +150,8 @@ const JobPageLinks = () => {
 
             <div className="px-3 py-2 d-flex flex-column">
               <h4 className="fs-3 fw-600 text-white mb-0 mt-3">Jobs by Category:</h4>
-              <div className="d-flex justify-content-between mt-3">
-                <div className="col-md-4">
+              <div className="d-flex justify-content-between mt-3 flex-wrap">
+                <div className="col-md-4 col-xs-12">
                   <ul className="flink">
                     <li>
                       <a href="/jobs/Claims-Management-Officer-jobs-in-Australia-ApplyKart" target="_blank">Claims Management Officer <img src="/assets/images/right-arrow.svg" alt="right-arrow"></img></a>
@@ -179,7 +179,7 @@ const JobPageLinks = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-4 col-xs-12">
                   <ul className="flink">
                     <li>
                       <a href="/jobs/Business-Broker-jobs-in-Australia-ApplyKart" target="_blank">Business Broker <img src="/assets/images/right-arrow.svg" alt="right-arrow"></img></a>
@@ -204,7 +204,7 @@ const JobPageLinks = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-4 col-xs-12">
                   <ul className="flink">
                     <li>
                       <a href="/jobs/Electrical-project-engineer-jobs-in-Australia-ApplyKart" target="_blank">Electrical project engineer <img src="/assets/images/right-arrow.svg" alt="right-arrow"></img></a>
