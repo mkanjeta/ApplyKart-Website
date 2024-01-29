@@ -31,9 +31,9 @@ const VCard = () => {
   // }, [isCompleted]);
 
   useEffect(() => {
-    if(activeSlide == 6) {
+    if(activeSlide == 5) {
       setTimeout(()=>{
-        setActiveSlide(7);
+        setActiveSlide(6);
       },2000);
     }
   },[activeSlide])
@@ -74,7 +74,7 @@ const VCard = () => {
             backgroundImage: "url(" + BASE_URL + "/assets/images/bg/1.png)",
           }}
         ></div>
-        {activeSlide == 7 ? (
+        {activeSlide == 6 ? (
           <div className="d-flex align-items-center vh-height">
             <div className="row p-4 align-items-center">
               <div className="col-lg-6">
@@ -104,7 +104,7 @@ const VCard = () => {
                     }}
                   >
                     <div className="top_actions">
-                      <img
+                      {/* <img
                         src={`/assets/images/icons/vaccine/white/${(jobSeekerDetails?.vaccination_Status == 1 &&
                           "singleDose") ||
                           (jobSeekerDetails?.vaccination_Status == 2 &&
@@ -114,7 +114,8 @@ const VCard = () => {
                           "doubleDose"
                           }.svg`}
                         alt="icon"
-                      />
+                      /> */}
+                      <span></span>
                       <button type="button" className="mode">
                         {(jobSeekerDetails?.shift == 2 && (
                           <img

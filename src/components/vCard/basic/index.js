@@ -251,7 +251,7 @@ const BasicInfo = () => {
                             (gender == "male" && "Male") ||
                             "Gender"}
                         </li>
-                        <li>
+                        {/* <li>
                           <span className="icon">
                             <img
                               src={`/assets/images/icons/vaccine/white/${vaccineStatus ||
@@ -285,7 +285,7 @@ const BasicInfo = () => {
                             (jobSeekerDetails?.vaccination_Status == 0 &&
                               "Not Vaccinated") ||
                             "Vaccination Status")}
-                        </li>
+                        </li> */}
                       </ul>
                     </div>
                   </div>
@@ -402,7 +402,7 @@ const BasicInfo = () => {
                               </div>
                             ) : null}
                           </div>
-                          <div className="form-group">
+                          {/* <div className="form-group">
                             <label className="text-black">
                               Vaccination status <span className="optional">(optional)</span>
                             </label>
@@ -567,7 +567,7 @@ const BasicInfo = () => {
                                 ) : null}
                               </div>
                             </div>
-                          </div>
+                          </div> */}
                           <div className="form-group">
                             <label className="text-black">I am <span className="optional">(optional)</span></label>
                             <div className="image_radio gender">
