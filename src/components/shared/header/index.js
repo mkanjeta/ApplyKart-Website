@@ -105,7 +105,7 @@ const Header = (props) => {
                     </>
                   ) : (
                     <div className="actions">
-                      <Link href="/login" passHref>
+                      {/* <Link href="/login" passHref>
                         <button
                           type="button"
                           //onClick={loginClick}
@@ -122,7 +122,7 @@ const Header = (props) => {
                         >
                           Register
                         </button>
-                      </Link>
+                      </Link> */}
                     </div>
                   )}
                 </>

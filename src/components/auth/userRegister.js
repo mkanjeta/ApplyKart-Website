@@ -160,14 +160,20 @@ const UserRegister = () => {
         <title>ApplyKart</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Header styleClass="" logoUrl="" />
-      <section className="section-padding">
+      <Header styleClass="register" logoUrl="" />
+      <section className="section-padding overflow-hidden">
         <div className="register-users">
           <Row className="">
             {loading && <Loader />}
             <div className="col-md-7">
               <div className="block_box user-register-p0">
                 <div className="user-register-bg">
+                <video  loop autoPlay muted controls>
+                  <source src=".\assets\videos\job-seeker.mp4"  loop autoPlay muted controls type="video/mp4"/>
+                  <source src=".\assets\videos\job-seeker.avi" loop autoPlay muted controls type="video/avi"/>
+                  {/* <source src="movie.ogg" type="video/ogg"> */}
+                Your browser does not support the video tag.
+                </video>
                   <div className="text_box">
                     <h4 className="title">
                       Hi mate! Are you looking for your next full-time work

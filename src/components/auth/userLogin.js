@@ -108,16 +108,16 @@ const UserLogin = () => {
         <title>ApplyKart</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Header styleClass="" logoUrl="" />
-      <section className="section-padding overflow-x-hidden">
+      <Header styleClass="register" logoUrl="" />
+      <section className="section-padding overflow-hidden">
         <Row className="">
           {loading && <Loader />}
           <div className=" col-md-7">
             <div className="block_box block-box-container">
               <div className="block_box_login_bg">
               <video  loop autoPlay muted controls>
-                  <source src=".\assets\videos\hiring.mp4"  loop autoPlay muted controls type="video/mp4"/>
-                  <source src=".\assets\videos\hiring.avi" loop autoPlay muted controls type="video/avi"/>
+                  <source src=".\assets\videos\job-seeker.mp4"  loop autoPlay muted controls type="video/mp4"/>
+                  <source src=".\assets\videos\job-seeker.avi" loop autoPlay muted controls type="video/avi"/>
                   {/* <source src="movie.ogg" type="video/ogg"> */}
                 Your browser does not support the video tag.
                 </video>

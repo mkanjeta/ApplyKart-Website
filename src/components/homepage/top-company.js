@@ -52,7 +52,7 @@ const TopCompanies = () => {
         data-aos-duration="10"
         data-aos-delay="100"
       >
-        <main>
+        <main className="chooseJobCard">
           <ul id="cards">
             <li className="card" id="card-1">
               <div className="card-content">
