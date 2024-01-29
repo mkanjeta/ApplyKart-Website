@@ -7902,7 +7902,7 @@ abbr[title] {
 
 /* choose a job  section*/
 main {
-  width: 80vw;
+  /* width: 80vw; */
   margin: 0 auto;
 }
 #cards {

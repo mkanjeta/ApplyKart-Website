@@ -193,7 +193,7 @@ function MyProfile(props) {
                                                 },
                                             }}
                                         />
-                                        <img className='qr-img1 position-absolute' style={{ top: "50%", left: "50%", transform: "translate(-50%,-50%)" }} height="50" src={"/assets/qr-pin.png"} alt="QrCode" />
+                                        <img className='qr-img1 position-absolute' style={{ top: "50%", left: "50%", transform: "translate(-50%,-50%)",opacity:"0.8" }} height="50" src={"/assets/qr-pin.png"} alt="QrCode" />
                                     </div>
                                     {/* <img src='/assets/images/qr-image.png' alt='img' /> */}
                                 </div>

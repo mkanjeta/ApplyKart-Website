@@ -82,9 +82,9 @@ const UserRegister = () => {
 
   const handleFormSubmit = (values) => {
 
-    if (!values?.phone && !values?.landline) {
+    if (!values?.phone) {
       Swal.fire({
-        title: 'Enter either phone or landline number',
+        title: 'Enter phone number',
         icon: 'error'
       })
       return;
@@ -244,9 +244,9 @@ const UserRegister = () => {
                               name: "phone",
                             }}
                           />
-                          <span style={{ color: "red" }}>
+                          {/* <span style={{ color: "red" }}>
                             <sup>*</sup>Don't Enter 0 Before Your Number
-                          </span>
+                          </span> */}
                           <ErrorMessage component="div" className="form-text error-message" name="phone" />
                           {/* {formik.errors.phone && formik.touched.phone ? (
                             <div style={{ color: "tomato" }}>
@@ -278,7 +278,7 @@ const UserRegister = () => {
                               name: "phone",
                             }}
                           /> */}
-                          <div className=" react-tel-input ">
+                          {/* <div className=" react-tel-input ">
                             <input
                               id="reg-input"
                               type="number"
@@ -293,7 +293,7 @@ const UserRegister = () => {
                               }}
                             />
                             <ErrorMessage component="div" className="form-text error-message" name="landline" />
-                          </div>
+                          </div> */}
                         </div>
                         <div className="form-group password_icon">
                           <input

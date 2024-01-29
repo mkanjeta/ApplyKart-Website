@@ -1,11 +1,16 @@
-import React from 'react';
+import React,{ useState } from 'react';
 import { useRouter } from "next/router";
 import Link from 'next/link';
-
+import Autocomplete from "react-google-autocomplete";
 
 const NavBar = () => {
     const router = useRouter();
 
+    const [search, setSearch] = useState(() => "");
+    const [location, setLocation] = useState(() => {
+      return router.query.location ? router.query.location : ''
+    });
+    const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
     function handleJobClick (jobType)  {
         if(jobType == "APPLIED_JOB") {
@@ -22,6 +27,17 @@ const NavBar = () => {
     function handleChatClick() {
         window.location.href = "/chat"
     }
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        let obj = {
+          search: search,
+          WorkLocation: "",
+        };
+        // dispatch(getJobBrowseList(obj));
+        // router?.push(`/dashboard?search=${search}&location=${location}`);
+        window.location.href = `/dashboard?search=${search}&location=`;
+      };
 
     return (
         <div className="menu-wrap">
@@ -59,6 +75,41 @@ const NavBar = () => {
                     </ul>
                 </li>
             </ul>
+            <form onSubmit={handleSearch}>
+                  <div className="search-job-w flex-row mb-0">
+                    <div className="job-title1 mb-0">
+                      <span className="job-search-icons" style={{top:"13px",left:"9px"}}>
+                        <img
+                          src={"/assets/images/icon-search.svg"}
+                          alt="search"
+                        />
+                      </span>
+                      <input
+                        type="text"
+                        className="banner-searchbar"
+                        placeholder="Search Jobs By Title"
+                        value={search}
+                        style={{minHeight:"33px",padding:"0px 10px 0px 30px"}}
+                        onChange={(e) => {
+                          setSearch(e.target.value);
+                        }}
+                      />
+                    </div>
+                    <button
+                      className="btn btn-warning search-btn"
+                      // onClick={handleSearch}
+                      style={{fontSize:"12px",lineHeight:"12px",padding:"8px 10px"}}
+                    >
+                      Search Job
+                      <span className="ps-2 btn-right-arrow">
+                        <img
+                          src={"/assets/images/right-arrow.svg"}
+                          alt="right-arrow"
+                        />
+                      </span>
+                    </button>
+                  </div>
+                </form>
         </div>
     )
 }
