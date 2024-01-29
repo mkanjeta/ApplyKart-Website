@@ -169,8 +169,8 @@ const UserRegister = () => {
               <div className="block_box user-register-p0">
                 <div className="user-register-bg">
                 <video  loop autoPlay muted controls>
-                  <source src=".\assets\videos\job-seeker.mp4"  loop autoPlay muted controls type="video/mp4"/>
-                  <source src=".\assets\videos\job-seeker.avi" loop autoPlay muted controls type="video/avi"/>
+                  <source src=".\assets\videos\job-seeker.mp4"  type="video/mp4"/>
+                  <source src=".\assets\videos\job-seeker.avi"  type="video/avi"/>
                   {/* <source src="movie.ogg" type="video/ogg"> */}
                 Your browser does not support the video tag.
                 </video>

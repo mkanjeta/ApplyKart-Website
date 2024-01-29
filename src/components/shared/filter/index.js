@@ -102,6 +102,7 @@ const Filter = ({
             <div className="row align-items-center justify-content-between">
               <div className="col-xl-3 col-lg-3 col-sm-6">
                 <div className="fl_select address-form-control">
+                <img src="/assets/images/icon-map.svg" alt="location"/>
                   <Autocomplete
                     apiKey={apiKey}
                     options={{
@@ -116,12 +117,14 @@ const Filter = ({
                     }}
                     defaultValue={cities}
                     name="Work Location"
-                    className="form-control "
+                    className="form-control"
+                    style={{padding:"6px 0px 6px 10px"}}
                   />
                 </div>
               </div>
               <div className="col-xl-3 col-lg-3 col-sm-6">
                 <div className="input-group fl_select">
+                <i className="fas fa-clock" style={{fontSize:"20px"}}></i>
                   <select
                     className="form-select form-select-solid"
                     name="experience"
@@ -146,6 +149,7 @@ const Filter = ({
               </div>
               <div className="col-xl-3 col-lg-3">
                 <div className="fl_select border_none justify-content-end">
+                  <img src="/assets/images/icon-search.svg" width={20} height={20} alt="search"/>
                   <div className="input-group">
                     <input
                       type="text"

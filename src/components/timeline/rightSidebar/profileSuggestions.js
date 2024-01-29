@@ -23,7 +23,7 @@ const SidebarProfileSuggestions = () => {
                     return (
                         <li key={index}>
                             <div className="p-img">
-                                <img src={item?.profilePic?.trim()} alt="profile-img" />
+                                <img src={item?.profilePic?.trim() || "/assets/images/profile.jpg"} alt="profile-img" />
                             </div>
                             <h4 className="p-name">
                                 <Link href={`/timeline/${item?.userId}`}>
