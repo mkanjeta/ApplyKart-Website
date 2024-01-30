@@ -74,8 +74,8 @@ const NavBar = () => {
                         <li><Link href="/terms"><a><span>Terms & Conditions</span></a></Link></li>
                     </ul>
                 </li>
-            </ul>
-            <form onSubmit={handleSearch}>
+                <li>
+                <form onSubmit={handleSearch}>
                   <div className="search-job-w flex-row mb-0">
                     <div className="job-title1 mb-0">
                       <span className="job-search-icons" style={{top:"13px",left:"9px"}}>
@@ -98,10 +98,10 @@ const NavBar = () => {
                     <button
                       className="btn btn-warning search-btn"
                       // onClick={handleSearch}
-                      style={{fontSize:"12px",lineHeight:"12px",padding:"8px 10px"}}
+                      style={{fontSize:"12px",lineHeight:"12px",padding:"5px 10px"}}
                     >
-                      Search Job
-                      <span className="ps-2 btn-right-arrow">
+                      <span className="d-sm-block d-none">Search Job &nbsp;</span>
+                      <span className="btn-right-arrow">
                         <img
                           src={"/assets/images/right-arrow.svg"}
                           alt="right-arrow"
@@ -110,6 +110,9 @@ const NavBar = () => {
                     </button>
                   </div>
                 </form>
+                </li>
+            </ul>
+           
         </div>
     )
 }

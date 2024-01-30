@@ -3745,13 +3745,15 @@ abbr[title] {
 }
 
 .banner-searchbar {
-  border: 0;
+  border: 1px solid #e3dbff;
+  border-radius: 20px;
   outline: 0;
   padding-left: 34px;
   background-color: #fff !important;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
+  margin-right: 10px;
 }
 
 .banner-searchbar2 {
@@ -3778,6 +3780,7 @@ abbr[title] {
   position: relative;
   padding: 6px 0;
   border-right: 1px solid #707070;
+  margin-right: 10px;
 }
 
 .job-title2 .btn {
@@ -8149,3 +8152,15 @@ min-height: auto;
 
 }
 /*why choose section ends*/
+
+#dropdown-basic::after{
+  display: none;
+}
+.main-menu > li:last-child:hover{
+  border: 2px solid transparent;
+}
+@media screen and (max-width:767px){
+  .search-job-w{
+    padding: 0;
+  }
+}
