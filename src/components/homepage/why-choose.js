@@ -13,105 +13,11 @@ const WhyChoose = () => {
   }, []);
   return (
     <>
-      <style>
-        {`
-    .scroll-filler {
-      height: 80vh;
-    }
     
-    .item {
-      &:after {
-        content: "";
-        display: block;
-        height: 100vh;
-        margin-bottom: -100vh;
-      }
-    
-      position: relative;
-      background-image: none;
-      );
-    
-      &:last-of-type {
-        &:after {
-          display: none;
-        }
-        margin-bottom: 0;
-        background-image:none;
-      }
-    
-      .image-holder {
-        position: sticky;
-        top: 0;
-        float: left;
-        overflow: hidden;
-        width: 50%;
-        height: 100vh;
-        img {
-          position: relative;
-          height: 100%;
-          width: auto;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      }
-    
-      .text-holder {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 50%;
-        min-height: 120vh;
-        margin-left: 50%;
-        padding: 1em;
-      }
-    }
-    .block h3{ 
-      max-inline-size: 13ch;
-      text-wrap: balance;
-      font-size: 3.75rem;
-      font-weight: 700;
-      line-height: 1.1;
-      padding-block-end: 1.25rem;
-      color: #000;
-  }
-  .subhead {
-    color: oklch(0.65 0.24 16.93);
-    font-size: 2.5rem;
-    font-weight: 600;
-    max-inline-size: 20ch;
-    line-height: 1.25;
-    text-wrap: pretty;
-}
-@media screen and (max-width:767px){
-  .scroll-reveal-section .item div {
-    width: 100%;
-    margin: 0;
-    height: auto;
-}
-.scroll-reveal-section .item {
-    display: flex;
-    flex-direction: column;
-}
-.scroll-reveal-section .item div {
-  width: 100%;
-  margin: 0;
-  height: auto;
-  min-height: auto;
-}
-.subhead{font-size: 1.5rem;}
-.block h3{font-size: 1.75rem;padding-bottom:0;}
-}
-@media screen and (min-width:768px) and (max-width:1024px){
-  .subhead{font-size: 1.5rem;}
-.block h3{font-size: 1.75rem;padding-bottom:0;}
-}
-     
-      `}
-      </style>
       <div className="section1">
         <div className="container">
           <div
-            className="text-center margin-bt"
+            className="text-center margin-bt md-sticky"
             data-aos="fade-up"
             data-aos-easing="ease"
             data-aos-duration="100"
