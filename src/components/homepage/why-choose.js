@@ -14,7 +14,7 @@ const WhyChoose = () => {
   return (
     <>
     
-      <div className="section1">
+      <div className="section2">
         <div className="container">
           <div
             className="text-center margin-bt md-sticky"
@@ -42,116 +42,169 @@ const WhyChoose = () => {
               with us!
             </p>
           </div>
-          <div className="applykart-features">
-            <div className="scroll-reveal-section">
-              <div className="item">
-                <div className="image-holder">
-                  <img
-                    src="/assets/images/applykart_features/intro_video.svg"
-                    alt=""
-                  />
-                </div>
+         {/* reeshabh code starts */}
 
-                <div className="text-holder">
-                  <div className="block gap-3">
-                    <h3>Intro Videos</h3>
-                    <div className="subhead">
-                      Explore the stories within each present.
-                    </div>
-                    <p>one line text will come here.</p>
+
+         <div
+        className="section2-card"
+        data-aos="fade-up"
+        data-aos-easing="ease"
+        data-aos-duration="10"
+        data-aos-delay="100"
+      >
+        <main className="chooseJobCard">
+          <ul id="cards">
+            <li className="card" id="card-1">
+              <div className="card-content">
+                <div>
+                  <h2>Intro Videos</h2>
+                  <h5>Explore the stories within each present.</h5>
+                  <p className="card-text">
+                  one line text will come here.
+                  </p>
+
+                  <div className="d-flex slider-btn">
+                    {/* <Button href="#" className="btn1">
+                  $2K-$3K
+                </Button> */}
+                  
                   </div>
                 </div>
-              </div>
-
-              <div className="item">
-                <div className="image-holder">
+                <figure>
                   <img
-                    src="/assets/images/applykart_features/visiting_card.svg"
-                    alt=""
+                    src={"/assets/images/applykart_features/intro_video.svg"}
+                    alt="user"
                   />
-                </div>
+                </figure>
+              </div>
+            </li>
 
-                <div className="text-holder">
-                  <div className="block gap-3">
-                    <h3>Digital Visiting Cards</h3>
-                    <div className="subhead">
-                      Embrace the significance of Digital card.
-                    </div>
-                    <p>In every meeting, find the heartwarming stories.</p>
+
+            <li className="card" id="card-2">
+              <div className="card-content">
+                <div>
+                  <h2>Digital Visiting Cards</h2>
+                  <h5>Embrace the significance of Digital card.</h5>
+                  <p className="card-text">
+                  In every meeting, find the heartwarming stories.
+                  </p>
+                  <div className="d-flex slider-btn">
+                    {/* <Button href="#" className="btn1">
+                  $2K-$3K
+                </Button> */}
+                  
                   </div>
                 </div>
-              </div>
-
-              <div className="item">
-                <div className="image-holder">
+                <figure>
                   <img
-                    src="/assets/images/applykart_features/ai_based.svg"
-                    alt=""
+                    src={"/assets/images/applykart_features/visiting_card.svg"}
+                    alt="user"
                   />
-                </div>
+                </figure>
+              </div>
+            </li>
 
-                <div className="text-holder">
-                  <div className="block gap-3">
-                    <h3>Job/Candidate Search</h3>
-                    <div className="subhead">AI-based Predictive</div>
-                    <p>one liner content for better UI.</p>
+            <li className="card" id="card-3">
+              <div className="card-content">
+                <div>
+                  <h2>Job/Candidate Search</h2>
+                  <h5>AI-based Predictive</h5>
+                  <p className="card-text">
+                  one liner content for better UI.
+                  </p>
+                  <div className="d-flex slider-btn">
+                    {/* <Button href="#" className="btn1">
+                  $2K-$3K
+                </Button> */}
+                   
                   </div>
                 </div>
-              </div>
-
-              <div className="item">
-                <div className="image-holder">
+                <figure>
                   <img
-                    src="/assets/images/applykart_features/interview.svg"
-                    alt=""
+                    src={"/assets/images/applykart_features/ai_based.svg"}
+                    alt="user"
                   />
-                </div>
-
-                <div className="text-holder">
-                  <div className="block gap-3">
-                    <h3>Live Interview</h3>
-                    <div className="subhead">
-                      Get the experience within each Hiring.
-                    </div>
-                    <p>one line text will come here.</p>
+                </figure>
+              </div>
+            </li>
+            <li className="card" id="card-4">
+              <div className="card-content">
+                <div>
+                  <h2>Live Interview</h2>
+                  <h5>Get the experience within each Hiring.</h5>
+                 
+                  <p className="card-text">
+                  one line text will come here.
+                  </p>
+                  <div className="d-flex slider-btn">
+                    {/* <Button href="#" className="btn1">
+                  $2K-$3K
+                </Button> */}
+                  
                   </div>
                 </div>
-              </div>
-
-              <div className="item">
-                <div className="image-holder">
+                <figure>
                   <img
-                    src="/assets/images/applykart_features/job_location.svg"
-                    alt=""
+                    src={"/assets/images/applykart_features/interview.svg "}
+                    alt="user"
                   />
-                </div>
-
-                <div className="text-holder">
-                  <div className="block gap-3">
-                    <h3>Location Based</h3>
-                    <div className="subhead">Jobs/Hiring.</div>
-                    <p>one line text will come here.</p>
+                </figure>
+              </div>
+            </li>
+            <li className="card" id="card-5">
+              <div className="card-content">
+                <div>
+                  <h2>Location Based</h2>
+                  <h5>Jobs/Hiring</h5>
+                  <p className="card-text">
+                  one line text will come here.   
+                  </p>
+                  <div className="d-flex slider-btn">
+                    {/* <Button href="#" className="btn1">
+                  $2K-$3K
+                </Button> */}
+                   
                   </div>
                 </div>
-              </div>
-              <div className="item">
-                <div className="image-holder">
+                <figure>
                   <img
-                    src="/assets/images/applykart_features/refer_job.svg"
-                    alt=""
+                    src={"/assets/images/applykart_features/job_location.svg"}
+                    alt="user"
                   />
-                </div>
+                </figure>
+              </div>
+            </li>
+            <li className="card" id="card-6">
+              <div className="card-content">
+                <div>
+                  <h2>Refer-A-Job</h2>
+                  <h5>Refer a job to anyone</h5>
+                  <p className="card-text">
+                  one line text will come here.
+                  </p>
 
-                <div className="text-holder">
-                  <div className="block gap-3">
-                    <h3>Refer-A-Job</h3>
-                    <div className="subhead">Refer a job to anyone .</div>
-                    <p>one line text will come here.</p>
+                  <div className="d-flex slider-btn">
+                    {/* <Button href="#" className="btn1">
+                  $2K-$3K
+                </Button> */}
+                  
                   </div>
                 </div>
+                <figure>
+                  <img
+                    src={"/assets/images/applykart_features/refer_job.svg"}
+                    alt="user"
+                  />
+                </figure>
               </div>
-            </div>
-          </div>
+            </li>
+          </ul>
+        </main>
+      </div>
+      <div className="card-bg d-flex justify-content-center align-items-end"></div>
+
+
+         {/* reeshabh code ends */}
         </div>
         <div className="section-company">
           <div className="brand-icon-img">

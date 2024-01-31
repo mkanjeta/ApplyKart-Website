@@ -62,7 +62,7 @@ const Header = (props) => {
           </div>
           {!props.hideButtons && (
             <span>
-              {router.asPath === "/" || router.asPath === "/login" ? (
+              {router.asPath === "/" || router.asPath === "/login" || router.pathname === "/jobs/[id]" ? (
                 <>
                   {router.asPath === "/login" ? null : (
                     <>
@@ -71,6 +71,7 @@ const Header = (props) => {
                           <button
                             type="button"
                             className="btn btn-outline-info me-4"
+                            style={router.pathname === "/jobs/[id]" ? ({borderColor:"#000000", color:"#000000"}) : ({})}
                           >
                             Login
                           </button>
