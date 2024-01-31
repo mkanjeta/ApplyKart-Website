@@ -17,6 +17,7 @@ const TimelineRightSidebar = () => {
                 title="Suggestions"
                 viewAll="true"
                 viewAllLink="/timeline/network"
+                class="rs-card mdx-sticky"
             >
                 <SidebarProfileSuggestions />
             </RightSidebarCard>
