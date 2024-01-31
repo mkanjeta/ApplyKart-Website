@@ -157,6 +157,7 @@ window.dataLayer = window.dataLayer || [];
             <Head>
               <title>Applykart | Welcome to applykart</title>
               <meta name="description" content="Find jobs with ApplyKart" />
+              <meta name='robots' content='index, follow' />
               <link
                 rel="icon"
                 href="/assets/images/favicon.png"
