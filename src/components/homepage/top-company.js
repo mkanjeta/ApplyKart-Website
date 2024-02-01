@@ -10,6 +10,7 @@ import "aos/dist/aos.css";
 import { Autoplay, Navigation, Pagination, Scrollbar, A11y } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import Link from "next/link";
 
 const TopCompanies = () => {
   useEffect(() => {
@@ -211,7 +212,7 @@ const TopCompanies = () => {
       </div>
 
       <div className="container text-center mb-5">
-   <a href="/dashboard?jobType=ALLJOBS"><button className="btn btn-warning" type="submit">View more jobs<i className="fal fa-long-arrow-right"></i></button></a>
+   <Link href="/dashboard?jobType=ALLJOBS" passHref><button className="btn btn-warning" type="submit">View more jobs<i className="fal fa-long-arrow-right"></i></button></Link>
     </div>
     </div>
   );
