@@ -3662,11 +3662,10 @@ abbr[title] {
   background-position: center;
   padding-bottom: 0rem;
   margin-bottom: 92px;
-  min-height: 80vh;
   background-color: #00113b;
-  height: 90vh;
+  height: auto;
 }
-
+.banner-iphone{padding-top: 40px;}
 .banner-text-center {
   color: var(--white-color);
 }
@@ -3745,7 +3744,7 @@ abbr[title] {
 }
 
 .banner-searchbar {
-  border: 1px solid #e3dbff;
+  border: none;
   border-radius: 20px;
   outline: 0;
   padding-left: 34px;
@@ -3792,6 +3791,7 @@ abbr[title] {
 
 .job-title2 .form-control {
   padding: 10px 10px 10px 40px;
+  background: transparent;
 }
 
 .job-title2 button:focus {
@@ -7941,11 +7941,12 @@ main.chooseJobCard {
   top: 80px;
   padding-top: calc(var(--index) * var(--card-top-offset));
   border-radius: 2rem;
+  margin-bottom: 30px;
 }
 
 #cards .card-content {
   box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
-  background: #fffaf2;
+  background: #8ce5ff2b;
   color: #131212;
   border-radius: 2rem;
   overflow: hidden;
@@ -7955,29 +7956,40 @@ main.chooseJobCard {
   grid-template-rows: auto;
   align-items: stretch;
   padding: 1.4em;
+  max-height: 75vh;
 }
 
 #cards .card-content > div {
   grid-area: text;
-  width: 95%;
-  max-width: 800px;
   place-self: center;
   text-align: left;
-  display: grid;
-  gap: 1em;
-  place-items: start;
 }
 
 #cards .card-content > figure {
-  grid-area: img;
-  overflow: hidden;
+  height: 100%;
+  position: relative;
+}
+
+#cards .card-content figure:after {
+  position: absolute;
+  content: '';
+  top: 0px;
+  left: 19px;
+  width: 100%;
+  height: 100%;
+  background: url(https://i.postimg.cc/DyyfBpbL/splash.png) no-repeat #cae4eb;
+  background-size: 100% 100%;
+  background-position: center;
+  mix-blend-mode: color-dodge;
 }
 
 #cards .card-content > figure > img {
-  width: 100%;
+  width: auto;
   height: 100%;
+  -o-object-fit: contain;
   object-fit: contain;
-  border-radius: .4em;
+  border-radius: 0.4em;
+  min-width: 450px;
 }
 
 h1 {
@@ -8043,6 +8055,19 @@ p {
   }
 }
 @media screen and (max-width:768px){
+  .home-iphone .banner-bg-phone{max-height: 300px;}
+  .banner-bg{height: auto;padding-bottom: 1rem;}
+  .hero-section,.banner-iphone{padding-top: 0;}
+  .job-title2 .form-control{background-color: #ded4ff;}
+  #cards .card-content > figure > img{
+    min-width: auto;
+  }
+  #cards .card-content > figure {
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+#cards .card-content figure:after{left: 0;}
   #cards .card-content{
     display: block;
   }
@@ -8207,4 +8232,18 @@ min-height: auto;
 /*new job card design css ends*/
 @media screen and (min-width:1200px){
   .mdx-sticky{position: sticky;top: 20px;}
+}
+@media screen and (max-width:768px){
+
+  .jobCardBox .card-content{max-width: 80%;margin: 0 auto;display: block;}
+.jobCardBox:nth-child(2n+1) {
+  transform: rotate(0deg);
+}
+.jobCardBox:nth-child(n+1) {
+  transform: rotate(0deg);
+}
+.JobcardDesign.pt-5{padding-top: 0!important;}
+.md-sticky{position: relative;top: inherit;margin-top: 25px;}
+.jobCardBox{top: 50px;}
+.section5{margin-bottom: 0;}
 }
