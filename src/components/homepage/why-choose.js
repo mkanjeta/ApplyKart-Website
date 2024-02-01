@@ -57,10 +57,10 @@ const WhyChoose = () => {
             <li className="card" id="card-1">
               <div className="card-content">
                 <div>
-                  <h2>Intro Videos</h2>
-                  <h5>Explore the stories within each present.</h5>
+                  <h2>AI-based Predictive Job/Candidate Search:</h2>
+                  <h5>Unlock your career potential with intelligent search, where jobs find you.</h5>
                   <p className="card-text">
-                  one line text will come here.
+                  Let the future guide your career path with our AI-driven search, ensuring the perfect match between jobs and candidates effortlessly.
                   </p>
 
                   <div className="d-flex slider-btn">
@@ -70,9 +70,10 @@ const WhyChoose = () => {
                   
                   </div>
                 </div>
+                
                 <figure>
                   <img
-                    src={"/assets/images/applykart_features/intro_video.svg"}
+                    src={"/assets/images/applykart_features/1.png"}
                     alt="user"
                   />
                 </figure>
@@ -83,10 +84,10 @@ const WhyChoose = () => {
             <li className="card" id="card-2">
               <div className="card-content">
                 <div>
-                  <h2>Digital Visiting Cards</h2>
-                  <h5>Embrace the significance of Digital card.</h5>
+                  <h2>Digital Visiting Cards:</h2>
+                  <h5>Make your mark in the digital realm – your career on a QR.</h5>
                   <p className="card-text">
-                  In every meeting, find the heartwarming stories.
+                  Forge a memorable digital identity – encapsulate your professional essence in a card, leaving a lasting impression in the virtual world.
                   </p>
                   <div className="d-flex slider-btn">
                     {/* <Button href="#" className="btn1">
@@ -97,7 +98,7 @@ const WhyChoose = () => {
                 </div>
                 <figure>
                   <img
-                    src={"/assets/images/applykart_features/visiting_card.svg"}
+                    src={"/assets/images/applykart_features/2.png"}
                     alt="user"
                   />
                 </figure>
@@ -107,10 +108,10 @@ const WhyChoose = () => {
             <li className="card" id="card-3">
               <div className="card-content">
                 <div>
-                  <h2>Job/Candidate Search</h2>
-                  <h5>AI-based Predictive</h5>
+                  <h2>Intro Videos:</h2>
+                  <h5>Bring your resume to life</h5>
                   <p className="card-text">
-                  one liner content for better UI.
+                  Elevate your application by adding a personal touch – showcase your skills and personality through engaging intro videos, making recruiters notice you beyond the resume.
                   </p>
                   <div className="d-flex slider-btn">
                     {/* <Button href="#" className="btn1">
@@ -121,7 +122,7 @@ const WhyChoose = () => {
                 </div>
                 <figure>
                   <img
-                    src={"/assets/images/applykart_features/ai_based.svg"}
+                    src={"/assets/images/applykart_features/3.png"}
                     alt="user"
                   />
                 </figure>
@@ -130,11 +131,11 @@ const WhyChoose = () => {
             <li className="card" id="card-4">
               <div className="card-content">
                 <div>
-                  <h2>Live Interview</h2>
-                  <h5>Get the experience within each Hiring.</h5>
+                  <h2>Live Interviews:</h2>
+                  <h5>Connect instantly, interview seamlessly</h5>
                  
                   <p className="card-text">
-                  one line text will come here.
+                  Bridge the gap between distances and time zones – experience real-time interviews from anywhere, making the hiring process more accessible and efficient.
                   </p>
                   <div className="d-flex slider-btn">
                     {/* <Button href="#" className="btn1">
@@ -145,7 +146,7 @@ const WhyChoose = () => {
                 </div>
                 <figure>
                   <img
-                    src={"/assets/images/applykart_features/interview.svg "}
+                    src={"/assets/images/applykart_features/4.png"}
                     alt="user"
                   />
                 </figure>
@@ -154,10 +155,10 @@ const WhyChoose = () => {
             <li className="card" id="card-5">
               <div className="card-content">
                 <div>
-                  <h2>Location Based</h2>
-                  <h5>Jobs/Hiring</h5>
+                  <h2>Refer-A-Job:</h2>
+                  <h5>Turn connections into opportunities with a single click.</h5>
                   <p className="card-text">
-                  one line text will come here.   
+                  Empower your network with a click – effortlessly refer and share job opportunities, turning connections into valuable career paths.
                   </p>
                   <div className="d-flex slider-btn">
                     {/* <Button href="#" className="btn1">
@@ -168,7 +169,7 @@ const WhyChoose = () => {
                 </div>
                 <figure>
                   <img
-                    src={"/assets/images/applykart_features/job_location.svg"}
+                    src={"/assets/images/applykart_features/5.png"}
                     alt="user"
                   />
                 </figure>
@@ -177,10 +178,10 @@ const WhyChoose = () => {
             <li className="card" id="card-6">
               <div className="card-content">
                 <div>
-                  <h2>Refer-A-Job</h2>
-                  <h5>Refer a job to anyone</h5>
+                  <h2>Location-based Jobs/Hiring:</h2>
+                  <h5>The perfect job right where you want it.</h5>
                   <p className="card-text">
-                  one line text will come here.
+                  Customize your job search based on location preferences, ensuring that your next career move aligns perfectly with your lifestyle and aspirations.
                   </p>
 
                   <div className="d-flex slider-btn">
@@ -192,7 +193,7 @@ const WhyChoose = () => {
                 </div>
                 <figure>
                   <img
-                    src={"/assets/images/applykart_features/refer_job.svg"}
+                    src={"/assets/images/applykart_features/6.png"}
                     alt="user"
                   />
                 </figure>

@@ -21,7 +21,7 @@ const Header = (props) => {
     if (accessToken) {
       router.push("/timeline")
     } else {
-      router.push("login")
+      router.push("/login")
     }
   };
 
