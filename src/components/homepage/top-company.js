@@ -211,7 +211,7 @@ const TopCompanies = () => {
       </div>
 
       <div className="container text-center mb-5">
-   <a href="/dashboard?jobType=ALLJOBS"><button class="btn btn-warning" type="submit">View more jobs<i class="fal fa-long-arrow-right"></i></button></a>
+   <a href="/dashboard?jobType=ALLJOBS"><button className="btn btn-warning" type="submit">View more jobs<i className="fal fa-long-arrow-right"></i></button></a>
     </div>
     </div>
   );
