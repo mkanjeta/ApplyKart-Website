@@ -8247,3 +8247,6 @@ min-height: auto;
 .jobCardBox{top: 50px;}
 .section5{margin-bottom: 0;}
 }
+@media screen and (max-width:1340px){
+  .job-title2 .form-control{background-color: #ded4ff;}
+}
