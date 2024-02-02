@@ -168,15 +168,18 @@ const UserRegister = () => {
             <div className="col-md-7">
               <div className="block_box user-register-p0">
                 <div className="user-register-bg">
-                <video  loop autoPlay muted>
+                {/* <iframe width="420" height="315" loop autoPlay muted controls
+                    src=".\assets\videos\Register.mp4?controls=0&autoplay=1&mute=1&loop=1">
+                    </iframe> */}
+                 <video  loop autoPlay muted control="0" playsinline="true">
                   <source src=".\assets\videos\Register.mp4"  type="video/mp4"/>
-                  <source src=".\assets\videos\Register.avi"  type="video/avi"/>
-                  {/* <source src="movie.ogg" type="video/ogg"> */}
+                  <source src=".\assets\videos\Register.avi" type="video/avi"/>
+                 
                 Your browser does not support the video tag.
-                </video>
+                </video> 
                   <div className="text_box">
                     <h4 className="title">
-                      Hi mate! Are you looking for your next full-time work
+                      Hi Mate! Are you looking for your next full-time work
                       opportunity or a one-time gig?
                     </h4>
                     <p className="mb-0">

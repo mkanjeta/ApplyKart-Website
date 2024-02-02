@@ -1060,7 +1060,7 @@ input[type="number"]::-webkit-inner-spin-button {
 /* .block_box_login_bg {
   background-image: url("/assets/images/auth/main_login.png");
 } */
-.block_box_login_bg video, .user-register-bg video{height: 100%;width: 100%;object-fit: fill;}
+.block_box_login_bg video, .user-register-bg video, .user-register-bg iframe{height: 100%;width: 100%;object-fit: fill;}
 
 @supports (-webkit-touch-callout: none) {
   .block_box_login_bg video, .user-register-bg video{height: 100%;width: 100%;object-fit: cover;}
