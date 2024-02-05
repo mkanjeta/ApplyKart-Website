@@ -1003,8 +1003,8 @@ input[type="number"]::-webkit-inner-spin-button {
 } */
 
 .header.style_two .btn.btn-outline-info {
-  border-color: var(--white-color);
-  color: var(--white-color);
+  border-color: var(--black-color);
+  color: var(--black-color);
 }
 
 .header.style_two .btn.btn-info {
@@ -1015,8 +1015,8 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .header.style_two .btn.btn-outline-info:hover,
 .header.style_two .btn.btn-outline-info:focus {
-  border-color: var(--white-color);
-  color: var(--white-color);
+  border-color: var(--black-color);
+  color: var(--black-color);
 }
 
 .header.style_two .btn.btn-info:hover,
@@ -3658,15 +3658,15 @@ abbr[title] {
 
 /*banner css 8th july */
 .banner-bg {
-  /* background-image: url(../../public/assets/images/bg.png),
-    linear-gradient(to right, #0315fb 0%, #c1afff 63%, #fff 102%); */
-    background-image: url(../../public/assets/images/bg.png);   
+  background-image: url(../../public/assets/images/bg.png),
+    linear-gradient(to right, #0315fb 0%, #c1afff 63%, #fff 102%);
+    /* background-image: url(../../public/assets/images/bg.png);    */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   padding-bottom: 0rem;
   margin-bottom: 92px;
-  background-color: #00113b;
+  /* background-color: #00113b; */
   height: auto;
 }
 .banner-iphone{padding-top: 40px;}
@@ -7950,7 +7950,7 @@ main.chooseJobCard {
 
 #cards .card-content {
   box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
-  background: #010F2E;
+  background: #9c91fe;
   color: #fff;
   border-radius: 2rem;
   overflow: hidden;
@@ -8216,7 +8216,7 @@ min-height: auto;
 /*new job card design css*/
 .jobCardContainer{padding-bottom: 2rem;margin-bottom: 5rem;position: relative;}
 .jobCardBox .card-content {
-  padding: 25px;
+  padding: 35px;
   border-radius: 15px;
   background: #fff;
   box-shadow: 0 0 15px 2px #C3C3c3;
@@ -8231,10 +8231,10 @@ min-height: auto;
   top: 150px;
 }
 .jobCardBox:nth-child(n+1){
-  transform: rotate(-8deg);
+  transform: rotate(-5deg);
 }
 .jobCardBox:nth-child(2n+1){
-  transform: rotate(8deg);
+  transform: rotate(5deg);
 }
 .jobCardBox .card-content figure img {
   max-width: 150px;

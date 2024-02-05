@@ -55,7 +55,7 @@ const TopCompanies = () => {
       <div className="jobCardContainer">
         <div className="container">
           <div className="row">
-            <div className="col-md-5 mx-auto">
+            <div className="col-md-7 mx-auto">
               <div className="jobCardBox">
                 <div className="card-content">
                   <figure>
