@@ -21,7 +21,7 @@ const Header = (props) => {
     if (accessToken) {
       router.push("/timeline")
     } else {
-      router.push("login")
+      router.push("/login")
     }
   };
 
@@ -62,7 +62,7 @@ const Header = (props) => {
           </div>
           {!props.hideButtons && (
             <span>
-              {router.asPath === "/" || router.asPath === "/login" ? (
+              {router.asPath === "/" || router.asPath === "/login" || router.pathname === "/jobs/[id]" ? (
                 <>
                   {router.asPath === "/login" ? null : (
                     <>
@@ -71,6 +71,7 @@ const Header = (props) => {
                           <button
                             type="button"
                             className="btn btn-outline-info me-4"
+                            style={router.pathname === "/jobs/[id]" ? ({borderColor:"#000000", color:"#000000"}) : ({})}
                           >
                             Login
                           </button>
@@ -105,7 +106,7 @@ const Header = (props) => {
                     </>
                   ) : (
                     <div className="actions">
-                      <Link href="/login" passHref>
+                      {/* <Link href="/login" passHref>
                         <button
                           type="button"
                           //onClick={loginClick}
@@ -122,7 +123,7 @@ const Header = (props) => {
                         >
                           Register
                         </button>
-                      </Link>
+                      </Link> */}
                     </div>
                   )}
                 </>

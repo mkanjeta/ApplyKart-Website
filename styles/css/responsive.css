@@ -56,7 +56,7 @@
 
   /* timeline */
   .menu-wrap .main-menu {
-    gap: 60px;
+    gap: 10px;
   }
 
   .menu-wrap .main-menu>li {
@@ -690,7 +690,7 @@
   }
 
   .section-padding .block_box {
-    padding-top: 120px;
+    padding-top: 85px;
     min-height: 500px;
   }
 

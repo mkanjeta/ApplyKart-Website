@@ -21,16 +21,16 @@ export default function TakeTour({ setActiveSlide }) {
             // console.log("Slide changed ==>>", e);
           }}
           onActiveIndexChange={(swiper) => {
-            // console.log(swiper.activeIndex);
+            console.log(swiper.activeIndex);
             setActiveSlide(swiper.activeIndex);
           }}
         >
           <SwiperSlide>
             <img src="/assets/images/take_tour_img/tour-1.png" />
           </SwiperSlide>
-          <SwiperSlide>
+          {/* <SwiperSlide>
             <img src="/assets/images/take_tour_img/tour-2.png" />
-          </SwiperSlide>
+          </SwiperSlide> */}
           <SwiperSlide>
             <img src="/assets/images/take_tour_img/tour-3.png" />
           </SwiperSlide>

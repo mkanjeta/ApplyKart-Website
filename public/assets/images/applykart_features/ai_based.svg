@@ -7,10 +7,14 @@
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
+     <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ed1c24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00aeef;stop-opacity:1" />
+    </linearGradient>
   </defs>
   <g id="Group_5991" data-name="Group 5991" transform="translate(-287.5 -1357.5)">
     <g transform="matrix(1, 0, 0, 1, 287.5, 1357.5)" filter="url(#Ellipse_1431)">
-      <circle id="Ellipse_1431-2" data-name="Ellipse 1431" cx="50" cy="50" r="50" transform="translate(37.5 35.5)" fill="#0720f4"/>
+      <circle id="Ellipse_1431-2" data-name="Ellipse 1431" cx="50" cy="50" r="50" transform="translate(37.5 35.5)" fill="url(#grad1)"/>
     </g>
     <path id="my_jobs_blue" d="M86.153,36.949a1.44,1.44,0,0,0-1.446,1.434v5.06H71.422q-.069,0-.138,0a1.44,1.44,0,0,0-1.3,1.434v7.245l18.009,4.843v-.053a1.44,1.44,0,0,1,1.434-1.446h7.2a1.44,1.44,0,0,1,1.434,1.445v.056l18.009-4.826V44.877a1.439,1.439,0,0,0-1.446-1.434H101.345v-5.06A1.44,1.44,0,0,0,99.9,36.949Zm1.435,2.88H98.464v3.614H87.588Zm-17.6,15.283v20.4a1.44,1.44,0,0,0,1.437,1.434h43.2a1.44,1.44,0,0,0,1.446-1.434V55.126L98.059,59.944V62.5a1.44,1.44,0,0,1-1.434,1.446h-7.2A1.44,1.44,0,0,1,87.993,62.5V59.944Zm20.889,3.235a1.441,1.441,0,0,1,0,1.038v1.682h4.306V59.385a1.441,1.441,0,0,1,0-1.038Z" transform="translate(282.016 1386.051)" fill="#fff"/>
   </g>

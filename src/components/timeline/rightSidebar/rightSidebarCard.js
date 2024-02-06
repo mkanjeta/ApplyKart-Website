@@ -1,6 +1,7 @@
 export const RightSidebarCard = (props) => {
+
     return (
-        <div className="rs-card">
+        <div className={props.class ? props.class : "rs-card"}>
             <div className="rs-head">
                 <h4 className="rs-title">{props.title}</h4>
                 {props.viewAll &&

@@ -137,7 +137,7 @@ const ProfileCard = (props) => {
 
     return (
         <>
-            <div className="profile-card">
+            <div className="profile-card mdx-sticky">
                 <div className="pc-head">
                     <div className="p-user-name">
                         <h4 className="text-capitalize">{userName}</h4>

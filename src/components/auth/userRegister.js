@@ -82,9 +82,9 @@ const UserRegister = () => {
 
   const handleFormSubmit = (values) => {
 
-    if (!values?.phone && !values?.landline) {
+    if (!values?.phone) {
       Swal.fire({
-        title: 'Enter either phone or landline number',
+        title: 'Enter phone number',
         icon: 'error'
       })
       return;
@@ -160,17 +160,26 @@ const UserRegister = () => {
         <title>ApplyKart</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Header styleClass="" logoUrl="" />
-      <section className="section-padding">
+      <Header styleClass="register" logoUrl="" />
+      <section className="section-padding overflow-hidden">
         <div className="register-users">
           <Row className="">
             {loading && <Loader />}
             <div className="col-md-7">
               <div className="block_box user-register-p0">
                 <div className="user-register-bg">
+                {/* <iframe width="420" height="315" loop autoPlay muted controls
+                    src=".\assets\videos\Register.mp4?controls=0&autoplay=1&mute=1&loop=1">
+                    </iframe> */}
+                 <video  loop autoPlay muted control="0" playsinline="true">
+                  <source src=".\assets\videos\Register.mp4"  type="video/mp4"/>
+                  <source src=".\assets\videos\Register.avi" type="video/avi"/>
+                 
+                Your browser does not support the video tag.
+                </video> 
                   <div className="text_box">
                     <h4 className="title">
-                      Hi mate! Are you looking for your next full-time work
+                      Hi Mate! Are you looking for your next full-time work
                       opportunity or a one-time gig?
                     </h4>
                     <p className="mb-0">
@@ -238,9 +247,9 @@ const UserRegister = () => {
                               name: "phone",
                             }}
                           />
-                          <span style={{ color: "red" }}>
+                          {/* <span style={{ color: "red" }}>
                             <sup>*</sup>Don't Enter 0 Before Your Number
-                          </span>
+                          </span> */}
                           <ErrorMessage component="div" className="form-text error-message" name="phone" />
                           {/* {formik.errors.phone && formik.touched.phone ? (
                             <div style={{ color: "tomato" }}>
@@ -272,7 +281,7 @@ const UserRegister = () => {
                               name: "phone",
                             }}
                           /> */}
-                          <div className=" react-tel-input ">
+                          {/* <div className=" react-tel-input ">
                             <input
                               id="reg-input"
                               type="number"
@@ -287,7 +296,7 @@ const UserRegister = () => {
                               }}
                             />
                             <ErrorMessage component="div" className="form-text error-message" name="landline" />
-                          </div>
+                          </div> */}
                         </div>
                         <div className="form-group password_icon">
                           <input

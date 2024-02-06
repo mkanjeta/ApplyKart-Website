@@ -258,6 +258,8 @@ export const PostItem = (props) => {
                                             background: '#fff',
                                             borderRadius: '8px',
                                             padding: '16px',
+                                            margin:' 0 auto',
+                                            textAlign: 'center',
                                         }}
                                     >
                                         <span
@@ -268,6 +270,15 @@ export const PostItem = (props) => {
                                                 cursor: 'pointer',
                                                 fontSize: '20px',
                                                 color: '#666',
+                                                zIndex: '99',
+                                                background: '#FFF',
+                                                verticalAlign: 'middle',
+                                                margin: '0',
+                                                padding: '2px 7px 0',
+                                                borderRadius: '50%',
+                                                height: '30px',
+                                                width: '30px',
+                                                boxShadow: '0 0 3px 5px #c9c9c9',
                                             }}
                                             onClick={closeImageModal}
                                         >
@@ -280,7 +291,11 @@ export const PostItem = (props) => {
                                                     width: '100%',
                                                     height: 'auto',
                                                     // You can adjust the zoom level here
-                                                    transform: 'scale(1.2)', // Example: Zoom in by 20%
+                                                    // Example: Zoom in by 20%
+                                                    transform: 'none',
+                                                    maxWidth: '80%',
+                                                    margin: '0 auto',
+                                                    textAlign: 'center',
                                                 }}
                                                 alt=""
                                             />

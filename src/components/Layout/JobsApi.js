@@ -2,6 +2,8 @@ import React, { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Sidebar from "components/shared/sidebar";
 import { Dropdown } from "react-bootstrap";
+import Header from "components/shared/header";
+import TimelineHeader from "components/shared/timelineHeader";
 // For map
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
@@ -23,6 +25,8 @@ const JobsApi = ({ apps }) => {
   const [latLong, setLatLong] = useState(null);
   const [pageNo, setPageNo] = useState(parseInt(router.query.page) || 1);
   const [data, setData] = useState(() => []);
+  const [seekerId, setSeekerId] = useState("");
+  const [accessToken, setaccessToken] = useState("");
 
   const handleJobDetail = (id) => {
     dispatch(particularJobDetail(id));
@@ -84,6 +88,13 @@ const JobsApi = ({ apps }) => {
 
   useEffect(() => {
     setData(apps[0]?.jobs ? apps[0]?.jobs : []);
+
+    if (typeof window !== "undefined") {
+      const applyKart = localStorage.getItem("applyKart");
+      const data = JSON.parse(applyKart);
+      setaccessToken(data?.encryptedToken);
+      setSeekerId(data?.userId);
+    }
   }, [apps[0]]);
 
   return (
@@ -118,13 +129,25 @@ const JobsApi = ({ apps }) => {
           </Dropdown>
         </ul>
       </div>
+
+      {seekerId || accessToken ? (
+        <TimelineHeader />
+      ):(
+        <Header
+        styleClass="style_two p-0"
+        logoUrl="assets/images/black-logo.svg"
+      />
+      )}
       <div className="right_side dashboard" id="right_side">
         <div className="row">
+        {locationdata? (
           <div className="col-12">
             <div className="dashboard_title_bar mb-0">
-              <h1 className="title my-3">Job In {locationdata?.location}</h1>
+              <p className="title my-3">Job In {locationdata?.location}</p>
             </div>
           </div>
+        ):(<></>)}
+          
           <div className="col-xl-12">
             <div className="dashboard_bar style_two job_box d-inline-block w-100 position-relative">
               <div className="desc_area ">
@@ -141,7 +164,8 @@ const JobsApi = ({ apps }) => {
           </div>
         </div>
 
-        <div className="row">
+        {locationdata ? (
+          <div className="row">
           <div className="col-xl-12">
             <div className="dashboard_title_bar">
               <h3 className="title">Jobs
@@ -286,6 +310,10 @@ const JobsApi = ({ apps }) => {
             />
           </div>
         </div>
+        ):(
+          <></>
+        )}
+        
       </div>
     </main>
   );

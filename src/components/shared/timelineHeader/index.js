@@ -133,13 +133,17 @@ const TimelineHeader = () => {
                     <button type='button' className='notification' onClick={handleToggleNotificationBar}><i className='icon-bell' /> <span /></button>
                   </div>
                   <Dropdown>
-                    <Dropdown.Toggle as="div" id="dropdown-basic" className='d-flex'>
-                      <div className='profile-img'>
+                    <Dropdown.Toggle as="div" id="dropdown-basic" >
+                    <i className="fa fa-bars" style={{fontSize:"20px"}}></i>
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu as="ul" className='w-100 mt-2 custom-submenu' style={{minWidth: "12rem"}}>
+                    <li><Dropdown.Item>
+                      <div className="row">
+                      <div className='profile-img col-4 p-1'>
                         <img src={profile ? profile.trim() : "/assets/images/profile.jpg"} alt={name || '-'} className='image-fit rounded-circle image' onError={({ currentTarget }) => { currentTarget.onerror = null; currentTarget.src = "/assets/images/profile.jpg"; }} />
                       </div>
-                      <span className='profile-name text-capitalize'>{name}</span>
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu as="ul" className='w-100 mt-2 custom-submenu'>
+                      <span className='text-capitalize col-8 p-0'  style={{whiteSpace:"break-spaces"}}>{name}</span>
+                      </div></Dropdown.Item></li>
                       <li><Dropdown.Item href="/timeline/my-profile">My Profile</Dropdown.Item></li>
                       <li><Dropdown.Item href="/profile/my-vcard">My V-Card</Dropdown.Item></li>
                       <li><Dropdown.Item href="/profile/calendar">Calendar</Dropdown.Item></li>
