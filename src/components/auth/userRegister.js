@@ -171,7 +171,7 @@ const UserRegister = () => {
                 {/* <iframe width="420" height="315" loop autoPlay muted controls
                     src=".\assets\videos\Register.mp4?controls=0&autoplay=1&mute=1&loop=1">
                     </iframe> */}
-                 <video  loop autoPlay muted control="0" playsinline="true">
+                 <video  loop autoPlay muted controls="0" playsInline="true">
                   <source src=".\assets\videos\Register.mp4"  type="video/mp4"/>
                   <source src=".\assets\videos\Register.avi" type="video/avi"/>
                  
