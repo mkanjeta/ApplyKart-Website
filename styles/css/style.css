@@ -7930,15 +7930,29 @@ main.chooseJobCard {
 
 #card-2 {
   --index: 2;
+  top: 100px!important;
 }
 
 #card-3 {
   --index: 3;
+  top: 120px!important;
 }
 
 #card-4 {
   --index: 4;
+  top: 140px!important;
 }
+
+#card-5 {
+  --index: 5;
+  top: 160px!important;
+}
+
+#card-6 {
+  --index: 6;
+  top: 180px!important;
+}
+
 
 #cards .card {
   position: sticky;
@@ -7946,11 +7960,13 @@ main.chooseJobCard {
   padding-top: calc(var(--index) * var(--card-top-offset));
   border-radius: 2rem;
   margin-bottom: 30px;
+  background: transparent;
+  box-shadow: none;
 }
 
 #cards .card-content {
   box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
-  background: #9c91fe;
+  background: #0024d7;
   color: #fff;
   border-radius: 2rem;
   overflow: hidden;
@@ -7962,13 +7978,43 @@ main.chooseJobCard {
   padding: 4.4em;
   max-height: 75vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   /* max-height: 100%; */
+}
+#cards li:nth-child(2) .card-content {
+  background:#102DBC;
+  margin: 0 -10px;
+}
+#cards li:nth-child(3) .card-content {
+  background: #280D82;
+  margin: 0 -20px;
+}
+#cards li:nth-child(4) .card-content {
+  background: #211268;
+  box-shadow: none;
+  margin: 0 -30px;
+}
+#cards li:nth-child(5) .card-content {
+  background: #c3b2ff;
+  color: #000!important;
+  box-shadow: none;
+  margin: 0 -40px;
+}
+#cards li:nth-child(6) .card-content {
+  background: #dad0ff;
+  color: #000;
+  box-shadow: none;
+  margin: 0 -50px;
 }
 #cards .card-content h2, #cards .card-content h5 {
   color: #fff;
 }
+#cards .card-content h2{
+  font-size: 52px;
+  margin-bottom: 25px;
+}
+#cards li:nth-child(6) .card-content h2,#cards li:nth-child(6) .card-content h5, #cards li:nth-child(5) .card-content h2,#cards li:nth-child(5) .card-content h5{color: #000;}
 #cards .card-content > div {
   grid-area: text;
   place-self: center;
@@ -7978,6 +8024,8 @@ main.chooseJobCard {
 #cards .card-content > figure {
   height: 100%;
   position: relative;
+  flex: 0 40%;
+   margin-left: 100px;
 }
 
 /* #cards .card-content figure:after {
@@ -8087,15 +8135,17 @@ p {
     height: auto;
     margin: 0 auto;
     text-align: center;
+    margin-top: 30px;
 }
 /* #cards .card-content figure:after{left: 0;} */
   #cards .card-content{
     display: block;
-    max-height: 90vh;
-    padding: 1.4em;
+    max-height: 100%;
+    padding: 2rem 1.4em;
   }
   #cards .card-content h2{
     font-size: 1.5rem;
+    margin-bottom: 15px;
   }
   #cards .card-content h5{font-size: 20px;}
   .section1{
@@ -8214,12 +8264,14 @@ min-height: auto;
 }
 
 /*new job card design css*/
+.section2.bg-gradient{background: linear-gradient(271deg, #4bdeff 1%, #9b00e4 100%)!important;}
+.bg-gradient .section2-heading{color: #FFF;}
 .jobCardContainer{padding-bottom: 2rem;margin-bottom: 5rem;position: relative;}
 .jobCardBox .card-content {
-  padding: 35px;
+  padding: 25px;
   border-radius: 15px;
   background: #fff;
-  box-shadow: 0 0 15px 2px #C3C3c3;
+  /* box-shadow: 0 0 15px 2px #C3C3c3; */
   display: grid;
   grid-template-columns: 2fr auto;
 }

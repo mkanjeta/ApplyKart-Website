@@ -57,10 +57,10 @@ const WhyChoose = () => {
             <li className="card" id="card-1">
               <div className="card-content">
                 <div>
-                  <h2>AI-based Predictive Job/Candidate Search:</h2>
-                  <h5>Unlock your career potential with intelligent search, where jobs find you.</h5>
+                  <h2>AI Predictive Search</h2>
+                  
                   <p className="card-text">
-                  Let the future guide your career path with our AI-driven search, ensuring the perfect match between jobs and candidates effortlessly.
+                  Unlock your career potential with intelligent search, where jobs find you.
                   </p>
 
                   <div className="d-flex slider-btn">
@@ -69,6 +69,17 @@ const WhyChoose = () => {
                 </Button> */}
                   
                   </div>
+                   <div className="search-job-btn">
+                  <button className="btn btn-warning search-btn">
+                    Get Started
+                    <span className="ps-2 btn-right-arrow">
+                      <img
+                        src={"/assets/images/right-arrow.svg"}
+                        alt="right-arrow"
+                      />
+                    </span>
+                  </button>
+                </div>
                 </div>
                 
                 <figure>
@@ -80,14 +91,12 @@ const WhyChoose = () => {
               </div>
             </li>
 
-
             <li className="card" id="card-2">
               <div className="card-content">
                 <div>
-                  <h2>Digital Visiting Cards:</h2>
-                  <h5>Make your mark in the digital realm – your career on a QR.</h5>
+                  <h2>Digital Visiting Cards</h2>
                   <p className="card-text">
-                  Forge a memorable digital identity – encapsulate your professional essence in a card, leaving a lasting impression in the virtual world.
+                  Make your mark in the digital realm – your career on a QR.
                   </p>
                   <div className="d-flex slider-btn">
                     {/* <Button href="#" className="btn1">
@@ -95,6 +104,17 @@ const WhyChoose = () => {
                 </Button> */}
                   
                   </div>
+                   <div className="search-job-btn">
+                  <button className="btn btn-warning search-btn">
+                    Get Started
+                    <span className="ps-2 btn-right-arrow">
+                      <img
+                        src={"/assets/images/right-arrow.svg"}
+                        alt="right-arrow"
+                      />
+                    </span>
+                  </button>
+                </div>
                 </div>
                 <figure>
                   <img
@@ -104,38 +124,13 @@ const WhyChoose = () => {
                 </figure>
               </div>
             </li>
-
+           
             <li className="card" id="card-3">
               <div className="card-content">
                 <div>
-                  <h2>Intro Videos:</h2>
-                  <h5>Bring your resume to life</h5>
+                  <h2>Live Interviews</h2>
                   <p className="card-text">
-                  Elevate your application by adding a personal touch – showcase your skills and personality through engaging intro videos, making recruiters notice you beyond the resume.
-                  </p>
-                  <div className="d-flex slider-btn">
-                    {/* <Button href="#" className="btn1">
-                  $2K-$3K
-                </Button> */}
-                   
-                  </div>
-                </div>
-                <figure>
-                  <img
-                    src={"/assets/images/applykart_features/3.png"}
-                    alt="user"
-                  />
-                </figure>
-              </div>
-            </li>
-            <li className="card" id="card-4">
-              <div className="card-content">
-                <div>
-                  <h2>Live Interviews:</h2>
-                  <h5>Connect instantly, interview seamlessly</h5>
-                 
-                  <p className="card-text">
-                  Bridge the gap between distances and time zones – experience real-time interviews from anywhere, making the hiring process more accessible and efficient.
+                  Connect instantly, interview seamlessly
                   </p>
                   <div className="d-flex slider-btn">
                     {/* <Button href="#" className="btn1">
@@ -143,6 +138,17 @@ const WhyChoose = () => {
                 </Button> */}
                   
                   </div>
+                   <div className="search-job-btn">
+                  <button className="btn btn-warning search-btn">
+                    Get Started
+                    <span className="ps-2 btn-right-arrow">
+                      <img
+                        src={"/assets/images/right-arrow.svg"}
+                        alt="right-arrow"
+                      />
+                    </span>
+                  </button>
+                </div>
                 </div>
                 <figure>
                   <img
@@ -152,13 +158,12 @@ const WhyChoose = () => {
                 </figure>
               </div>
             </li>
-            <li className="card" id="card-5">
+            <li className="card" id="card-4">
               <div className="card-content">
                 <div>
-                  <h2>Refer-A-Job:</h2>
-                  <h5>Turn connections into opportunities with a single click.</h5>
+                  <h2>Refer-A-Job</h2>
                   <p className="card-text">
-                  Empower your network with a click – effortlessly refer and share job opportunities, turning connections into valuable career paths.
+                  Turn connections into opportunities with a single click.
                   </p>
                   <div className="d-flex slider-btn">
                     {/* <Button href="#" className="btn1">
@@ -166,6 +171,17 @@ const WhyChoose = () => {
                 </Button> */}
                    
                   </div>
+                   <div className="search-job-btn">
+                  <button className="btn btn-warning search-btn">
+                    Get Started
+                    <span className="ps-2 btn-right-arrow">
+                      <img
+                        src={"/assets/images/right-arrow.svg"}
+                        alt="right-arrow"
+                      />
+                    </span>
+                  </button>
+                </div>
                 </div>
                 <figure>
                   <img
@@ -175,30 +191,7 @@ const WhyChoose = () => {
                 </figure>
               </div>
             </li>
-            <li className="card" id="card-6">
-              <div className="card-content">
-                <div>
-                  <h2>Location-based Jobs/Hiring:</h2>
-                  <h5>The perfect job right where you want it.</h5>
-                  <p className="card-text">
-                  Customize your job search based on location preferences, ensuring that your next career move aligns perfectly with your lifestyle and aspirations.
-                  </p>
-
-                  <div className="d-flex slider-btn">
-                    {/* <Button href="#" className="btn1">
-                  $2K-$3K
-                </Button> */}
-                  
-                  </div>
-                </div>
-                <figure>
-                  <img
-                    src={"/assets/images/applykart_features/6.png"}
-                    alt="user"
-                  />
-                </figure>
-              </div>
-            </li>
+            
           </ul>
         </main>
       </div>
@@ -207,7 +200,7 @@ const WhyChoose = () => {
 
          {/* reeshabh code ends */}
         </div>
-        <div className="section-company">
+        {/* <div className="section-company">
           <div className="brand-icon-img">
             <img src="/assets/images/company-icon.png" alt="brand-icon" />
           </div>
@@ -248,18 +241,10 @@ const WhyChoose = () => {
                   </button>
                 </div>
               </div>
-              {/* <div
-              className="tp-right"
-              data-aos="fade-left"
-              data-aos-offset="200"
-              data-aos-easing="ease"
-              data-aos-duration="600"
-            >
-              <img src={"/assets/images/brands-logo.png"} alt="brands" />
-            </div> */}
+             
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

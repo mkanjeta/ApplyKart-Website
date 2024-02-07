@@ -19,7 +19,7 @@ const TopCompanies = () => {
   }, []);
     
   return (
-    <div className="section2">
+    <div className="section2 bg-gradient py-5">
       <div className="container md-sticky">
         <h1
           className="section2-heading text-cente r"
