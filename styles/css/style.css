@@ -1050,16 +1050,17 @@ input[type="number"]::-webkit-inner-spin-button {
 .block_box_otp_register_bg,
 .forgot-password-bg,
 .reset-password-bg,
-.user-register-bg {
+.user-register-bg,
+.block_box_basic_bg {
   height: 100%;
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
 }
 
-/* .block_box_login_bg {
+.block_box_basic_bg {
   background-image: url("/assets/images/auth/main_login.png");
-} */
+}
 .block_box_login_bg video, .user-register-bg video, .user-register-bg iframe{height: 100%;width: 100%;object-fit: fill;}
 
 @supports (-webkit-touch-callout: none) {

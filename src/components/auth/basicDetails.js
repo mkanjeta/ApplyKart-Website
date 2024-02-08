@@ -94,7 +94,7 @@ const BasicDetails = () => {
           {loading && <Loader />}
           <div className=" col-md-7">
             <div className="block_box block-box-container">
-              <div className="block_box_login_bg">
+              <div className="block_box_basic_bg">
                 <div className="text_box">
                   <h4 className="title">
                     Are you a <b>business owner</b> or a <b>recruiter</b>{" "}
