@@ -3744,7 +3744,8 @@ abbr[title] {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
-  margin-left: 32px;
+  margin-left: 10px;
+  margin-right: 12px;
   position: relative;
 }
 
@@ -3794,9 +3795,9 @@ abbr[title] {
   outline: 0;
 }
 
-.job-title2 .form-control {
-  padding: 10px 10px 10px 40px;
-  background: transparent;
+ .job-title2 .form-control {
+ padding: 10px 10px 10px 40px;
+   /* background: transparent;  */
 }
 
 .job-title2 button:focus {
