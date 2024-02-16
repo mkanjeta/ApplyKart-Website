@@ -632,7 +632,10 @@ const RequirementDetails = ({ handleSwitchComp, edit }) => {
                       ) : null}
                     </div>
                     <div className="form-group">
-                      <label className="label">Description</label>
+                      <label className="label d-flex">
+                        Description
+                        <svg width="7" height="7" viewBox="0 0 100 100" style={{enableBackground:"new 0 0 512 512"}} xmlSpace="preserve"><path fill="#f32121" d="m37.926 54.672-29.155-8.04 5.812-16.886L43.114 41.45 40.879 10h19.137l-2.323 32.076L85.415 30.64l5.814 17.065-29.514 8.041 19.587 23.701L65.83 90 49.464 63.706l-16.456 25.4-15.473-10.107z" data-original="#2196f3"/></svg>
+                      </label>
                       <textarea
                         id="text"
                         value={description}

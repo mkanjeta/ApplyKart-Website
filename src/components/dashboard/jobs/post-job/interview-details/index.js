@@ -133,8 +133,9 @@ const Interviewinformation = ({ handleSwitchComp, edit }) => {
                     <div className="row p-3">
                       <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div className="form-group">
-                          <label htmlFor="companyname" className="label">
+                          <label htmlFor="companyname" className="label d-flex">
                             Company Name
+                            <svg width="7" height="7" viewBox="0 0 100 100" style={{enableBackground:"new 0 0 512 512"}} xmlSpace="preserve"><path fill="#f32121" d="m37.926 54.672-29.155-8.04 5.812-16.886L43.114 41.45 40.879 10h19.137l-2.323 32.076L85.415 30.64l5.814 17.065-29.514 8.041 19.587 23.701L65.83 90 49.464 63.706l-16.456 25.4-15.473-10.107z" data-original="#2196f3"/></svg>
                           </label>
                           <input
                             type="text"
@@ -156,8 +157,9 @@ const Interviewinformation = ({ handleSwitchComp, edit }) => {
                           ) : null}
                         </div>
                         <div className="form-group">
-                          <label htmlFor="jobposter" className="label">
+                          <label htmlFor="jobposter" className="label d-flex">
                             Name Of Job Poster
+                            <svg width="7" height="7" viewBox="0 0 100 100" style={{enableBackground:"new 0 0 512 512"}} xmlSpace="preserve"><path fill="#f32121" d="m37.926 54.672-29.155-8.04 5.812-16.886L43.114 41.45 40.879 10h19.137l-2.323 32.076L85.415 30.64l5.814 17.065-29.514 8.041 19.587 23.701L65.83 90 49.464 63.706l-16.456 25.4-15.473-10.107z" data-original="#2196f3"/></svg>
                           </label>
                           <input
                             type="text"
@@ -179,8 +181,9 @@ const Interviewinformation = ({ handleSwitchComp, edit }) => {
                           ) : null}
                         </div>
                         <div className="form-group">
-                          <label htmlFor="contactdata" className="label">
+                          <label htmlFor="contactdata" className="label d-flex">
                             Contact Number
+                            <svg width="7" height="7" viewBox="0 0 100 100" style={{enableBackground:"new 0 0 512 512"}} xmlSpace="preserve"><path fill="#f32121" d="m37.926 54.672-29.155-8.04 5.812-16.886L43.114 41.45 40.879 10h19.137l-2.323 32.076L85.415 30.64l5.814 17.065-29.514 8.041 19.587 23.701L65.83 90 49.464 63.706l-16.456 25.4-15.473-10.107z" data-original="#2196f3"/></svg>
                           </label>
                           <PhoneInput
                             country={"au"}
@@ -200,8 +203,9 @@ const Interviewinformation = ({ handleSwitchComp, edit }) => {
                           ) : null}
                         </div>
                         <div className="form-group">
-                          <label htmlFor="email" className="label">
+                          <label htmlFor="email" className="label d-flex">
                             Email Address
+                            <svg width="7" height="7" viewBox="0 0 100 100" style={{enableBackground:"new 0 0 512 512"}} xmlSpace="preserve"><path fill="#f32121" d="m37.926 54.672-29.155-8.04 5.812-16.886L43.114 41.45 40.879 10h19.137l-2.323 32.076L85.415 30.64l5.814 17.065-29.514 8.041 19.587 23.701L65.83 90 49.464 63.706l-16.456 25.4-15.473-10.107z" data-original="#2196f3"/></svg>
                           </label>
                           <input
                             type="email"

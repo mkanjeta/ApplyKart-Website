@@ -154,6 +154,16 @@ const BasicDetails = ({ handleSwitchComp, data, edit }) => {
       });
       return;
     }
+    
+    if (!values.jobType.length) {
+      Swal.fire({
+        icon: "error",
+        title: "Select Job Type",
+      });
+      return;
+    }
+    
+
     setFormData((prev) => {
       return {
         ...prev,
@@ -310,8 +320,9 @@ const BasicDetails = ({ handleSwitchComp, data, edit }) => {
                     <div className="row">
                       <div className="col-sm-12">
                         <div className="form-group">
-                          <label htmlFor="jobTitle" className="label">
+                          <label htmlFor="jobTitle" className="label d-flex">
                             Job Title
+                            <svg width="7" height="7" viewBox="0 0 100 100" style={{enableBackground:"new 0 0 512 512"}} xmlSpace="preserve"><path fill="#f32121" d="m37.926 54.672-29.155-8.04 5.812-16.886L43.114 41.45 40.879 10h19.137l-2.323 32.076L85.415 30.64l5.814 17.065-29.514 8.041 19.587 23.701L65.83 90 49.464 63.706l-16.456 25.4-15.473-10.107z" data-original="#2196f3"/></svg>
                           </label>
                           <input
                             type="text"
@@ -321,6 +332,9 @@ const BasicDetails = ({ handleSwitchComp, data, edit }) => {
                             placeholder="Job Title"
                             value={values?.jobtitle}
                             onChange={(e) => {
+                              if(!/^[a-zA-Z0-9()+\-%_#@\$%?:]*$/.test(e.target.value)){
+                                return false;
+                              };
                               setFieldValue("jobtitle", e.target.value);
                             }}
                             onBlur={handleBlur}
@@ -333,8 +347,9 @@ const BasicDetails = ({ handleSwitchComp, data, edit }) => {
                           ) : null}
                         </div>
                         <div className="form-group">
-                          <label htmlFor="jobRole" className="label">
+                          <label htmlFor="jobRole" className="label d-flex">
                             Job Category
+                            <svg width="7" height="7" viewBox="0 0 100 100" style={{enableBackground:"new 0 0 512 512"}} xmlSpace="preserve"><path fill="#f32121" d="m37.926 54.672-29.155-8.04 5.812-16.886L43.114 41.45 40.879 10h19.137l-2.323 32.076L85.415 30.64l5.814 17.065-29.514 8.041 19.587 23.701L65.83 90 49.464 63.706l-16.456 25.4-15.473-10.107z" data-original="#2196f3"/></svg>
                           </label>
 
                           <input
@@ -344,6 +359,9 @@ const BasicDetails = ({ handleSwitchComp, data, edit }) => {
                             value={values?.jobRole}
                             placeholder="Job Category"
                             onChange={(e) => {
+                              if(!/^[a-zA-Z0-9()]*$/.test(e.target.value)){
+                                return false;
+                              };
                               setFieldValue("jobRole", e.target.value);
                             }}
                             onBlur={handleBlur}
@@ -435,7 +453,7 @@ const BasicDetails = ({ handleSwitchComp, data, edit }) => {
 
                         <div className="form-group">
                           <label htmlFor="language" className="label">
-                            Language Preferences
+                            Language Preferences <small>(Optional)</small>
                           </label>
 
                           <Select
@@ -497,8 +515,9 @@ const BasicDetails = ({ handleSwitchComp, data, edit }) => {
 
                         <div className="form-group">
                           {/* {console.log(errors)} */}
-                          <label htmlFor="language" className="label">
-                            Job Type <small>(Category)</small>
+                          <label htmlFor="language" className="label d-flex">
+                            Job Category
+                            <svg width="7" height="7" viewBox="0 0 100 100" style={{enableBackground:"new 0 0 512 512"}} xmlSpace="preserve"><path fill="#f32121" d="m37.926 54.672-29.155-8.04 5.812-16.886L43.114 41.45 40.879 10h19.137l-2.323 32.076L85.415 30.64l5.814 17.065-29.514 8.041 19.587 23.701L65.83 90 49.464 63.706l-16.456 25.4-15.473-10.107z" data-original="#2196f3"/></svg>
                           </label>
 
                           <Select
@@ -642,7 +661,7 @@ const BasicDetails = ({ handleSwitchComp, data, edit }) => {
                         </div>
 
                         <div className="form-group row radio-forms">
-                          <label className="label">Gender</label>
+                          <label className="label">Gender <small>(Optional)</small></label>
                           <div className="row image_radio default">
                             <div className="col-md-4">
                               <div className="form-check">
@@ -786,7 +805,10 @@ const BasicDetails = ({ handleSwitchComp, data, edit }) => {
                         <div className="form-group row">
                           <label className="label">Salary offered (in {`${localStorageData?.countryCode == 61 ? '$' : '₹'}`})</label>
                           <div className="col-md-4">
-                            <label htmlFor="minsalary">Minimum</label>
+                            <label htmlFor="minsalary" className="d-flex">
+                              Minimum
+                              <svg width="7" height="7" viewBox="0 0 100 100" style={{enableBackground:"new 0 0 512 512"}} xmlSpace="preserve"><path fill="#f32121" d="m37.926 54.672-29.155-8.04 5.812-16.886L43.114 41.45 40.879 10h19.137l-2.323 32.076L85.415 30.64l5.814 17.065-29.514 8.041 19.587 23.701L65.83 90 49.464 63.706l-16.456 25.4-15.473-10.107z" data-original="#2196f3"/></svg>
+                            </label>
                             <input
                               type="number"
                               className="form-control"
@@ -807,7 +829,10 @@ const BasicDetails = ({ handleSwitchComp, data, edit }) => {
                             ) : null}
                           </div>
                           <div className="col-md-4">
-                            <label htmlFor="maxsalary">Maximum</label>
+                            <label htmlFor="maxsalary" className="d-flex">
+                              Maximum
+                              <svg width="7" height="7" viewBox="0 0 100 100" style={{enableBackground:"new 0 0 512 512"}} xmlSpace="preserve"><path fill="#f32121" d="m37.926 54.672-29.155-8.04 5.812-16.886L43.114 41.45 40.879 10h19.137l-2.323 32.076L85.415 30.64l5.814 17.065-29.514 8.041 19.587 23.701L65.83 90 49.464 63.706l-16.456 25.4-15.473-10.107z" data-original="#2196f3"/></svg>
+                            </label>
                             <input
                               type="number"
                               className="form-control"

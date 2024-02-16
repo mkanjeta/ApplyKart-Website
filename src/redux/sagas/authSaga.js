@@ -239,10 +239,10 @@ function* handleLoggedIn(action) {
           isCompleted: 0,
         },
       });
-      Swal.fire({
-        icon: "success",
-        text: "Logged in successfully",
-      });
+      // Swal.fire({
+      //   icon: "success",
+      //   text: "Logged in successfully",
+      // });
     } else {
       yield put({
         type: AUTH_LOGGEDIN_FAILED,
@@ -301,10 +301,10 @@ function* handleSocialLoggedIn(action) {
           entity: data,
         },
       });
-      Swal.fire({
-        icon: "success",
-        text: "Login Successful",
-      });
+      // Swal.fire({
+      //   icon: "success",
+      //   text: "Login Successful",
+      // });
     } else {
       yield put({
         type: SOCIAL_AUTH_LOGGEDIN_FAILED,
