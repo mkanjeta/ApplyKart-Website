@@ -14,7 +14,8 @@ import { getLanguagelist } from "redux/actions/workActions";
 import { toggleHamburger } from "helper/helper";
 import { getJobCategory } from "redux/actions/categoryActions";
 import { editAJob } from "redux/actions/jobBrowse";
-
+import Slider from 'react-rangeslider'
+import 'react-rangeslider/lib/index.css'
 import Swal from "sweetalert2";
 import { min } from "lodash";
 
@@ -83,18 +84,17 @@ const BasicDetails = ({ handleSwitchComp, data, edit }) => {
   // console.log("@@@formData", formData);
   const [base, setBase] = useState(() => "");
 
-  const experienceList = [
-    { id: 1, name: "1 year" },
-    { id: 2, name: "2 year" },
-    { id: 3, name: "3 year" },
-    { id: 4, name: "4 year" },
-    { id: 5, name: "5 year" },
-    { id: 6, name: "6 year" },
-    { id: 7, name: "7 year" },
-    { id: 8, name: "8 year" },
-    { id: 9, name: "9 year" },
-    { id: 10, name: "10 year" },
-  ];
+  const experienceList ={ 
+     1 : "1 year",
+     2 : "2 year",
+     3 : "3 year",
+     4 : "4 year",
+     5 : "5 year",
+     6 : "6 year",
+     7 : "7 year",
+     8 : "8 year",
+     9 : "9 year",
+     10 : "10 year" };
 
   const createOptions = educationListData?.map((el) => {
     return {
@@ -631,26 +631,19 @@ const BasicDetails = ({ handleSwitchComp, data, edit }) => {
                           </div>
 
                           {values.experience == "experienced" && (
-                            <select
-                              className="form-control"
-                              name="experiences"
-                              id="experiences"
-                              value={values?.experiences}
-                              placeholder="Experience"
-                              onChange={(e) => {
-                                setFieldValue("experiences", e.target.value);
-                              }}
-                              onBlur={handleBlur}
-                            >
-                              <option key={'item.key'} value={''}>
-                                {'Experience'}
-                              </option>
-                              {experienceList.map((item) => (
-                                <option key={item.key} value={item.id}>
-                                  {item.name}
-                                </option>
-                              ))}
-                            </select>
+                              <div className='slider-horizontal px-md-5 px-4'>
+                                <Slider
+                                  min={1}
+                                  max={10}
+                                  step={1}
+                                  value={values.experiences}
+                                  onChange={(e) => {
+                                    setFieldValue("experiences", e);
+                                  }}
+                                  labels={experienceList}
+                                  orientation='horizontal'
+                                />
+                              </div>
                           )}
                           {errors.experience &&
                             values.experience == "experienced" ? (

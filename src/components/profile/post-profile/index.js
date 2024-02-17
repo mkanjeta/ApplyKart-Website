@@ -427,37 +427,38 @@ const JobPosterProfileBox = () => {
 
     // console.log("docType ==>>", docType)
 
-    let complete = false;
-    if (countryCode == 61) {
-      if (docType == "abn" && numABN && ABNImage) {
-        complete = true;
-      } else if (docType == "acn" && numACN && ACNImage) {
-        complete = true;
-      } else if (docType == "dl" && front && back) {
-        complete = true;
-      } else if (docType == "medicard" && medico) {
-        complete == true;
-      }
-    } else if(countryCode == 91) {
-      if(docType == "gstin" && GSTImage) {
-        complete = true;
-      }
-    }
-    // console.log("complete ==>>", complete)
-    // console.log("modes type ==>>", modes?.type)
-    if (complete && (modes?.type == 1 || modes?.type == 2)) {
-      Swal.fire({
-        title: "Please save the changes",
-        icon: "error"
-      });
-    } else if(complete && modes?.type == "") {
-      router.push('/dashboard?jobType=ALLJOBS')
-    }else {
-      Swal.fire({
-        title: "At least one document is Required",
-        icon: "error"
-      });
-    }
+    // let complete = false;
+    // if (countryCode == 61) {
+    //   if (docType == "abn" && numABN && ABNImage) {
+    //     complete = true;
+    //   } else if (docType == "acn" && numACN && ACNImage) {
+    //     complete = true;
+    //   } else if (docType == "dl" && front && back) {
+    //     complete = true;
+    //   } else if (docType == "medicard" && medico) {
+    //     complete == true;
+    //   }
+    // } else if(countryCode == 91) {
+    //   if(docType == "gstin" && GSTImage) {
+    //     complete = true;
+    //   }
+    // }
+    // // console.log("complete ==>>", complete)
+    // // console.log("modes type ==>>", modes?.type)
+    // if (complete && (modes?.type == 1 || modes?.type == 2)) {
+    //   Swal.fire({
+    //     title: "Please save the changes",
+    //     icon: "error"
+    //   });
+    // } else if(complete && modes?.type == "") {
+    //   router.push('/dashboard?jobType=ALLJOBS')
+    // }else {
+    //   Swal.fire({
+    //     title: "At least one document is Required",
+    //     icon: "error"
+    //   });
+    // }
+    router.push('/dashboard?jobType=ALLJOBS')
   }
   return (
     <Fragment>
