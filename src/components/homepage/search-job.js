@@ -58,11 +58,24 @@ const SearchJob = () => {
             // spaceBetween={30}
             // centeredSlides={true}
             modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
-            spaceBetween={40}
-            slidesPerView={4}
+            // spaceBetween={40}
             autoplay={{
               delay: 2500,
               disableOnInteraction: false,
+            }}
+            breakpoints={{
+              600: {
+                slidesPerView: 1,
+                spaceBetween: 1
+              },
+              1000:{
+                slidesPerView:2,
+                spaceBetween: 20
+              },
+              1300:{
+                slidesPerView:4,
+                spaceBetween: 20
+              },
             }}
             navigation
             allowSlidePrev={true}

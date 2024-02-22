@@ -4459,8 +4459,8 @@ abbr[title] {
 }
 
 .section5 .category-slider .swiper-slide {
-  width: 320px !important;
-  height: 408px;
+  /* width: 320px !important;
+  height: 408px; */
   box-shadow: 0px 15px 30px #0000001a;
   border-radius: 24px;
   margin: 5px;
@@ -4805,7 +4805,7 @@ abbr[title] {
 .job-page-links{
   background-color: #00113b;
   padding: 64px 0 0;
-  height: 620px;
+  height: auto;
   /* margin-bottom: 180px; */
   /* background-image: url(/_next/static/media/australia_map_bg.35b718e7.svg), url(/_next/static/media/footer_bg.e56d634b.png); */
   background-position: 50% 50%;
@@ -8124,6 +8124,10 @@ p {
   }
 }
 @media screen and (max-width:768px){
+
+  .section5 .category-slider .swiper-slide {
+    max-width: -webkit-fill-available;
+  }
   .home-iphone .banner-bg-phone{max-height: 300px;}
   .banner-bg{height: auto;padding-bottom: 1rem;}
   .hero-section,.banner-iphone{padding-top: 0;}

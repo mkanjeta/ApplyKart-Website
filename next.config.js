@@ -10,7 +10,12 @@ module.exports = {
     return [
       {
         source: '/jobs/jobs-in-adelaide',
-        destination: '/jobs/par-time-jobs-in-adelaide',
+        destination: '/jobs/part-time-jobs-in-adelaide',
+        permanent: true, // or false for temporary redirection
+      },
+      {
+        source: '/jobs/par-time-jobs-in-adelaide',
+        destination: '/jobs/part-time-jobs-in-adelaide',
         permanent: true, // or false for temporary redirection
       },
       {
@@ -36,11 +41,6 @@ module.exports = {
       {
         source: '/jobs/jobs-in-victoria',
         destination: '/jobs/jobs-in-hamilton-victoria/',
-        permanent: true,
-      },
-      {
-        source: '/jobs/jobs-in-adelaide',
-        destination: '/jobs/par-time-jobs-in-adelaide/',
         permanent: true,
       },
       {
