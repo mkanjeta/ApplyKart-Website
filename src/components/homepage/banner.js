@@ -6,6 +6,8 @@ import Swal from "sweetalert2";
 import Autocomplete from "react-google-autocomplete";
 import { useDispatch } from "react-redux";
 import { getJobBrowseList } from "redux/actions/jobBrowse";
+import jobTitles from "../../../public/assets/titles.json"
+import _ from "lodash";
 
 const Banner = () => {
   const router = useRouter();
@@ -72,10 +74,16 @@ const Banner = () => {
                         className="banner-searchbar"
                         placeholder="Search Jobs By Title"
                         value={search}
+                        list="titles"
                         onChange={(e) => {
                           setSearch(e.target.value);
                         }}
                       />
+                      <datalist id="titles">
+                        {search && search.length > 3 && jobTitles.titles.map((item, key) =>
+                          <option key={key} value={_.capitalize(item)} />
+                        )}
+                      </datalist>
                     </div>
                     <div className="job-title2">
                       <span className="job-location-icons">

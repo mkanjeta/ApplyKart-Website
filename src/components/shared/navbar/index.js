@@ -2,6 +2,8 @@ import React,{ useState } from 'react';
 import { useRouter } from "next/router";
 import Link from 'next/link';
 import Autocomplete from "react-google-autocomplete";
+import jobTitles from "../../../../public/assets/titles.json"
+import _ from "lodash";
 
 const NavBar = () => {
     const router = useRouter();
@@ -89,11 +91,17 @@ const NavBar = () => {
                         className="banner-searchbar"
                         placeholder="Search Jobs By Title"
                         value={search}
+                        list="titles"
                         style={{minHeight:"33px",padding:"0px 10px 0px 30px"}}
                         onChange={(e) => {
                           setSearch(e.target.value);
                         }}
                       />
+                      <datalist id="titles">
+                        {search && search.length > 3 && jobTitles.titles.map((item, key) =>
+                          <option key={key} value={_.capitalize(item)} />
+                        )}
+                      </datalist>
                     </div>
                     <button
                       className="btn btn-warning search-btn"
