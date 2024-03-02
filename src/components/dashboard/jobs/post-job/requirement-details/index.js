@@ -193,6 +193,9 @@ const RequirementDetails = ({ handleSwitchComp, edit }) => {
     if (!description || description.trim() == "") {
       showErrorMessage("Enter job description", setErrorDesc);
       return;
+    }else if(description.length < 50) {
+      showErrorMessage("Minimum 50 Characters required", setErrorDesc);
+      return;
     }
     // if (!requirements || requirements == "") {
     //   showErrorMessage(
