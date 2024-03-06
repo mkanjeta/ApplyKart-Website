@@ -11,6 +11,7 @@ import PhoneInput from "react-phone-input-2";
 import { toggleHamburger } from "helper/helper";
 import { editAJob } from "redux/actions/jobBrowse";
 import { useDispatch, useSelector } from "react-redux";
+import 'react-phone-input-2/lib/style.css'
 
 const interviewSchema = Yup.object().shape({
   companyname: Yup.string().max(100).nullable(true).required("Company Name is required"),
@@ -187,11 +188,19 @@ const Interviewinformation = ({ handleSwitchComp, edit }) => {
                           </label>
                           <PhoneInput
                             country={"au"}
-                            onlyCountries={["au, in"]}
+                            prefix={""}
+                            onlyCountries={["au", "in"]}
                             countryCodeEditable={true}
                             placeholder="Enter contact number"
                             inputClass="form-control phnInput"
                             value={values?.contactdata}
+                            isValid={(value, country) => {
+                              if (!value.match(/^([+]\d{2}[ ])?\d{10}$/)) {
+                                return 'Invalid value: '+value+', '+country.name;
+                              } else {
+                                return true;
+                              }
+                            }}
                             onChange={(phone, code) => {
                               setFieldValue("contactdata", phone);
                             }}
