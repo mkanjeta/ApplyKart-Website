@@ -23,7 +23,7 @@ const SearchJob = () => {
             data-aos-duration="50"
             data-aos-delay="100"
           >
-            <h1 className="section5-heading">
+            <h2 className="section5-heading">
               Search Jobs by
               <span className="animate">
                 <strong>
@@ -36,7 +36,7 @@ const SearchJob = () => {
                   />
                 </strong>
               </span>
-            </h1>
+            </h2>
             <p className="para">
               All businesses - big and small - need staff. <br /> They need you!
               And we've got you covered!

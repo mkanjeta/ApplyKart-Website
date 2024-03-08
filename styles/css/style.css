@@ -8247,6 +8247,11 @@ margin: 0;
 height: auto;
 min-height: auto;
 }
+.swiper{
+  touch-action: pan-y;
+  position: relative;
+  z-index: 0;
+}
 .subhead{font-size: 1.5rem;}
 .block h3{font-size: 1.75rem;padding-bottom:0;}
 }
@@ -8364,4 +8369,68 @@ min-height: auto;
 }
 .slider-horizontal .rangeslider__labels .rangeslider__label-item {
   white-space: nowrap;
+}
+
+/* faqs section */
+
+
+.accordion-item {
+  background-color: #1c3fed;
+  color: #fff;
+  margin: 1rem 0;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 20px !important;
+  padding: 5px;
+}
+.accordion-title {
+    min-height: 3.5rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    justify-content: space-between;
+}
+.accordion-title h3 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 0 10px;
+  line-height: 22px;
+  margin-bottom: 0;
+}
+
+.accordion-title.active svg {
+   transform: rotate(180deg);
+}
+.accordion-title svg{
+  margin: 0 10px;
+}
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.tab-content {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 15px 20px;
+    line-height: 1.5;
+     border-top: 1px solid;
+}
+.accordion-item:first-of-type, .elementor-accordion-item:last-of-type {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+@media screen and (max-width:768px){
+  .accordion-title h3 {
+    font-size: 14px;
+    font-weight: 500;
+    width: 80%;
+  }
+  .accordion-title svg{
+    margin: 0 5px;
+  }
+  .tab-content {
+    font-size: 13px;
+}
 }

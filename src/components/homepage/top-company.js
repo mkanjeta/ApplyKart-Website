@@ -21,8 +21,8 @@ const TopCompanies = () => {
   return (
     <div className="section2 bg-gradient py-5">
       <div className="container md-sticky">
-        <h1
-          className="section2-heading text-cente r"
+        <h2
+          className="section2-heading text-center"
           data-aos="fade-up"
           data-aos-easing="ease"
           data-aos-delay="50"
@@ -40,7 +40,7 @@ const TopCompanies = () => {
             </strong>
           </span>
           That Suits Your Passion
-        </h1>
+        </h2>
         {/* <p className="para">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

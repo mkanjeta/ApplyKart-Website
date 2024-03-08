@@ -20,7 +20,7 @@ const HowItWork = () => {
     >
       <div className="container">
         <div className="text-center locate-your-map-txt">
-          <h1 className="">
+          <h2 className="">
             Locate your Job by
             <span className="animate">
               <strong>
@@ -34,7 +34,7 @@ const HowItWork = () => {
                 />
               </strong>
             </span>
-          </h1>
+          </h2>
           <p className="para">
             See the job location on a live map and get real-time ETA. Don't
             guess. Be sure.

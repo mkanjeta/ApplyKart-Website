@@ -23,7 +23,7 @@ const WhyChoose = () => {
             data-aos-duration="100"
             data-aos-delay="100"
           >
-            <h1 className="section1-heading">
+            <h2 className="section1-heading">
               Why Choose ApplyKart for
               <span className="animate">
                 <strong>
@@ -36,7 +36,7 @@ const WhyChoose = () => {
                   />
                 </strong>
               </span>
-            </h1>
+            </h2>
             <p className="para">
               We have industry-first features which will make you fall in love
               with us!

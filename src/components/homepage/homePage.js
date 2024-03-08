@@ -8,6 +8,7 @@ import TopCompanies from "./top-company";
 import ChooseJob from "./choose-job";
 import HowItWork from "./how-works";
 import SearchJob from "./search-job";
+import Faqs from "./faqs";
 import AdvertisingJob from "./advertisingJob";
 import DownloadApp from "./downloadApp";
 import AppFooter from "./AppFooter";
@@ -22,8 +23,9 @@ const HomePage = () => {
   return (
     <Fragment>
       <Head>
-        <title>ApplyKart</title>
+        <title>Land Your Dream Job in 2 Hours with ApplyKart</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="ApplyKart is your one-stop platform for finding a job in India & Australia and getting hired fast. We offer AI job search, digital visiting cards, and live interviews to help you land your dream job."></meta>
         <meta
           property="og:image"
           content={"https://applykart.co/assets/images/applykart-logo.png"}
@@ -42,6 +44,7 @@ const HomePage = () => {
       <HowItWork />
       <SearchJob />
       {/* <AdvertisingJob /> */}
+      <Faqs />
       <DownloadApp />
       <JobPageLinks />
       <AppFooter />
