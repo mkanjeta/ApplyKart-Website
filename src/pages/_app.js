@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import Head from "next/head";
+
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { wrapper } from "../store";
@@ -18,7 +19,6 @@ import "../../styles/TimePicker.css";
 import "../../styles/Clock.css";
 import Script from "next/script";
 import GetSubscription from "components/auth/GetSubscription";
-
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -131,9 +131,13 @@ function MyApp({ Component, pageProps }) {
   }, [router]);
 
   // console.log(loading, 'common loading');
+  var origin =  typeof window !== 'undefined' && window.location.origin ? window.location.origin : '';
+  const URL = origin+router.asPath;
 
+  
+  
   return (
-    <>
+    <html lang="en-AU">
       {loading && <Loader />}
       {/* <Component {...pageProps} /> */}
       {
@@ -154,10 +158,12 @@ window.dataLayer = window.dataLayer || [];
                     });
                 `}
             </Script>
+         
             <Head>
               <title>Applykart | Welcome to applykart</title>
               <meta name="description" content="Find jobs with ApplyKart" />
               <meta name='robots' content='index, follow' />
+              <link rel="canonical" href={URL} />
               <link
                 rel="icon"
                 href="/assets/images/favicon.png"
@@ -191,7 +197,7 @@ window.dataLayer = window.dataLayer || [];
         // :
         // <Component {...pageProps} />
       }
-    </>
+    </html>
   );
 }
 
