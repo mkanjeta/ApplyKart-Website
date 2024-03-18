@@ -1221,6 +1221,7 @@ h4 {
   align-items: center;
   justify-content: center;
   margin: 30px 0;
+  font-size: 1rem;
 }
 
 .form_box .other_authtext::before,
@@ -8370,10 +8371,10 @@ min-height: auto;
 .slider-horizontal .rangeslider__labels .rangeslider__label-item {
   white-space: nowrap;
 }
-
+.chooseJobCard p{
+  font-weight: 500;
+}
 /* faqs section */
-
-
 .accordion-item {
   background-color: #1c3fed;
   color: #fff;
@@ -8425,7 +8426,7 @@ min-height: auto;
   .accordion-title h3 {
     font-size: 14px;
     font-weight: 500;
-    width: 80%;
+    /* width: 80%; */
   }
   .accordion-title svg{
     margin: 0 5px;
@@ -8433,4 +8434,21 @@ min-height: auto;
   .tab-content {
     font-size: 13px;
 }
+.download-app .download-title h2 {
+  color: #000000;
+  font-weight: 600;
 }
+.download-app .download-title p {
+  color: #000000;
+  font-weight: 600;
+}
+.menu-wrap .main-menu{
+  flex-wrap: wrap;
+}
+.dropdown .custom-submenu{
+  transform: translate3d(-170px, 22px, 0px);
+}
+.fixed-sidebar {
+  width: 70%;
+}
+} 

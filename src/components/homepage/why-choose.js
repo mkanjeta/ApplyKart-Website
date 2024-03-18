@@ -5,6 +5,7 @@ import Typewriter from "typewriter-effect";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Link from "next/link";
 
 const WhyChoose = () => {
   useEffect(() => {
@@ -70,15 +71,18 @@ const WhyChoose = () => {
                   
                   </div>
                    <div className="search-job-btn">
+                  <Link href="/dashboard?jobType=ALLJOBS">
                   <button className="btn btn-warning search-btn">
-                    Get Started
+                   Get Started
                     <span className="ps-2 btn-right-arrow">
                       <img
                         src={"/assets/images/right-arrow.svg"}
                         alt="right-arrow"
                       />
                     </span>
+                   
                   </button>
+                  </Link>
                 </div>
                 </div>
                 
@@ -105,6 +109,7 @@ const WhyChoose = () => {
                   
                   </div>
                    <div className="search-job-btn">
+                   <Link href="/dashboard?jobType=ALLJOBS">
                   <button className="btn btn-warning search-btn">
                     Get Started
                     <span className="ps-2 btn-right-arrow">
@@ -114,6 +119,7 @@ const WhyChoose = () => {
                       />
                     </span>
                   </button>
+                  </Link>
                 </div>
                 </div>
                 <figure>
@@ -139,6 +145,7 @@ const WhyChoose = () => {
                   
                   </div>
                    <div className="search-job-btn">
+                   <Link href="/dashboard?jobType=ALLJOBS">
                   <button className="btn btn-warning search-btn">
                     Get Started
                     <span className="ps-2 btn-right-arrow">
@@ -148,6 +155,7 @@ const WhyChoose = () => {
                       />
                     </span>
                   </button>
+                  </Link>
                 </div>
                 </div>
                 <figure>
@@ -172,6 +180,7 @@ const WhyChoose = () => {
                    
                   </div>
                    <div className="search-job-btn">
+                   <Link href="/dashboard?jobType=ALLJOBS">
                   <button className="btn btn-warning search-btn">
                     Get Started
                     <span className="ps-2 btn-right-arrow">
@@ -181,6 +190,7 @@ const WhyChoose = () => {
                       />
                     </span>
                   </button>
+                  </Link>
                 </div>
                 </div>
                 <figure>

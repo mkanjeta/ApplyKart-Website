@@ -137,7 +137,7 @@ function MyApp({ Component, pageProps }) {
   
   
   return (
-    <html lang="en-AU">
+    <>
       {loading && <Loader />}
       {/* <Component {...pageProps} /> */}
       {
@@ -160,6 +160,7 @@ window.dataLayer = window.dataLayer || [];
             </Script>
          
             <Head>
+            <html lang="en-AU" />
               <title>Applykart | Welcome to applykart</title>
               <meta name="description" content="Find jobs with ApplyKart" />
               <meta name='robots' content='index, follow' />
@@ -197,7 +198,7 @@ window.dataLayer = window.dataLayer || [];
         // :
         // <Component {...pageProps} />
       }
-    </html>
+    </>
   );
 }
 

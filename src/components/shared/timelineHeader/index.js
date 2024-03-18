@@ -72,7 +72,7 @@ const TimelineHeader = () => {
           {
             localStorageData && (
               <div
-                className="content-area"
+                className="content-area d-none d-md-block"
               // style={{ 
               //   width: 'calc(100% - 700px)', 
               //   flex: '1 1 auto', 
@@ -157,6 +157,22 @@ const TimelineHeader = () => {
           }
 
         </div>
+
+        <div className="container mt-2">
+        <div className="row">
+                      <div
+                        className="content-area navMobile d-block d-md-none"
+                      // style={{ 
+                      //   width: 'calc(100% - 700px)', 
+                      //   flex: '1 1 auto', 
+                      //   marginLeft: 'calc(100% - 1000px)' 
+                      // }}
+                      >
+                        <NavBar />
+                      </div>
+          </div>    
+        </div>
+
       </header>
       {notificationBar ? <NotificationBar action={handleToggleNotificationBar} state={notificationBar} /> : null}
     </>

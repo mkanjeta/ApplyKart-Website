@@ -31,7 +31,7 @@ const Faqs = () => {
 
   return (
     <div
-      className="section4 py-5"
+      className="section4 py-4"
       data-aos="fade-up"
       data-aos-easing="ease-in-shine"
       data-aos-duration="600"

@@ -96,7 +96,7 @@ const AppFooter = () => {
 
           <div className="copyright">
             <div className="c-left">
-              <p>Copyright © 2022 Applykart. All Rights Reserved.</p>
+              <p>Copyright © 2024 Applykart. All Rights Reserved.</p>
             </div>
             <div className="c-right">
               <ul className="social-icon">

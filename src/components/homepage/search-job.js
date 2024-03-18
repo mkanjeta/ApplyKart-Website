@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Autoplay, Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import Link from "next/link";
 
 const SearchJob = () => {
   useEffect(() => {
@@ -98,7 +99,9 @@ const SearchJob = () => {
                     with daily living.
                   </p>
                 </div>
-                <Button className="btn active slider-btn">
+                
+                 <Link href="/dashboard?jobType=ALLJOBS">
+                  <Button className="btn active slider-btn">
                   View Jobs
                   <span className="ps-2 btn-right-arrow">
                     <img
@@ -107,6 +110,7 @@ const SearchJob = () => {
                     />
                   </span>
                 </Button>
+                </Link>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -125,7 +129,9 @@ const SearchJob = () => {
                     outstanding organizational skills.
                   </p>
                 </div>
-                <Button className="btn btn-warning slider-btn">
+                
+                 <Link href="/dashboard?jobType=ALLJOBS">
+                  <Button className="btn btn-warning slider-btn">
                   View Jobs
                   <span className="ps-3 btn-right-arrow">
                     <img
@@ -134,6 +140,7 @@ const SearchJob = () => {
                     />
                   </span>
                 </Button>
+                </Link>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -152,7 +159,9 @@ const SearchJob = () => {
                     coordinate full order cycle.
                   </p>
                 </div>
-                <Button className="btn slider-btn">
+                
+                 <Link href="/dashboard?jobType=ALLJOBS">
+                  <Button className="btn slider-btn">
                   View Jobs
                   <span className="ps-3 btn-right-arrow">
                     <img
@@ -161,6 +170,7 @@ const SearchJob = () => {
                     />
                   </span>
                 </Button>
+                </Link>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -178,7 +188,9 @@ const SearchJob = () => {
                     details and symptoms of patient medical history.
                   </p>
                 </div>
-                <Button className="btn  slider-btn">
+                
+                 <Link href="/dashboard?jobType=ALLJOBS">
+                  <Button className="btn  slider-btn">
                   View Jobs
                   <span className="ps-3 btn-right-arrow">
                     <img
@@ -187,6 +199,7 @@ const SearchJob = () => {
                     />
                   </span>
                 </Button>
+                </Link>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -205,7 +218,9 @@ const SearchJob = () => {
                     customers, answering questions,
                   </p>
                 </div>
-                <Button className="btn slider-btn">
+                
+                 <Link href="/dashboard?jobType=ALLJOBS">
+                  <Button className="btn slider-btn">
                   View Jobs
                   <span className="ps-3 btn-right-arrow">
                     <img
@@ -214,6 +229,7 @@ const SearchJob = () => {
                     />
                   </span>
                 </Button>
+                </Link>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -232,7 +248,9 @@ const SearchJob = () => {
                     mopping, damp mopping.
                   </p>
                 </div>
-                <Button className="btn slider-btn">
+                
+                 <Link href="/dashboard?jobType=ALLJOBS">
+                  <Button className="btn slider-btn">
                   View Jobs
                   <span className="ps-3 btn-right-arrow">
                     <img
@@ -241,6 +259,7 @@ const SearchJob = () => {
                     />
                   </span>
                 </Button>
+                </Link>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -259,7 +278,9 @@ const SearchJob = () => {
                     and load goods for dispatching.
                   </p>
                 </div>
-                <Button className="btn  slider-btn">
+                
+                 <Link href="/dashboard?jobType=ALLJOBS">
+                  <Button className="btn  slider-btn">
                   View Jobs
                   <span className="ps-3 btn-right-arrow">
                     <img
@@ -268,6 +289,7 @@ const SearchJob = () => {
                     />
                   </span>
                 </Button>
+                </Link>
               </div>
             </SwiperSlide>
           </Swiper>
