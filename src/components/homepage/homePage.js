@@ -23,13 +23,15 @@ const HomePage = () => {
   return (
     <Fragment>
       <Head>
-        <title>Land Your Dream Job in 2 Hours with ApplyKart</title>
+        <title>An all-in-one professional networking platform to connect, engage and find jobs with the help of AI!</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content="ApplyKart is your one-stop platform for finding a job in India & Australia and getting hired fast. We offer AI job search, digital visiting cards, and live interviews to help you land your dream job."></meta>
-        <meta
-          property="og:image"
-          content={"https://applykart.co/assets/images/applykart-logo.png"}
-        />
+
+        <meta property="og:title" content="Find jobs with ApplyKart" />
+        <meta property="og:type" content="website" />
+        <meta property='og:description' content='An all-in-one professional networking platform to connect, engage and find jobs with the help of AI!'/>
+        <meta property="og:image" content="https://applykart.co/assets/images/applykart-logo.png" />
+        <meta property="og:url" content="https://applykart.co/" />
+
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
       </Head>

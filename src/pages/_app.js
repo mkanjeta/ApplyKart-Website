@@ -160,7 +160,6 @@ window.dataLayer = window.dataLayer || [];
             </Script>
          
             <Head>
-            <html lang="en-AU" />
               <title>Applykart | Welcome to applykart</title>
               <meta name="description" content="Find jobs with ApplyKart" />
               <meta name='robots' content='index, follow' />
