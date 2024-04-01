@@ -179,12 +179,12 @@ const DashboardComp = (props) => {
                     className="image-fit"
                   /> */}
                   <img
-                    src={jobBrowse?.companyLogo?.trim() || "/assets/images/placeholder.jpg"}
+                    src={jobBrowse?.companyLogo?.trim() || "https://ui-avatars.com/api/?name="+jobBrowse?.company+"&background=random&color=fff&bold=true"}
                     alt="img"
                     className="image-fit"
                     onError={(e) => {
                       e.target.onerror = null;
-                      e.target.src = "/assets/images/placeholder.jpg";
+                      e.target.src = "https://ui-avatars.com/api/?name="+jobBrowse?.company+"&background=random&color=fff&bold=true";
                     }}
                   />
                 </div>

@@ -541,7 +541,7 @@ const JobDetails = () => {
                       {jobDetail?.salary_Offered &&
                         jobDetail?.max_Salary_Offered && jobDetail?.isScraped == 0
                         ? `${getPrice(jobDetail?.salary_Offered)}-${getPrice(jobDetail?.max_Salary_Offered)}`
-                        : "Not Available"}
+                        : "Not Disclosed"}
                       {getSalaryType(jobDetail?.base)}
                     </span>
                   </li>
@@ -557,7 +557,7 @@ const JobDetails = () => {
                           return jobTypeFunc(item);
                         })
                         .join(", ")
-                      : "N/A"}
+                      : "Full Time"}
                     {/* </span> */}
                   </li>
                   {
@@ -581,7 +581,7 @@ const JobDetails = () => {
 
                 <div className="desc_area ">
                   <h5 className="jobtitle">Description</h5>
-                  <p className="text ">{jobDetail?.description}</p>
+                  <p className="text ">{jobDetail?.description ? jobDetail?.description : 'No Description'}</p>
                 </div>
                 {jobDetail?.job_Type
                   ? jobDetail?.job_Type.map((item, index) => {
@@ -600,49 +600,40 @@ const JobDetails = () => {
                 <div className="desc_area">
                   <h5 className="jobtitle">Availablity</h5>
                   <ul>
-                    {jobDetail?.availablity?.monday?.from && (
-                      <li>
-                        Monday{" "}
-                        <span>{`${jobDetail?.availablity?.monday?.from} to ${jobDetail?.availablity?.monday?.to}`}</span>
-                      </li>
-                    )}
-                    {jobDetail?.availablity?.tuesday?.from && (
-                      <li>
-                        Tuesday{" "}
-                        <span>{`${jobDetail?.availablity?.tuesday?.from} to ${jobDetail?.availablity?.tuesday?.to}`}</span>
-                      </li>
-                    )}
-                    {jobDetail?.availablity?.wednesday?.from && (
-                      <li>
-                        Wednesday{" "}
-                        <span>{`${jobDetail?.availablity?.wednesday?.from} to ${jobDetail?.availablity?.wednesday?.to}`}</span>
-                      </li>
-                    )}
-                    {jobDetail?.availablity?.thursday?.from && (
-                      <li>
-                        Thursday{" "}
-                        <span>{`${jobDetail?.availablity?.thursday?.from} to ${jobDetail?.availablity?.thursday?.to}`}</span>
-                      </li>
-                    )}
-                    {jobDetail?.availablity?.friday?.from && (
-                      <li>
-                        Friday{" "}
-                        <span>{`${jobDetail?.availablity?.friday?.from} to ${jobDetail?.availablity?.friday?.to}`}</span>
-                      </li>
-                    )}
-                    {jobDetail?.availablity?.saturday?.from && (
-                      <li>
-                        Saturday{" "}
-                        <span>{`${jobDetail?.availablity?.saturday?.from} to ${jobDetail?.availablity?.saturday?.to}`}</span>
-                      </li>
-                    )}
-                    {jobDetail?.availablity?.sunday?.from && (
-                      <li>
-                        Sunday{" "}
-                        <span>{`${jobDetail?.availablity?.sunday?.from} to ${jobDetail?.availablity?.sunday?.to}`}</span>
-                      </li>
-                    )}
-                  </ul>
+                  <li>
+                    Monday{" "}
+                    <span>{`${jobDetail?.availablity?.monday?.from || ''} ${jobDetail?.availablity?.monday?.to || ''}`}</span>
+                  </li>
+                  <li>
+                    Tuesday{" "}
+                    <span>{`${jobDetail?.availablity?.tuesday?.from || ''} ${jobDetail?.availablity?.tuesday?.to || ''}`}</span>
+                  </li>
+                  <li>
+                    Wednesday{" "}
+                    <span>{`${jobDetail?.availablity?.wednesday?.from || ''} ${jobDetail?.availablity?.wednesday?.to || ''}`}</span>
+                  </li>
+                  <li>
+                    Thursday{" "}
+                    <span>{`${jobDetail?.availablity?.thursday?.from || ''} ${jobDetail?.availablity?.thursday?.to || ''}`}</span>
+                  </li>
+                  <li>
+                    Friday{" "}
+                    <span>{`${jobDetail?.availablity?.friday?.from || ''} ${jobDetail?.availablity?.friday?.to || ''}`}</span>
+                  </li>
+                  {jobDetail?.availablity?.saturday?.from && (
+                    <li>
+                      Saturday{" "}
+                      <span>{`${jobDetail?.availablity?.saturday?.from} ${jobDetail?.availablity?.saturday?.to}`}</span>
+                    </li>
+                  )}
+                  {jobDetail?.availablity?.sunday?.from && (
+                    <li>
+                      Sunday{" "}
+                      <span>{`${jobDetail?.availablity?.sunday?.from} ${jobDetail?.availablity?.sunday?.to}`}</span>
+                    </li>
+                  )}
+                </ul>
+
                 </div>
               </div>
               <div className="row">
@@ -772,24 +763,24 @@ const JobDetails = () => {
                       ? typeof jobDetail?.gender == "object"
                         ? jobDetail?.gender.join("/")
                         : JSON.parse(jobDetail?.gender).join("/")
-                      : ``}
+                      : `Male / Female`}
                   </li>
                   <li>
                     <p>Special requirements</p>
-                    {jobDetail?.special_Requirement?.map((item, i) => (
+                    {jobDetail?.special_Requirement.length ? jobDetail?.special_Requirement.map((item, i) => (
                       <div key={i}>{item?.special_requirements}</div>
-                    ))}
+                    )) : 'No Special requirements'}
                   </li>
                   <li>
                     <p>Visa requirement</p>
-                    {jobDetail?.visa_type}
+                    {jobDetail?.visa_type ? jobDetail.visa_type : 'Not Specified'}
                   </li>
                   <li>
                     <p>Language Preference</p>
-                    {jobDetail?.language_preference &&
+                    {jobDetail?.language_preference ?
                       jobDetail?.language_preference
                         .map((item) => item.language)
-                        .join(",")}
+                        .join(",") : 'English'}
                   </li>
                 </ul>
               </div>
@@ -803,10 +794,14 @@ const JobDetails = () => {
                     src={
                       jobDetail?.companyLogo
                         ? jobDetail?.companyLogo
-                        : "https://via.placeholder.com/100"
+                        : "https://ui-avatars.com/api/?name="+jobDetail?.company+"&background=random&color=fff&bold=true"
                     }
                     alt="img"
                     className="image-fit rounded-circle"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = "https://ui-avatars.com/api/?name="+jobDetail?.company+"&background=random&color=fff&bold=true";
+                    }}
                   />
                   <h6 className="name">{jobDetail?.job_Poster_Name}</h6>
                   <p>
