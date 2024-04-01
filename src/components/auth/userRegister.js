@@ -229,7 +229,7 @@ const UserRegister = () => {
                         <div className="form-group">
                           <PhoneInput
                             country={'au'}
-                            onlyCountries={["au", "in"]}
+                            onlyCountries={["au", "in" , "us"]}
                             // onlyCountries={["au"]}
                             countryCodeEditable={false}
                             placeholder="Enter contact number"
