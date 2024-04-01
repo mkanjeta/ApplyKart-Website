@@ -4,6 +4,7 @@ import { particularJobDetail, postFavoriteJob } from "redux/actions/jobBrowse";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import { priceFormat, indianPriceFormat } from "CommonHelper";
+import axios from "axios";
 
 const LocationMap = dynamic(() => import("./map/DetailsMap").then((module) => {
   return module.default
@@ -23,23 +24,39 @@ const DashboardComp = (props) => {
     ({ jobBrowseReducer }) => jobBrowseReducer
   );
 
-  useEffect(() => {
+  useEffect(async() => {
     // console.log("jobBrowseListById ==>>", jobBrowseListById)
-    function getLatLong(lat, long, currencyType) {
+    async function getLatLong(lat, long, currencyType, location) {
       if (lat && long) {
         return [lat, long];
       } else {
-        if (currencyType == "AUD") {
-          return [-37.840935, 144.946457]
-        } else {
-          return [28.644800, 77.216721]
+        if(location){
+          const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+          let search_location = location.split(',')[0]; 
+          await axios
+          .post(
+            `https://maps.googleapis.com/maps/api/geocode/json?address=${search_location}&key=${apiKey}`
+          )
+          .then((response) => {
+            console.log(response.data.results[0].geometry.location)
+            return [response.data.results[0].geometry.location.lat, response.data.results[0].geometry.location.lng]
+          })
+          .catch((err) => {
+            // console.log(err);
+          });
+        }else{
+          if (currencyType == "AUD") {
+            return [-37.840935, 144.946457]
+          } else {
+            return [28.644800, 77.216721]
+          }
         }
       }
     }
 
     if (jobBrowseListById) {
       // let office = [jobBrowseListById?.latitude, jobBrowseListById?.longitude]; // getLatLong(jobBrowseListById?.latitude, jobBrowseListById?.longitude, jobBrowseListById?.currencyType)
-      const office = getLatLong(jobBrowseListById?.latitude, jobBrowseListById?.longitude, jobBrowseListById?.currencyType);
+      const office = getLatLong(jobBrowseListById?.latitude, jobBrowseListById?.longitude, jobBrowseListById?.currencyType, jobBrowseListById?.location);
       setLatLong({ office: office, current: office });
       setJobBrowse(jobBrowseListById);
     }
@@ -287,11 +304,11 @@ const DashboardComp = (props) => {
             </div>
           </div>
           <div className="map_area">
-            <LocationMap
+            {latLong?.office && <LocationMap
               mapLat={getLatitute(jobBrowse?.latitude, jobBrowse?.currencyType)}
               mapLong={getLongitude(jobBrowse?.longitude, jobBrowse?.currencyType)}
               latLong={latLong}
-            />
+            />}
           </div>
         </div>
       </div>

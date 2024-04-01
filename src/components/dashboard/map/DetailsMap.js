@@ -98,12 +98,13 @@ export default function DetailsMap(props) {
           });
       }
       setPosition([coords?.latitude, coords?.longitude]);
-      // console.log('--->lat lon<--', props?.latLong?.office)
+      console.log('--->lat lon<--', props?.latLong?.office)
       setOffice(props?.latLong?.office ? [...props?.latLong?.office] : [-37.840935, 144.946457]);
       // console.log('Has Location');
       setHasLocation(true);
     } else {
       setHasLocation(false);
+      console.log('--->lat lon<--', props?.latLong?.office)
       setPosition([-37.840935, 144.946457]);
       setOffice(props?.latLong?.office ? [...props?.latLong?.office] : [-37.840935, 144.946457]);
     }
