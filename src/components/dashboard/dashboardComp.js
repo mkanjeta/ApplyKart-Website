@@ -24,40 +24,51 @@ const DashboardComp = (props) => {
     ({ jobBrowseReducer }) => jobBrowseReducer
   );
 
-  useEffect(async() => {
+  useEffect(() => {
     // console.log("jobBrowseListById ==>>", jobBrowseListById)
     async function getLatLong(lat, long, currencyType, location) {
       if (lat && long) {
         return [lat, long];
       } else {
-        if(location){
-          const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
-          let search_location = location.split(',')[0]; 
-          await axios
-          .post(
-            `https://maps.googleapis.com/maps/api/geocode/json?address=${search_location}&key=${apiKey}`
-          )
-          .then((response) => {
-            console.log(response.data.results[0].geometry.location)
-            return [response.data.results[0].geometry.location.lat, response.data.results[0].geometry.location.lng]
-          })
-          .catch((err) => {
-            // console.log(err);
-          });
-        }else{
           if (currencyType == "AUD") {
             return [-37.840935, 144.946457]
           } else {
             return [28.644800, 77.216721]
           }
-        }
       }
     }
 
     if (jobBrowseListById) {
       // let office = [jobBrowseListById?.latitude, jobBrowseListById?.longitude]; // getLatLong(jobBrowseListById?.latitude, jobBrowseListById?.longitude, jobBrowseListById?.currencyType)
-      const office = getLatLong(jobBrowseListById?.latitude, jobBrowseListById?.longitude, jobBrowseListById?.currencyType, jobBrowseListById?.location);
-      setLatLong({ office: office, current: office });
+      
+      if(jobBrowseListById?.location){
+        const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+        let search_location = jobBrowseListById?.location; 
+        axios
+        .post(
+          `https://maps.googleapis.com/maps/api/geocode/json?address=${search_location}&key=${apiKey}`
+        )
+        .then((response) => {
+          if(response.data.results.length){
+            console.log(response.data.results[0]?.geometry?.location)
+            let office = [response.data.results[0]?.geometry.location.lat, response.data.results[0].geometry.location.lng]
+            setLatLong({ office: office, current: office });
+          }else{
+            if (currencyType == "AUD") {
+              let office = [-37.840935, 144.946457];
+            } else {
+              let office = [28.644800, 77.216721];
+            }
+            setLatLong({ office: office, current: office });
+          }
+        })
+        .catch((err) => {
+          console.log('errr ===========>>>>>>>>',err);
+        });
+      }else{
+        const office = getLatLong(jobBrowseListById?.latitude, jobBrowseListById?.longitude, jobBrowseListById?.currencyType);
+        setLatLong({ office: office, current: office });
+      }
       setJobBrowse(jobBrowseListById);
     }
   }, [jobBrowseListById]);

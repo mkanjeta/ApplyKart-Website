@@ -12,6 +12,7 @@ import domtoimage from 'dom-to-image';
 import { useQRCode } from 'next-qrcode';
 import NavBar from "components/shared/navbar";
 import { priceFormat, indianPriceFormat } from "CommonHelper";
+import axios from "axios";
 
 import { QRCodeSVG } from 'qrcode.react';
 
@@ -122,9 +123,36 @@ const JobDetails = () => {
 
     if (jobDetail) {
       setActive(jobDetail?.is_Active);
-      // let office = [jobDetail?.latitude, jobDetail?.longitude];
-      const office = getLatLong(jobDetail?.latitude, jobDetail?.longitude, jobDetail?.currencyType);
-      setLatLong({ office: office, current: office });
+
+      if(jobDetail?.location){
+        const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+        let search_location = jobDetail?.location; 
+        axios
+        .post(
+          `https://maps.googleapis.com/maps/api/geocode/json?address=${search_location}&key=${apiKey}`
+        )
+        .then((response) => {
+          if(response.data.results.length){
+            console.log(response.data.results[0]?.geometry?.location)
+            let office = [response.data.results[0]?.geometry.location.lat, response.data.results[0].geometry.location.lng]
+            setLatLong({ office: office, current: office });
+          }else{
+            if (currencyType == "AUD") {
+              let office = [-37.840935, 144.946457];
+            } else {
+              let office = [28.644800, 77.216721];
+            }
+            setLatLong({ office: office, current: office });
+          }
+        })
+        .catch((err) => {
+          console.log('err=>',err);
+        });
+      }else{
+        // let office = [jobDetail?.latitude, jobDetail?.longitude];
+        const office = getLatLong(jobDetail?.latitude, jobDetail?.longitude, jobDetail?.currencyType);
+        setLatLong({ office: office, current: office });
+      }
     }
   }, [jobDetail]);
 
@@ -374,8 +402,12 @@ const JobDetails = () => {
                         src={
                           jobDetail?.companyLogo
                             ? jobDetail?.companyLogo
-                            : "/assets/images/placeholder.jpg"
+                            : "https://ui-avatars.com/api/?name="+jobDetail?.company+"&background=random&color=fff&bold=true"
                         }
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src = "https://ui-avatars.com/api/?name="+jobDetail?.company+"&background=random&color=fff&bold=true";
+                        }}
                         alt="img"
                         className="image-fit"
                       />
