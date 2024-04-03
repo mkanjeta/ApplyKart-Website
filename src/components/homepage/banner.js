@@ -38,21 +38,21 @@ const Banner = () => {
               <div className="d-flex flex-column hero-section">
                 <div className="banner-text-center">
                   <h1 className="banner-heading">
-                    <strong>ApplyKart </strong> will help you{" "}
+                    <strong>All in one  </strong> professional{" "}
                     <span className="animate">
                       <Typewriter
                         options={{
-                          strings: ["hire staff "],
+                          strings: ["Ai driven "],
                           autoStart: true,
                           loop: true,
                         }}
                       />
                     </span>
-                    <br className="line-break" /> and
+                    <br className="line-break" />  networking  
                     <span className="animate">
                       <Typewriter
                         options={{
-                          strings: [" get hired in 2 hours! "],
+                          strings: [" platform "],
                           autoStart: true,
                           loop: true,
                         }}
