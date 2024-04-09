@@ -31,12 +31,11 @@ const HomePage = () => {
   return (
     <Fragment>
       <Head>
-        <title>An all-in-one professional networking platform to connect, engage and find jobs with the help of AI!</title>
+        <title>How to Apply for Jobs in Australia from India: A Comprehensive Guide</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
-        <meta property="og:title" content="Find jobs with ApplyKart" />
         <meta property="og:type" content="website" />
-        <meta property='og:description' content='An all-in-one professional networking platform to connect, engage and find jobs with the help of AI!'/>
+        <meta property='og:description' content='Explore step-by-step procedures and valuable tips on applying for various job roles in Australia from India. Discover visa requirements, resume tips, networking strategies, and specific job role insights.'/>
         <meta property="og:image" content="https://applykart.co/assets/images/applykart-logo.png" />
         <meta property="og:url" content="https://applykart.co/" />
 
