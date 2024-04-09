@@ -36,7 +36,7 @@ const AppFooter = () => {
             </div>
             <div className="col-md-7 p-0">
               <div className="row">
-                <div className="col-md-4">
+                <div className="col-md-3">
                   <ul className="flink">
                     <li>
                       <h4>For Candidate</h4>
@@ -55,7 +55,7 @@ const AppFooter = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-3">
                   <ul className="flink">
                     <li>
                       <h4>For Job Poster</h4>
@@ -71,7 +71,7 @@ const AppFooter = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-3">
                   <ul className="flink">
                     <li>
                       <h4>Information</h4>
@@ -90,6 +90,18 @@ const AppFooter = () => {
                     </li>
                   </ul>
                 </div>
+
+                <div className="col-md-3">
+                  <ul className="flink">
+                    <li>
+                      <h4>Blogs</h4>
+                    </li>
+                    <li>
+                      <Link href="/how-to-apply-for-jobs-in-australia-from-india">How To Apply For Jobs In Australia From India</Link>
+                    </li>
+                  </ul>
+                </div>
+
               </div>
             </div>
           </div>

@@ -42,7 +42,7 @@ const Banner = () => {
                     <span className="animate">
                       <Typewriter
                         options={{
-                          strings: ["Ai driven "],
+                          strings: ["AI driven "],
                           autoStart: true,
                           loop: true,
                         }}
