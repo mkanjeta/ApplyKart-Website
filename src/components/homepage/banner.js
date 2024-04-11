@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect   } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { useRouter } from "next/router";
 import Typewriter from "typewriter-effect";
@@ -27,6 +27,33 @@ const Banner = () => {
     // router?.push(`/dashboard?search=${search}&location=${location}`);
     window.location.href = `/dashboard?search=${search}&location=${location}`;
   };
+  
+  useEffect(() => {
+    function updateCounter() {
+      const counter = document.getElementById('countertext');
+      const randomNumber = Math.floor(Math.random() * (20001 - 15000) + 20000);
+      counter.innerHTML = randomNumber + ' Active Users';
+      animateText(counter);
+      setTimeout(flipCounter, 10000);
+    }
+
+    function flipCounter() {
+      const counter = document.getElementById('countertext');
+      const randomNumber = Math.floor(Math.random() * (30001 - 25000) + 25000);
+      counter.innerHTML = randomNumber + ' Daily Active Users';
+      animateText(counter);
+      setTimeout(updateCounter, 10000);
+    }
+
+    function animateText(element) {
+      // Trigger reflow to restart the animation
+      element.style.animation = 'none';
+      element.offsetHeight; /* trigger reflow */
+      element.style.animation = null;
+    }
+
+    updateCounter();
+  },[]);
   return (
     <div className="banner banner-bg">
       {/* bg animation */}
@@ -118,6 +145,15 @@ const Banner = () => {
                   </div>
                 </form>
 
+              <div className="activeusers">
+                <div className="counter">
+                      <div id="countertext" className="countertext">
+
+                      </div>
+                  </div>
+              </div>
+               
+
                 {/* <div className="tabs-content">
                   <div className="tabs-btn">
                     <a href="#" className="find-job-btn1">
@@ -137,11 +173,7 @@ const Banner = () => {
             <Col lg={6} md={8}>
               <div className="banner-iphone mb-2">
                 <div className="home-iphone">
-                  <img
-                    src={"/assets/images/home_iphone.png"}
-                    className="banner-bg-phone"
-                    alt="iphone"
-                  />
+                <img src="/assets/images/reelgif.gif" className="bannergif" />
                   <img
                     src={"/assets/images/home-circle-img.png"}
                     className="banner-bg-circle"

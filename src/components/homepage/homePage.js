@@ -1,4 +1,4 @@
-import { Fragment, useEffect } from "react";
+import { Fragment, useEffect, useState } from "react";
 import Header from "components/shared/header";
 import Footer from "components/shared/footer";
 import Head from "next/head";
@@ -13,9 +13,9 @@ import AdvertisingJob from "./advertisingJob";
 import DownloadApp from "./downloadApp";
 import AppFooter from "./AppFooter";
 import JobPageLinks from "./jobPageLinks";
+import ReelSlider from "./reelSlider";
 
 const HomePage = () => {
-
   useEffect(() => {
     localStorage.removeItem('applyKart');
   },[]);
@@ -40,6 +40,7 @@ const HomePage = () => {
         logoUrl="assets/images/white-logo.svg"
       />
       <Banner />
+      <ReelSlider />
       <WhyChoose />
       <TopCompanies />
       <ChooseJob />

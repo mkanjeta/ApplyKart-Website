@@ -186,7 +186,7 @@ const RecommendedJobs = () => {
             <div className="row">
 
               {(filterWithoutLogin) && (
-                <div className="col-xl-2">
+                <div className="col-xl-3">
                   {/* Filter */}
                   <form className="side_filter">
                     <h5 className="title">Filter</h5>
@@ -304,7 +304,7 @@ const RecommendedJobs = () => {
                   {/* Filter */}
                 </div>
               )}
-              <div className={`col-xl-${filterWithoutLogin ? '10' : '12'}`}>
+              <div className={`col-xl-${filterWithoutLogin ? '7' : '9'}`}>
                 <div className="dashboard_title_bar">
                   <h3 className="title"> Jobs
 
@@ -460,6 +460,15 @@ const RecommendedJobs = () => {
                     />
                   </div>
                 )}
+              </div>
+                
+              <div className="col-xl-2 text-center">
+                <h6 className="mt-3 text-dark">Download Our App</h6>
+              <img src="/assets/images/applykart-portal.png" />
+
+              <a href="https://play.google.com/store/apps/details?id=com.applykart" target="blank" className="my-3 btn btn-warning">Play Store</a>
+
+              <a href="https://apps.apple.com/us/app/applykart/id1638867413" target="blank" className="btn btn-warning">App Store</a>
               </div>
             </div>
           </div>
