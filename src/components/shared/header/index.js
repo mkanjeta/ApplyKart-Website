@@ -1,5 +1,4 @@
 import { Container } from "react-bootstrap";
-//import Router, { useRouter } from "next/router";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { BASE_URL } from "constants/constants";
@@ -8,25 +7,23 @@ import { useEffect, useState } from "react";
 import { LoggedOut } from "redux/actions/authActions";
 
 const Header = (props) => {
-  // console.log("logo", props);
   const dispatch = useDispatch();
   const [seekerId, setSeekerId] = useState("");
   const [accessToken, setaccessToken] = useState("");
+  const [showSidebar, setShowSidebar] = useState(false); // State to control sidebar visibility
   const { showButton } = props;
-
   const auth = useSelector(({ AuthReducer }) => AuthReducer);
-
   const router = useRouter();
-  const homeClick = () => {
-    if (accessToken) {
-      router.push("/timeline")
-    } else {
-      router.push("/login")
-    }
+
+  const toggleSidebar = () => {
+    setShowSidebar(!showSidebar);
   };
 
-  // console.log("accessToken ==>>", accessToken)
-  // console.log("seekerId ==>", seekerId)
+  const handleLogout = () => {
+    dispatch(LoggedOut());
+    localStorage.clear();
+    window.location.href = "/login";
+  };
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -37,11 +34,14 @@ const Header = (props) => {
     }
   }, []);
 
-  const handleLogout = () => {
-    dispatch(LoggedOut());
-    localStorage.clear();
-    window.location.href = "/login";
+  const homeClick = () => {
+    if (accessToken) {
+      router.push("/timeline");
+    } else {
+      router.push("/login");
+    }
   };
+
   return (
     <div className={"header " + props.styleClass}>
       <Container>
@@ -51,7 +51,7 @@ const Header = (props) => {
               <img
                 src={
                   props.logoUrl == "/assets/images/white-logo.svg" ||
-                    props.logoUrl == "assets/images/white-logo.svg"
+                  props.logoUrl == "assets/images/white-logo.svg"
                     ? "/assets/images/white-logo.svg"
                     : "/assets/images/dark-logo.svg"
                 }
@@ -62,30 +62,39 @@ const Header = (props) => {
           </div>
           {!props.hideButtons && (
             <span>
-              {router.asPath === "/" || router.asPath === "/login" || router.pathname === "/jobs/[id]" ? (
+              {router.asPath === "/" ||
+              router.asPath === "/login" ||
+              router.pathname === "/jobs/[id]" ? (
                 <>
                   {router.asPath === "/login" ? null : (
                     <>
                       <div className="actions">
-                        <Link href="/login" passHref>
+                        <Link href="/login" passHref className="">
                           <button
                             type="button"
-                            className="btn btn-outline-info me-4"
-                            style={router.pathname === "/jobs/[id]" ? ({borderColor:"#000000", color:"#000000"}) : ({})}
+                            className="btn btn-outline-info me-4 d-none d-sm-block"
+                            style={
+                              router.pathname === "/jobs/[id]"
+                                ? { borderColor: "#000000", color: "#000000" }
+                                : {}
+                            }
                           >
                             Login
                           </button>
                         </Link>
-                        <Link href="/register" passHref>
-                          <button
-                            type="button"
-                            className="btn btn-info"
-                          >
+                        <Link href="/register" passHref className="">
+                          <button type="button" className="btn btn-info d-none d-sm-block">
                             Register
                           </button>
                         </Link>
+                        <button
+                          type="button"
+                          className="btn btn-outline-dark ms-4 d-block d-sm-none"
+                          onClick={toggleSidebar}
+                        >
+                          &#9776; 
+                        </button>
                       </div>
-
                     </>
                   )}
                 </>
@@ -93,8 +102,7 @@ const Header = (props) => {
                 <>
                   {seekerId && accessToken ? (
                     <>
-                      {showButton
-                        &&
+                      {showButton && (
                         <button
                           type="button"
                           onClick={handleLogout}
@@ -102,7 +110,7 @@ const Header = (props) => {
                         >
                           Logout
                         </button>
-                      }
+                      )}
                     </>
                   ) : (
                     <div className="actions">
@@ -132,7 +140,97 @@ const Header = (props) => {
           )}
         </div>
       </Container>
+
+      {/* Sidebar */}
+      {showSidebar && (
+        <div className="sidebar headersidebar">
+
+{!props.hideButtons && (
+            <span className="d-block d-sm-none">
+              {router.asPath === "/" ||
+              router.asPath === "/login" ||
+              router.pathname === "/jobs/[id]" ? (
+                <>
+                  {router.asPath === "/login" ? null : (
+                    <>
+                    <div className="closebutton">
+                     <button
+                          type="button"
+                          className="btn mobileclose" style={{marginRight: "0"}}
+                          onClick={toggleSidebar}
+                        >
+                         &times;
+                        </button>
+                      </div>
+                      <div className="actions">
+                        <Link href="/login" passHref>
+                          <button
+                            type="button"
+                            className="btn btn-outline-info"
+                            style={
+                              router.pathname === "/jobs/[id]"
+                                ? { borderColor: "#000000", color: "#000000" }
+                                : {}
+                            }
+                          >
+                            Login
+                          </button>
+                        </Link>
+                        <Link href="/register" passHref>
+                          <button type="button" className="btn btn-info">
+                            Register
+                          </button>
+                        </Link>
+                       
+                      </div>
+                    </>
+                  )}
+                </>
+              ) : (
+                <>
+                  {seekerId && accessToken ? (
+                    <>
+                      {showButton && (
+                        <button
+                          type="button"
+                          onClick={handleLogout}
+                          className="btn btn-info mb-3"
+                        >
+                          Logout
+                        </button>
+                      )}
+                    </>
+                  ) : (
+                    <div className="actions">
+                      {/* <Link href="/login" passHref>
+                        <button
+                          type="button"
+                          //onClick={loginClick}
+                          className="btn btn-outline-info me-4"
+                        >
+                          Login
+                        </button>
+                      </Link>
+                      <Link href="/register" passHref>
+                        <button
+                          type="button"
+                          //onClick={registerClick}
+                          className="btn btn-info"
+                        >
+                          Register
+                        </button>
+                      </Link> */}
+                    </div>
+                  )}
+                </>
+              )}
+            </span>
+          )}
+        
+        </div>
+      )}
     </div>
   );
 };
+
 export default Header;

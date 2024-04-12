@@ -176,6 +176,22 @@ const DashboardComp = (props) => {
     }
   }
 
+  const postedDate = new Date(jobBrowse?.posted_Date);
+const formattedDate = `${postedDate.getDate()}${getOrdinalSuffix(postedDate.getDate())} ${getMonthName(postedDate.getMonth())} ${postedDate.getFullYear()}`;
+function getOrdinalSuffix(day) {
+    if (day > 3 && day < 21) return 'th';
+    switch (day % 10) {
+        case 1: return "st";
+        case 2: return "nd";
+        case 3: return "rd";
+        default: return "th";
+    }
+}
+function getMonthName(month) {
+    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    return monthNames[month];
+}
+
 
 
   return (
@@ -253,9 +269,9 @@ const DashboardComp = (props) => {
               display: 'flex',
               alignItems: 'center'
             }}>
-              <label style={{ marginRight: '10px'}}>Country</label>
+              <label style={{ marginRight: '10px'}}>Location</label>
               <button type="button" className="btn btn-light-info" style={{padding: '1px 11px'}}>
-                {jobBrowse?.location && jobBrowse?.isScraped === 0
+                {jobBrowse?.location
                   ? getLocation(jobBrowse?.location, jobBrowse?.currencyType)
                   : "Not Available"}
               </button>
@@ -263,21 +279,27 @@ const DashboardComp = (props) => {
             <div className="action_tags_area">
               <ul>
                 <li>
-                  <label>Salary</label>
+                  <label>Min Salary</label>
                   <button type="button" className="btn btn-light-warning ">
-                    {jobBrowse?.salary && jobBrowse?.max_Salary && jobBrowse?.isScraped == 0
-                      ? jobBrowse?.salary == jobBrowse?.max_Salary
+                    {jobBrowse?.salary
                         ? `${getPriceRange(jobBrowse?.salary, jobBrowse?.currencyType)}`
-                        : `${getPriceRange(jobBrowse?.salary, jobBrowse?.currencyType)} - ${getPriceRange(jobBrowse?.max_Salary, jobBrowse?.currencyType)}`
-                      : "Not Available"}
+                      : "Not Disclosed"}
                     {`${getSalaryType(jobBrowse?.base)}`}
                   </button>
                 </li>
                 <li>
-                  <label>Job Type</label>
+                  <label>Posted Date</label>
                   <div style={{ maxWidth: "355px", width: "100%" }}>
-                    {/* <button type="button" className="btn btn-light-info"> */}
-                    {jobBrowse?.job_Type &&
+
+                    <button
+                        type="button"
+                        className="btn btn-light-info"
+                        style={{ marginRight: "2px" }}
+                    >
+                        {formattedDate ? formattedDate : "Not Available"}
+                    </button>
+
+                    {/* {jobBrowse?.job_Type &&
                       jobBrowse?.job_Type.length != 0 ?
                       jobBrowse?.job_Type.map((item, i) => {
                         return (
@@ -299,9 +321,21 @@ const DashboardComp = (props) => {
                       >
                         N/A
                       </button>
-                    }
+                    } */}
                   </div>
                 </li>
+
+                <li>
+                  <label>Basic Requirements</label>
+                  <button
+                        type="button"
+                        className="btn"
+                        style={{ marginRight: "2px", background: "rgb(155, 0, 228, 0.7)", color: "#fff"}}
+                    >
+                        Basic English
+                    </button>
+                </li>
+
               </ul>
               <button
                 type="submit"

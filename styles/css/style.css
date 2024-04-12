@@ -970,7 +970,7 @@ input[type="number"]::-webkit-inner-spin-button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   padding: 20px 0;
 }
 
@@ -2233,7 +2233,7 @@ input {
 
 .job_box .action_tags_area .btn {
   margin-bottom: 15px;
-  padding: 5px 12px;
+  padding: 5px;
   font-size: 12px;
 }
 
@@ -8238,7 +8238,7 @@ text-wrap: pretty;
 @media screen and (max-width:767px){
 
   .activeusers {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 .scroll-reveal-section .item div {
 width: 100%;
@@ -8562,23 +8562,19 @@ min-height: auto;
 
 .countertext {
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 24px;
+  text-align: center;
   font-weight: 600;
+  border-radius: 50px;
+  border: 2px solid #fff;
   padding: 10px;
-  background: linear-gradient(to right, #0315fb 32%, #764fff 98%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-fill-color: linear-gradient(to right, #0315fb 30%, #c1afff 98%);
   transition: transform 2s ease;
   animation: swipeUp 0.5s ease-in-out;
 }
-.counter{
-  background: #fff;
-  border-radius: 50px;
-  display: inline-block;
-  margin: 20px;
-  border: 2px solid #fff;
-
+.counter {
+display: inline-block;
+  margin: 20px 5px;
+  width: 50%;
 }
 
 @keyframes swipeUp {
@@ -8686,6 +8682,11 @@ min-height: auto;
  display: block;
 }
 @media only screen and (max-width: 420px) {
+
+  .countertext {
+    font-size: 20px;
+  }
+
   .slider {
     padding: 0;
  }
@@ -8701,11 +8702,17 @@ min-height: auto;
   .control-next-btn {
     top: 37%;
  }
+
+ 
 }
 
 .bannergif{
-  width: 300px;
+  width: 250px;
   z-index: 99;
+  border-radius: 10px;
+}
+
+.reelslider .swiper-slide img{
   border-radius: 10px;
 }
 @media only screen and (max-width: 420px) {
@@ -8713,3 +8720,4 @@ min-height: auto;
   width: 150px;
 }
 }
+

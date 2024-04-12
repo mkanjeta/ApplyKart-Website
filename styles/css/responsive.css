@@ -509,8 +509,31 @@
   .search-job-w .job-title2 {
     margin-left: 0;
     margin-bottom: 10px;
+    display: none;
   }
+  .counter {
+    width: 100%;
+}
 
+.headersidebar{
+  background: #fff;
+  padding: 0 20px 20px 20px;
+  margin: 5px 10px 10px 10px;
+}
+.headersidebar button{
+  display: block;
+  margin: 10px auto;
+}
+
+.headersidebar .mobileclose{
+  margin-right: 0px;
+  font-size: 28px;
+  padding: 0;
+}
+.btn-outlinewhite{
+  color: #fff;
+  border: 1px solid #fff;
+}
   .app-footer .footer-content .flink-logo {
     margin-bottom: 30px;
   }
@@ -740,9 +763,9 @@
     width: 260px;
   }
 
-  .header .header-inner {
+  /* .header .header-inner {
     flex-direction: column;
-  }
+  } */
 
   .header .header-inner .btn {
     padding: 4px 16px;
