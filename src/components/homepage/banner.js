@@ -32,7 +32,7 @@ const Banner = () => {
     function updateCounter() {
       const counter = document.getElementById("countertext");
       const randomNumber = Math.floor(Math.random() * (20001 - 15000) + 20000);
-      counter.innerHTML = randomNumber + " Active Users";
+     if(counter) counter.innerHTML = randomNumber + " Active Users";
       counter.style.color = "#fff";
       counter.style.background = "transparent";
       animateText(counter);
@@ -42,7 +42,7 @@ const Banner = () => {
     function flipCounter() {
       const counter = document.getElementById("countertext");
       const randomNumber = Math.floor(Math.random() * (30001 - 25000) + 25000);
-      counter.innerHTML = randomNumber + " Daily Active Users";
+      if(counter)  counter.innerHTML = randomNumber + " Daily Active Users";
       counter.style.color = "#0315fb";
       counter.style.background = "#fff";
       animateText(counter);
@@ -157,7 +157,7 @@ const Banner = () => {
             <Col lg={6} md={8}>
               <div className="banner-iphone mb-2">
                 <div className="home-iphone">
-                  <img src="/assets/images/reelgif.gif" className="bannergif" />
+                  <img src="/assets/images/homepage.png" className="bannergif" />
                   <img
                     src={"/assets/images/home-circle-img.png"}
                     className="banner-bg-circle"
