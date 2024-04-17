@@ -514,6 +514,10 @@
   .counter {
     width: 100%;
 }
+.job_box .action_tags_area, .job_box .action_tags_area ul {
+  flex-wrap: wrap;
+}
+
 
 .headersidebar{
   background: #fff;

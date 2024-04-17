@@ -463,12 +463,16 @@ const RecommendedJobs = () => {
               </div>
                 
               <div className="col-xl-2 text-center">
+                <div className="appsidebar">
                 <h6 className="mt-3 text-dark">Download Our App</h6>
               <img src="/assets/images/applykart-portal.png" />
 
-              <a href="https://play.google.com/store/apps/details?id=com.applykart" target="blank" className="my-3 btn btn-warning">Play Store</a>
+                <div className="downloadapp">
+              <a href="https://play.google.com/store/apps/details?id=com.applykart" target="blank" className="my-3"><i className='fab fa-google-play'></i></a>
 
-              <a href="https://apps.apple.com/us/app/applykart/id1638867413" target="blank" className="btn btn-warning">App Store</a>
+              <a href="https://apps.apple.com/us/app/applykart/id1638867413" target="blank" className=""><i className='fab fa-app-store'></i></a>
+              </div>
+              </div>
               </div>
             </div>
           </div>

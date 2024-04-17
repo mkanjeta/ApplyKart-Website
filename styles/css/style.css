@@ -8725,7 +8725,12 @@ display: inline-block;
   border-radius: 10px;
   font-weight: 600;
   margin-right: 10px;
+  width: max-content;
 }   
+.livecounter{
+  padding: 0 5px;
+  font-size: 20px;
+}
 
 @media only screen and (max-width: 420px) {
 .bannergif {
@@ -8755,9 +8760,7 @@ display: inline-block;
   padding: 25px 10px;
   z-index: 1;
 }
-.reelslider .carousel-cell{
-  opacity: .5;
-}
+
 .reelslider .carousel-cell img{
   box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
 }
@@ -8780,3 +8783,8 @@ display: inline-block;
   overflow: visible !important;
 }
 
+.downloadapp .fab{
+  color: #1c3fed;
+  font-size: 24px;
+  margin: 5px;
+}

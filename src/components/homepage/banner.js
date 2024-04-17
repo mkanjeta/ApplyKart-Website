@@ -8,6 +8,8 @@ import { useDispatch } from "react-redux";
 import { getJobBrowseList } from "redux/actions/jobBrowse";
 import jobTitles from "../../../public/assets/titles.json";
 import _ from "lodash";
+import Tooltip from '@mui/material/Tooltip';
+
 
 const Banner = () => {
   const router = useRouter();
@@ -29,43 +31,57 @@ const Banner = () => {
   };
 
   useEffect(() => {
-    function updateCounter() {
-      const counter = document.getElementById("countertext");
-      const randomNumber = Math.floor(Math.random() * (20001 - 15000) + 20000);
-     if(counter) counter.innerHTML = randomNumber + " Active Users";
-      counter.style.color = "#fff";
-      counter.style.background = "transparent";
-      animateText(counter);
-      setTimeout(flipCounter, 10000);
-    }
 
     function flipCounter() {
       const counter = document.getElementById("countertext");
       const randomNumber = Math.floor(Math.random() * (30001 - 25000) + 25000);
-      if(counter)  counter.innerHTML = randomNumber + " Daily Active Users";
-      counter.style.color = "#0315fb";
-      counter.style.background = "#fff";
-      animateText(counter);
-      setTimeout(updateCounter, 10000);
+      if(counter) counter.innerHTML = randomNumber + " Daily Active Users";
+      if(counter) counter.style.color = "#0315fb";
+      if(counter) counter.style.background = "#fff";
+      if(counter) counter.style.animation = "none";
+      if(counter) counter.offsetHeight; /* trigger reflow */
+      if(counter) counter.style.animation = null;
+      setTimeout(flipCounter, 10000);
     }
 
-    function animateText(element) {
-      // Trigger reflow to restart the animation
-      element.style.animation = "none";
-      element.offsetHeight; /* trigger reflow */
-      element.style.animation = null;
-    }
+    flipCounter();
 
-    updateCounter();
+
+    function updatelivecounter() {
+      const livecounter = document.getElementById("livecounter");
+      const randomNumber = Math.floor(Math.random() * (20001 - 15000) + 20000);
+      if(livecounter)livecounter.innerHTML = randomNumber;
+  }
+
+  updatelivecounter();
+  setTimeout(updatelivecounter, 10000);
   }, []);
 
   return (
     <div className="banner banner-bg">
       <div className="container">
         <div className="banner-content">
+
+       
+
           <Row className=" justify-content-center">
             <Col lg={6}>
+              
               <div className="d-flex flex-column hero-section">
+
+              <div className="">
+              <Tooltip title="Live Users" placement="top">
+              <div className="counterlivediv d-flex align-items-center">
+              <svg width="20" height="20">
+            <circle fill="#ff0000" stroke="none" cx="10" cy="10" r="10">
+              <animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin="0.1"></animate>
+            </circle>
+          </svg> <div id="livecounter" className="livecounter"></div>
+            </div>
+          </Tooltip> 
+          </div>
+
+
                 <div className="banner-text-center">
                   <h1 className="banner-heading">
                     <strong>All in one </strong> professional{" "}

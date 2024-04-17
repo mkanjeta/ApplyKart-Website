@@ -5,8 +5,7 @@ import { BASE_URL } from "constants/constants";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { LoggedOut } from "redux/actions/authActions";
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
+
 
 const Header = (props) => {
   const dispatch = useDispatch();
@@ -34,15 +33,6 @@ const Header = (props) => {
       setaccessToken(data?.encryptedToken);
       setSeekerId(data?.userId);
     }
-
-    function updatelivecounter() {
-        const livecounter = document.getElementById("livecounter");
-        const randomNumber = Math.floor(Math.random() * (20001 - 15000) + 20000);
-        if(livecounter)livecounter.innerHTML = randomNumber;
-    }
-
-    updatelivecounter();
-    setTimeout(updatelivecounter, 10000);
     
   }, []);
 
@@ -83,17 +73,6 @@ const Header = (props) => {
 
                   
                       <div className="actions">
-
-                      {router.asPath === "/" ? 
-                      <div className="">
-                         <Tooltip title="Active Users" placement="bottom">
-                         <div className="counterlivediv d-flex align-items-center">
-                        <i className="fa fa-eye" aria-hidden="true" style={{marginRight:"5px"}}></i> <div id="livecounter" className="livecounter"></div>
-                        </div>
-                      </Tooltip> 
-                      </div>
-                      : "" }
-
                         <Link href="/login" passHref className="">
                           <button
                             type="button"

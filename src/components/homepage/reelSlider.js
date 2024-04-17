@@ -43,9 +43,9 @@ export default function ReelSlider() {
       loop={true}
       slidesPerView="auto"
       centeredSlides= "true"
-      coverflowEffect={{
-        opacity: 0.5
-      }}
+      // coverflowEffect={{
+      //   opacity: 0.5
+      // }}
       breakpoints={{
         300: {
           slidesPerView: 3,
@@ -65,7 +65,7 @@ export default function ReelSlider() {
       {slide_img.map((img, i) => {
           return (
             <SwiperSlide key={i}>
-             <div className="carousel-cell" style={{ opacity: centerIndex == i ? 1 : '' }}> <img src={img} alt="" /> </div>
+             <div className="carousel-cell"> <img src={img} alt="" /> </div>
             </SwiperSlide>
           );
         })}
