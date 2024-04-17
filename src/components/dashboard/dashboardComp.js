@@ -267,7 +267,8 @@ function getMonthName(month) {
             </div>
             <div style={{
               display: 'flex',
-              alignItems: 'center'
+              alignItems: 'center',
+              flexWrap: 'wrap'
             }}>
               <label style={{ marginRight: '10px'}}>Location</label>
               <button type="button" className="btn btn-light-info" style={{padding: '1px 11px'}}>
