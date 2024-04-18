@@ -9,6 +9,9 @@ import { getJobBrowseList } from "redux/actions/jobBrowse";
 import jobTitles from "../../../public/assets/titles.json";
 import _ from "lodash";
 import Tooltip from '@mui/material/Tooltip';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 
 const Banner = () => {
@@ -32,30 +35,54 @@ const Banner = () => {
 
   useEffect(() => {
 
-    function flipCounter() {
-      const counter = document.getElementById("countertext");
-      const randomNumber = Math.floor(Math.random() * (30001 - 25000) + 25000);
-      if(counter) counter.innerHTML = randomNumber + " Daily Active Users";
-      if(counter) counter.style.color = "#0315fb";
-      if(counter) counter.style.background = "#fff";
-      if(counter) counter.style.animation = "none";
-      if(counter) counter.offsetHeight; /* trigger reflow */
-      if(counter) counter.style.animation = null;
-      setTimeout(flipCounter, 10000);
-    }
-
-    flipCounter();
-
 
     function updatelivecounter() {
       const livecounter = document.getElementById("livecounter");
       const randomNumber = Math.floor(Math.random() * (20001 - 15000) + 20000);
-      if(livecounter)livecounter.innerHTML = randomNumber;
+      if(livecounter)livecounter.innerHTML = randomNumber + ' Active Users';
   }
 
   updatelivecounter();
   setTimeout(updatelivecounter, 10000);
   }, []);
+
+  var settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    autoplay: true,
+    arrows: false,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear" ,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
 
   return (
     <div className="banner banner-bg">
@@ -68,17 +95,12 @@ const Banner = () => {
             <Col lg={6}>
               
               <div className="d-flex flex-column hero-section">
-
-              <div className="">
-              <Tooltip title="Live Users" placement="top">
               <div className="counterlivediv d-flex align-items-center">
               <svg width="20" height="20">
             <circle fill="#ff0000" stroke="none" cx="10" cy="10" r="10">
               <animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin="0.1"></animate>
             </circle>
           </svg> <div id="livecounter" className="livecounter"></div>
-            </div>
-          </Tooltip> 
           </div>
 
 
@@ -107,7 +129,7 @@ const Banner = () => {
                   </h1>
                 </div>
                 <form onSubmit={handleSearch}>
-                  <div className="search-job-w">
+                  <div className="search-job-w activeusers">
                     <div
                       className="job-title1"  id="jobtitle1"
                     >
@@ -163,13 +185,9 @@ const Banner = () => {
                   </div>
                 </form>
 
-                <div className="activeusers">
-                  <div className="counter">
-                    <div id="countertext" className="countertext"></div>
-                  </div>
-                </div>
-              </div>
+              </div>      
             </Col>
+
             <Col lg={6} md={8}>
               <div className="banner-iphone mb-2">
                 <div className="home-iphone">
@@ -182,6 +200,113 @@ const Banner = () => {
                 </div>
               </div>
             </Col>
+
+            <div className="image-slider-container">
+      <Slider {...settings}>
+        <div>
+          <div className="divimgbox">
+            <img src="/assets/images/nikhil.jpg" />
+            <p>Nikhil got job 3 hours ago</p>
+          </div>
+        </div>
+        <div>
+          <div className="divimgbox">
+            <img src="/assets/images/stella.jpg" />
+            <p>Stella uploaded a reel</p>
+          </div>
+        </div>
+
+        <div>
+          <div className="divimgbox">
+             <img src="/assets/images/priya.jpg" />
+            <p>Priya got job 4 hours ago</p>
+          </div>
+        </div>
+
+
+        <div>
+          <div className="divimgbox">
+            <img src="/assets/images/chandrajeet.jpg" />
+            <p>Chandrajeet has fixed an interview</p>
+          </div>
+        </div>
+
+        <div>
+          <div className="divimgbox">
+             <img src="/assets/images/jennie.jpg" />
+            <p>Jennie has fixed an interview</p>
+          </div>
+        </div>
+
+
+        <div>
+          <div className="divimgbox">
+            <img src="/assets/images/han.jpg" />
+            <p>Han viewed a profile</p>
+          </div>
+        </div>
+
+        <div>
+          <div className="divimgbox">
+             <img src="/assets/images/melissa.jpg" />
+            <p>Melissa uploaded a reel</p>
+          </div>
+        </div>
+
+
+        <div>
+          <div className="divimgbox">
+            <img src="/assets/images/dinesh.jpg" />
+            <p>Dinesh has fixed an interview</p>
+          </div>
+        </div>
+
+        
+        <div>
+          <div className="divimgbox">
+             <img src="/assets/images/kristina.jpg" />
+            <p>Kristina got job 9 hours ago</p>
+          </div>
+        </div>
+
+        <div>
+          <div className="divimgbox">
+            <img src="/assets/images/abhijeet.jpg" />
+            <p>Abhijeet got job 7 hours ago</p>
+          </div>
+        </div>
+       
+
+        <div>
+          <div className="divimgbox">
+             <img src="/assets/images/jack.jpg" />
+            <p>Jack has fixed an interview</p>
+          </div>
+        </div>
+   
+
+        <div>
+          <div className="divimgbox">
+             <img src="/assets/images/stephnie.jpg" />
+            <p>Stephnie got job 3 hours ago</p>
+          </div>
+        </div>
+        <div>
+          <div className="divimgbox">
+             <img src="/assets/images/tao.jpg" />
+            <p>Tao has fixed an interview</p>
+          </div>
+        </div>
+
+
+        <div>
+          <div className="divimgbox">
+             <img src="/assets/images/xiu.jpg" />
+            <p>Xiu uploaded a reel</p>
+          </div>
+        </div>
+      </Slider>
+    </div>
           </Row>
         </div>
       </div>

@@ -14,7 +14,6 @@ export default function ReelSlider() {
     setCenterIndex(swiper.realIndex);
   };
 
-
   const slide_img = [
     "/assets/images/reelgif.gif",
     "/assets/images/reel2.gif",
@@ -37,15 +36,17 @@ export default function ReelSlider() {
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={handleSlideChange}
       autoplay={{
-        delay: 1000,
+        delay: 0,
         disableOnInteraction: false,
       }}
       loop={true}
       slidesPerView="auto"
       centeredSlides= "true"
+      effect="slide"
       // coverflowEffect={{
       //   opacity: 0.5
       // }}
+      speed={3000}
       breakpoints={{
         300: {
           slidesPerView: 3,
@@ -60,12 +61,15 @@ export default function ReelSlider() {
           spaceBetween: 15
         },
       }}
+  freeMode="true"
+  grabCursor="true"
+  freeModeMomentum="false"
     >
 
       {slide_img.map((img, i) => {
           return (
             <SwiperSlide key={i}>
-             <div className="carousel-cell"> <img src={img} alt="" /> </div>
+            <div className="doteffect"><div className="carousel-cell sepiaEffect"> <img src={img} alt="" /> </div></div> 
             </SwiperSlide>
           );
         })}

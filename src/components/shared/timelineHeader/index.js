@@ -86,7 +86,7 @@ const TimelineHeader = () => {
 
           {
             !localStorageData && (
-              <div className="actions">
+              <div className="actions timelinelogin">
                 <Link href="/login" passHref>
                   <button
                     type="button"

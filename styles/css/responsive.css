@@ -202,7 +202,7 @@
 
   .banner-content .banner-heading {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
   .section5 .swiperjs {
@@ -473,6 +473,17 @@
   .banner-content .banner-heading {
     font-size: 24px;
     line-height: 38px;
+  }
+
+  .timelinelogin{
+    display: flex;
+
+  }
+
+  .timelinelogin .btn{
+    padding: 5px 10px;
+    margin-right: 5px !important;
+    margin-left: 5px !important;
   }
 
   .banner-text-center p {

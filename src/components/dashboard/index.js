@@ -154,6 +154,38 @@ const RecommendedJobs = () => {
     }
   }, [jobBrowseList]);
 
+  useEffect(() => {
+
+    window.scroll(reOrder);
+
+ 
+ function reOrder() {
+   var mq = window.matchMedia("(min-width: 992px)");
+   if (mq.matches) {
+    document.querySelector('.filtersidebar').addClass('customm');
+    
+     var scroll = window.scrollTop(),
+       topContent = document.querySelector('.main_wrapper').position().top - 25,
+       sectionHeight = document.querySelector('.dashboard_title_bar').height(),
+       rightHeight = document.querySelector('.filtersidebar').height(),
+       bottomContent = topContent + sectionHeight - rightHeight - 45;
+ 
+     if (scroll > topContent && scroll < bottomContent) {
+       document.querySelector('.customm').removeClass('posAbs').addClass('posFix');
+     } else if (scroll > bottomContent) {
+       document.querySelector('.customm').removeClass('posFix').addClass('posAbs');
+     } else if (scroll < topContent) {
+       document.querySelector('.customm').removeClass('posFix');
+     }
+   } else {
+    document.querySelector('.filtersidebar').removeClass('customm posAbs posFix');
+    
+   }
+ }
+
+  }, []);
+
+
   // const [currentPage, setCurrentPage] = useState(1);
 
   const filterWithoutLogin = (jobTypeList?.length > 0 || jobCategory?.length > 0) || false;
@@ -164,7 +196,7 @@ const RecommendedJobs = () => {
         <title>ApplyKart</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <main className="main_wrapper">
+      <main className="main_wrapper wrapper_style_two">
         <TimelineHeader />
         <div className="container">
           <div className="right_side dashboard" id="right_side">
@@ -183,10 +215,12 @@ const RecommendedJobs = () => {
               experience={experience}
             />
 
-            <div className="row">
+            <div className="row content-wrap">
 
               {(filterWithoutLogin) && (
-                <div className="col-xl-3">
+              
+                <div className="col-xl-3 left-sidebar">
+                    <div className="filtersidebar">
                   {/* Filter */}
                   <form className="side_filter">
                     <h5 className="title">Filter</h5>
@@ -302,6 +336,7 @@ const RecommendedJobs = () => {
                     </Accordion>
                   </form>
                   {/* Filter */}
+                </div>
                 </div>
               )}
               <div className={`col-xl-${filterWithoutLogin ? '7' : '9'}`}>
