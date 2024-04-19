@@ -39,7 +39,7 @@ const Banner = () => {
     function updatelivecounter() {
       const livecounter = document.getElementById("livecounter");
       const randomNumber = Math.floor(Math.random() * (20001 - 15000) + 20000);
-      if(livecounter)livecounter.innerHTML = randomNumber + ' Active Users';
+      if(livecounter)livecounter.innerHTML = randomNumber + ' LIVE NOW';
   }
 
   updatelivecounter();

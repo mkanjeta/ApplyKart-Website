@@ -69,7 +69,7 @@ export default function ReelSlider() {
       {slide_img.map((img, i) => {
           return (
             <SwiperSlide key={i}>
-            <div className="doteffect"><div className="carousel-cell sepiaEffect"> <img src={img} alt="" /> </div></div> 
+            <div className="doteffect"><div className="carousel-cell sepiaEffect"> <a href="https://play.google.com/store/apps/details?id=com.applykart" target="blank"> <img src={img} alt="" /></a> </div></div> 
             </SwiperSlide>
           );
         })}
