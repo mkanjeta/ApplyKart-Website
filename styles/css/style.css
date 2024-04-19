@@ -8806,14 +8806,14 @@ display: inline-block;
   /* transition: transform 0.5s ease-in-out; */
 }
 
-.sepiaEffect {
+/* .sepiaEffect {
   background: radial-gradient(circle at center, rgb(205, 165, 105), rgb(100, 80, 60) 84%);
   filter: contrast(132%) saturate(180%);
 }
 
 .sepiaEffect > * {
   filter: opacity(60%) saturate(0%) sepia(30%);
-}
+} */
 .image-slider-container{
   margin-top: -12%;
   z-index: 999;
