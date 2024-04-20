@@ -55,7 +55,7 @@ const Banner = () => {
     slidesToScroll: 20,
     autoplay: true,
     arrows: false,
-    speed: 24000,
+    speed: 26000,
     autoplaySpeed: 2000,
     cssEase: "linear" ,
     responsive: [
