@@ -18,6 +18,7 @@ const Banner = () => {
   const router = useRouter();
   const dispatch = useDispatch();
   const [search, setSearch] = useState("");
+  const [slides, setSlides] = useState([]);
   const [location, setLocation] = useState(() =>
     router.query.location ? router.query.location : ""
   );
@@ -44,16 +45,17 @@ const Banner = () => {
 
   updatelivecounter();
   setTimeout(updatelivecounter, 10000);
+  randomUserSlides()
   }, []);
 
   var settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 6,
-    slidesToScroll: 1,
+    slidesToShow: 5,
+    slidesToScroll: 20,
     autoplay: true,
     arrows: false,
-    speed: 2000,
+    speed: 24000,
     autoplaySpeed: 2000,
     cssEase: "linear" ,
     responsive: [
@@ -61,7 +63,7 @@ const Banner = () => {
         breakpoint: 1024,
         settings: {
           slidesToShow: 5,
-          slidesToScroll: 3,
+          slidesToScroll: 20,
           infinite: true,
           dots: true
         }
@@ -84,6 +86,52 @@ const Banner = () => {
     ]
   };
 
+  function randomUserSlides(){
+    let users = [
+      {"name": "Akash Patel", "imgurl": "https://randomuser.me/api/portraits/men/45.jpg"},
+      {"name": "Rajesh Sharma", "imgurl": "https://randomuser.me/api/portraits/men/65.jpg"},
+      {"name": "Arjun Singh", "imgurl": "https://randomuser.me/api/portraits/men/38.jpg"},
+      {"name": "Siddharth Kumar", "imgurl": "https://randomuser.me/api/portraits/men/47.jpg"},
+      {"name": "Rahul Gupta", "imgurl": "https://randomuser.me/api/portraits/men/12.jpg"},
+      {"name": "Priya Sharma", "imgurl": "https://randomuser.me/api/portraits/women/50.jpg"},
+      {"name": "Aarti Desai", "imgurl": "https://randomuser.me/api/portraits/women/37.jpg"},
+      {"name": "Neha Reddy", "imgurl": "https://randomuser.me/api/portraits/women/15.jpg"},
+      {"name": "Ananya Kapoor", "imgurl": "https://randomuser.me/api/portraits/women/38.jpg"},
+      {"name": "Pooja Mehta", "imgurl": "https://randomuser.me/api/portraits/women/88.jpg"},
+      {"name": "Jack Thompson", "imgurl": "https://randomuser.me/api/portraits/men/44.jpg"},
+      {"name": "Liam Wilson", "imgurl": "https://randomuser.me/api/portraits/men/81.jpg"},
+      {"name": "Ethan Campbell", "imgurl": "https://randomuser.me/api/portraits/men/46.jpg"},
+      {"name": "Oliver Harris", "imgurl": "https://randomuser.me/api/portraits/men/16.jpg"},
+      {"name": "Noah Roberts", "imgurl": "https://randomuser.me/api/portraits/men/29.jpg"},
+      {"name": "Olivia Smith", "imgurl": "https://randomuser.me/api/portraits/women/79.jpg"},
+      {"name": "Isabella Jones", "imgurl": "https://randomuser.me/api/portraits/women/80.jpg"},
+      {"name": "Kate William", "imgurl": "https://randomuser.me/api/portraits/women/68.jpg"},
+      {"name": "Charlotte Taylor", "imgurl": "https://randomuser.me/api/portraits/women/32.jpg"},
+      {"name": "Ava Wilson", "imgurl": "https://randomuser.me/api/portraits/women/81.jpg"}
+  ]
+
+  let slugs = [
+    "has fixed an interview",
+    "got job 4 hours ago",
+    "uploaded a reel",
+    "got job 3 hours ago",
+    "got job 9 hours ago",
+    "uploaded a reel",
+    "viewed a profile"
+  ]
+  let random_users = [];
+  let used_indeces = [];
+
+  while(random_users.length < users.length){
+    let randomIndex = Math.floor(Math.random() * users.length);
+    let randomSlugIndex = Math.floor(Math.random() * slugs.length);
+    if(!used_indeces.includes(randomIndex)){
+      random_users.push({"slug":slugs[randomSlugIndex],...users[randomIndex]})
+      used_indeces.push(randomIndex);
+    }
+  }
+  setSlides(random_users)
+  }
   return (
     <div className="banner banner-bg">
       <div className="container">
@@ -203,108 +251,16 @@ const Banner = () => {
 
             <div className="image-slider-container">
       <Slider {...settings}>
-        <div>
-          <div className="divimgbox">
-            <img src="/assets/images/nikhil.jpg" />
-            <p>Nikhil got job 3 hours ago</p>
-          </div>
-        </div>
-        <div>
-          <div className="divimgbox">
-            <img src="/assets/images/stella.jpg" />
-            <p>Stella uploaded a reel</p>
-          </div>
-        </div>
-
-        <div>
-          <div className="divimgbox">
-             <img src="/assets/images/priya.jpg" />
-            <p>Priya got job 4 hours ago</p>
-          </div>
-        </div>
-
-
-        <div>
-          <div className="divimgbox">
-            <img src="/assets/images/chandrajeet.jpg" />
-            <p>Chandrajeet has fixed an interview</p>
-          </div>
-        </div>
-
-        <div>
-          <div className="divimgbox">
-             <img src="/assets/images/jennie.jpg" />
-            <p>Jennie has fixed an interview</p>
-          </div>
-        </div>
-
-
-        <div>
-          <div className="divimgbox">
-            <img src="/assets/images/han.jpg" />
-            <p>Han viewed a profile</p>
-          </div>
-        </div>
-
-        <div>
-          <div className="divimgbox">
-             <img src="/assets/images/melissa.jpg" />
-            <p>Melissa uploaded a reel</p>
-          </div>
-        </div>
-
-
-        <div>
-          <div className="divimgbox">
-            <img src="/assets/images/dinesh.jpg" />
-            <p>Dinesh has fixed an interview</p>
-          </div>
-        </div>
-
-        
-        <div>
-          <div className="divimgbox">
-             <img src="/assets/images/kristina.jpg" />
-            <p>Kristina got job 9 hours ago</p>
-          </div>
-        </div>
-
-        <div>
-          <div className="divimgbox">
-            <img src="/assets/images/abhijeet.jpg" />
-            <p>Abhijeet got job 7 hours ago</p>
-          </div>
-        </div>
-       
-
-        <div>
-          <div className="divimgbox">
-             <img src="/assets/images/jack.jpg" />
-            <p>Jack has fixed an interview</p>
-          </div>
-        </div>
-   
-
-        <div>
-          <div className="divimgbox">
-             <img src="/assets/images/stephnie.jpg" />
-            <p>Stephnie got job 3 hours ago</p>
-          </div>
-        </div>
-        <div>
-          <div className="divimgbox">
-             <img src="/assets/images/tao.jpg" />
-            <p>Tao has fixed an interview</p>
-          </div>
-        </div>
-
-
-        <div>
-          <div className="divimgbox">
-             <img src="/assets/images/xiu.jpg" />
-            <p>Xiu uploaded a reel</p>
-          </div>
-        </div>
+        {slides.map((slide,key)=>{
+          return (
+            <div key={key}>
+              <div className="divimgbox">
+                <img src={slide.imgurl} />
+                <p>{slide.name} {slide.slug}</p>
+              </div>
+            </div>
+          )
+        })}
       </Slider>
     </div>
           </Row>
