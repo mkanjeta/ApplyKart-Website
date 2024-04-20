@@ -55,7 +55,7 @@ const Banner = () => {
     slidesToScroll: 20,
     autoplay: true,
     arrows: false,
-    speed: 26000,
+    speed: 40000,
     autoplaySpeed: 2000,
     cssEase: "linear" ,
     responsive: [
@@ -65,7 +65,9 @@ const Banner = () => {
           slidesToShow: 5,
           slidesToScroll: 20,
           infinite: true,
-          dots: true
+          dots: true,
+          speed: 40000,
+          autoplaySpeed: 2000,
         }
       },
       {
@@ -73,14 +75,18 @@ const Banner = () => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 2,
-          initialSlide: 2
+          initialSlide: 2,
+          speed: 3000,
+          autoplaySpeed: 2000,
         }
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          speed: 2000,
+          autoplaySpeed: 2000,
         }
       }
     ]
