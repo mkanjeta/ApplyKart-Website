@@ -46,18 +46,18 @@ export default function ReelSlider() {
       // coverflowEffect={{
       //   opacity: 0.5
       // }}
-      speed={3000}
+      speed={6000}
       breakpoints={{
         300: {
           slidesPerView: 3,
           spaceBetween: 15
         },
         920: {
-          slidesPerView: 3,
+          slidesPerView: 4,
           spaceBetween: 15
         },
         1340: {
-          slidesPerView: 5,
+          slidesPerView: 7,
           spaceBetween: 15
         },
       }}

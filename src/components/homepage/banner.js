@@ -39,12 +39,13 @@ const Banner = () => {
 
     function updatelivecounter() {
       const livecounter = document.getElementById("livecounter");
-      const randomNumber = Math.floor(Math.random() * (20001 - 15000) + 20000);
-      if(livecounter)livecounter.innerHTML = randomNumber + ' LIVE NOW';
+      const randomNumber = Math.floor(Math.random() * (20001 - 19000) + 20000);
+      if(livecounter)livecounter.innerHTML = randomNumber + ' LIVE';
+      setTimeout(updatelivecounter, 2000);
   }
 
   updatelivecounter();
-  setTimeout(updatelivecounter, 10000);
+
   randomUserSlides()
   }, []);
 
@@ -55,7 +56,7 @@ const Banner = () => {
     slidesToScroll: 20,
     autoplay: true,
     arrows: false,
-    speed: 40000,
+    speed: 90000,
     autoplaySpeed: 2000,
     cssEase: "linear" ,
     responsive: [
@@ -66,7 +67,7 @@ const Banner = () => {
           slidesToScroll: 20,
           infinite: true,
           dots: true,
-          speed: 40000,
+          speed: 90000,
           autoplaySpeed: 2000,
         }
       },
@@ -76,8 +77,8 @@ const Banner = () => {
           slidesToShow: 3,
           slidesToScroll: 2,
           initialSlide: 2,
-          speed: 3000,
-          autoplaySpeed: 2000,
+          speed: 5000,
+          autoplaySpeed: 3000,
         }
       },
       {
@@ -85,8 +86,8 @@ const Banner = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          speed: 2000,
-          autoplaySpeed: 2000,
+          speed: 3000,
+          autoplaySpeed: 3000,
         }
       }
     ]
@@ -150,11 +151,14 @@ const Banner = () => {
               
               <div className="d-flex flex-column hero-section">
               <div className="counterlivediv d-flex align-items-center">
-              <svg width="20" height="20">
-            <circle fill="#ff0000" stroke="none" cx="10" cy="10" r="10">
-              <animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin="0.1"></animate>
-            </circle>
-          </svg> <div id="livecounter" className="livecounter"></div>
+                <div className="">
+                  <svg width="20" height="20">
+                <circle fill="#ffffff" stroke="none" cx="10" cy="10" r="10">
+                  <animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin="0.1"></animate>
+                </circle>
+              </svg>
+          </div>
+           <div id="livecounter" className="livecounter"></div>
           </div>
 
 
