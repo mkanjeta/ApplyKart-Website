@@ -47,12 +47,12 @@ const Banner = () => {
       const randomSign = Math.random() < 0.5 ? 1 : -1;
 
       let random_number = Math.floor(Math.random() * (end - start));
-      console.log(random_number * randomSign)
+      // console.log(random_number * randomSign)
       const livecounter = document.getElementById("livecounter");
       base_counter += (random_number * randomSign);
-      if(livecounter)livecounter.innerHTML = base_counter + ' LIVE';
+      if(livecounter)livecounter.innerHTML = base_counter.toString().slice(0,2) + ',' +base_counter.toString().slice(2)+ ' LIVE';
       live_update_counter++;
-      setTimeout(updatelivecounter, 2000);
+      setTimeout(updatelivecounter, 10000);
   }
 
   updatelivecounter();
