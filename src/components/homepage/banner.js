@@ -23,7 +23,8 @@ const Banner = () => {
     router.query.location ? router.query.location : ""
   );
 
-  
+  const live_update_counter = 0;
+  const base_counter = 15000;
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
   const handleSearch = (e) => {
     e.preventDefault();
@@ -35,12 +36,22 @@ const Banner = () => {
   };
 
   useEffect(() => {
-
-
     function updatelivecounter() {
+      let start = 0;
+      let end = 15;
+      if(live_update_counter >= 15){
+        start = 100;
+        end = 500;
+        live_update_counter = 0;
+      }
+      const randomSign = Math.random() < 0.5 ? 1 : -1;
+
+      let random_number = Math.floor(Math.random() * (end - start));
+      console.log(random_number * randomSign)
       const livecounter = document.getElementById("livecounter");
-      const randomNumber = Math.floor(Math.random() * (20001 - 19000) + 20000);
-      if(livecounter)livecounter.innerHTML = randomNumber + ' LIVE';
+      base_counter += (random_number * randomSign);
+      if(livecounter)livecounter.innerHTML = base_counter + ' LIVE';
+      live_update_counter++;
       setTimeout(updatelivecounter, 2000);
   }
 
