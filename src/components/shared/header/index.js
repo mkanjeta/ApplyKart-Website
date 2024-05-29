@@ -70,9 +70,17 @@ const Header = (props) => {
                 <>
                   {router.asPath === "/login" ? null : (
                     <>
-
-                  
-                      <div className="actions">
+                      {seekerId && accessToken
+                      ? <div className="actions">
+                          <button
+                              type="button"
+                              onClick={homeClick}
+                              className="btn btn-info mb-3"
+                            >
+                              Go to Dashboard
+                          </button>
+                        </div>
+                      :<div className="actions">
                         <Link href="/login" passHref className="">
                           <button
                             type="button"
@@ -98,7 +106,7 @@ const Header = (props) => {
                         >
                           &#9776; 
                         </button>
-                      </div>
+                      </div>}
                     </>
                   )}
                 </>
