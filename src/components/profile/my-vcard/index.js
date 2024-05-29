@@ -136,9 +136,8 @@ const MyVcard = () => {
                   <div className="v_card form-group">
                     <div className="image">
                       <img
-                        src={`${jobSeekerDetails?.profile_pic ||
-                          "/assets/images/default-user.png"
-                          }`}
+                        src={`${jobSeekerDetails?.profile_pic}`}
+                        onError={({ currentTarget }) => { currentTarget.onerror = null; currentTarget.src = "/assets/images/default-user.png"; }} 
                         //src={`${jobSeekerDetails?.profile_pic || BASE_URL + "/assets/images/user.png"}`}
                         // src={BASE_URL + "/assets/images/user.png"}
                         style={{ borderRadius: "50%" }}
@@ -223,7 +222,7 @@ const MyVcard = () => {
                           </>
                         ) : (
                           <>
-                            {skillData?.map((item) => (
+                            {/* {skillData?.map((item) => (
                               <button
                                 type="button"
                                 className="tag"
@@ -231,7 +230,7 @@ const MyVcard = () => {
                               >
                                 {item?.name}
                               </button>
-                            ))}
+                            ))} */}
                           </>
                         )}
                       </div>

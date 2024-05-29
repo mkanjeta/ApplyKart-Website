@@ -137,7 +137,7 @@ const TimelineHeader = () => {
                     <i className="fa fa-bars" style={{fontSize:"20px"}}></i>
                     </Dropdown.Toggle>
                     <Dropdown.Menu as="ul" className='w-100 mt-2 custom-submenu' style={{minWidth: "12rem"}}>
-                    <li><Dropdown.Item>
+                    <li><Dropdown.Item href="/timeline/my-profile">
                       <div className="row">
                       <div className='profile-img col-4 p-1'>
                         <img src={profile ? profile.trim() : "/assets/images/profile.jpg"} alt={name || '-'} className='image-fit rounded-circle image' onError={({ currentTarget }) => { currentTarget.onerror = null; currentTarget.src = "/assets/images/profile.jpg"; }} />

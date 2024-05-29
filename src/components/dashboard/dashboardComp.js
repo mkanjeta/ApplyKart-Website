@@ -53,13 +53,6 @@ const DashboardComp = (props) => {
             console.log(response.data.results[0]?.geometry?.location)
             let office = [response.data.results[0]?.geometry.location.lat, response.data.results[0].geometry.location.lng]
             setLatLong({ office: office, current: office });
-          }else{
-            if (currencyType == "AUD") {
-              let office = [-37.840935, 144.946457];
-            } else {
-              let office = [28.644800, 77.216721];
-            }
-            setLatLong({ office: office, current: office });
           }
         })
         .catch((err) => {

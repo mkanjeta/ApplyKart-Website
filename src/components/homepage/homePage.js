@@ -17,7 +17,7 @@ import ReelSlider from "./reelSlider";
 
 const HomePage = () => {
   useEffect(() => {
-    localStorage.removeItem('applyKart');
+    // localStorage.removeItem('applyKart');
   },[]);
 
   return (
