@@ -139,6 +139,16 @@ module.exports = {
         permanent: true,
       },
       {
+        source: '/Pest-Technician-jobs-in-Australia-ApplyKart',
+        destination: '/jobs/Pest-Technician-jobs-in-Australia/',
+        permanent: true,
+      },
+      {
+        source: '/a-guide-to-tradesman-jobs-in-australia',
+        destination: '/jobs/a-guide-to-tradesman-jobs-in-australia/',
+        permanent: true,
+      },
+      {
         source: '/jobs/Logistic-Driver-jobs-in-Australia-ApplyKart',
         destination: '/jobs/Logistic-Driver-jobs-in-Australia/',
         permanent: true,
