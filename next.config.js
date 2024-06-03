@@ -85,7 +85,7 @@ module.exports = {
       },
       {
         source: '/jobs/best-jobs-in-Darwin',
-        destination: '/jobs/best-part-time-jobs-in-Darwin/',
+        destination: '/jobs/best-part-time-jobs-in-darwin/',
         permanent: true,
       },
       {
@@ -100,7 +100,7 @@ module.exports = {
       },
       {
         source: '/jobs/Best-jobs-in-Dandenong',
-        destination: '/jobs/best-jobs-in-Dandenong-south/',
+        destination: '/jobs/best-jobs-in-dandenong-south/',
         permanent: true,
       },
       {
@@ -125,22 +125,22 @@ module.exports = {
       },
       {
         source: '/jobs/Claims-Management-Officer-jobs-in-Australia-ApplyKart',
-        destination: '/jobs/Claims-Management-Officer-jobs-in-Australia/',
+        destination: '/jobs/claims-management-officer-jobs-in-australia/',
         permanent: true,
       },
       {
         source: '/jobs/Plumber-Pipe-Fitter-jobs-in-Australia-ApplyKart',
-        destination: '/jobs/Plumber-Pipe-Fitter-jobs-in-Australia/',
+        destination: '/jobs/plumber-pipe-Fitter-jobs-in-australia/',
         permanent: true,
       },
       {
         source: '/jobs/Pest-Technician-jobs-in-Australia-ApplyKart',
-        destination: '/jobs/Pest-Technician-jobs-in-Australia/',
+        destination: '/jobs/pest-technician-jobs-in-australia/',
         permanent: true,
       },
       {
         source: '/Pest-Technician-jobs-in-Australia-ApplyKart',
-        destination: '/jobs/Pest-Technician-jobs-in-Australia/',
+        destination: '/jobs/pest-technician-jobs-in-australia/',
         permanent: true,
       },
       {
@@ -150,37 +150,37 @@ module.exports = {
       },
       {
         source: '/jobs/Logistic-Driver-jobs-in-Australia-ApplyKart',
-        destination: '/jobs/Logistic-Driver-jobs-in-Australia/',
+        destination: '/jobs/logistic-driver-jobs-in-australia/',
         permanent: true,
       },
       {
         source: '/jobs/Business-Broker-jobs-in-Australia-ApplyKart',
-        destination: '/jobs/Business-Broker-jobs-in-Australia/',
+        destination: '/jobs/business-broker-jobs-in-australia/',
         permanent: true,
       },
       {
         source: '/jobs/Entry-Level-Drillers-Offsiders-Surface-Underground-jobs-in-Australia-ApplyKart',
-        destination: '/jobs/Entry-Level-Drillers-Offsiders-jobs-in-Australia/',
+        destination: '/jobs/entry-level-drillers-offsiders-jobs-in-australia/',
         permanent: true,
       },
       {
         source: '/jobs/Parts-Interpreter-jobs-in-Australia-ApplyKart',
-        destination: '/jobs/Parts-Interpreter-jobs-in-Australia/',
+        destination: '/jobs/parts-interpreter-jobs-in-australia/',
         permanent: true,
       },
       {
         source: '/jobs/Heritage-Architect-Built-Heritage-Consultant-jobs-in-Australia-ApplyKart',
-        destination: '/jobs/Heritage-Architect-Built-Heritage-Consultant-jobs-in-Australia/',
+        destination: '/jobs/heritage-architect-built-heritage-consultant-jobs-in-australia/',
         permanent: true,
       },
       {
         source: '/jobs/Electrical-project-engineer-jobs-in-Australia-ApplyKart',
-        destination: '/jobs/Electrical-project-engineer-jobs-in-Australia/',
+        destination: '/jobs/electrical-project-engineer-jobs-in-australia/',
         permanent: true,
       },
       {
         source: '/jobs/Leading-head-carpenter-jobs-in-Australia-ApplyKart',
-        destination: '/jobs/Leading-head-carpenter-jobs-in-Australia/',
+        destination: '/jobs/leading-head-carpenter-jobs-in-australia/',
         permanent: true,
       },
       {
@@ -215,7 +215,7 @@ module.exports = {
       },
       {
         source: '/jobs/Parts-Interpreter-jobs-in-Australia-ApplyKart',
-        destination: '/jobs/Parts-Interpreter-jobs-australia/',
+        destination: '/jobs/parts-interpreter-jobs-australia/',
         permanent: true,
       },
       {
@@ -265,17 +265,17 @@ module.exports = {
       },
       {
         source: '/jobs/Real-estate-agent',
-        destination: '/jobs/best-Real-estate-agent-jobs-Australia/',
+        destination: '/jobs/best-real-estate-agent-jobs-australia/',
         permanent: true,
       },
       {
         source: '/jobs/Mortgage-Lender',
-        destination: '/jobs/best-mortgage-lender-jobs-Australia/',
+        destination: '/jobs/best-mortgage-lender-jobs-australia/',
         permanent: true,
       },
       {
         source: '/jobs/best-nurse-%20jobs-in-Australia-Applykart',
-        destination: '/jobs/best-nurse-jobs-Australia/',
+        destination: '/jobs/best-nurse-jobs-australia/',
         permanent: true,
       }
       // Add more redirection rules as needed
