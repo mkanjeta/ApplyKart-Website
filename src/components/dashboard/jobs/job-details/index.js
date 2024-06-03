@@ -571,7 +571,7 @@ const JobDetails = () => {
                     </p>
                     <span className="text">
                       {jobDetail?.salary_Offered &&
-                        jobDetail?.max_Salary_Offered && jobDetail?.isScraped == 0
+                        jobDetail?.max_Salary_Offered
                         ? `${getPrice(jobDetail?.salary_Offered)}-${getPrice(jobDetail?.max_Salary_Offered)}`
                         : "Not Disclosed"}
                       {getSalaryType(jobDetail?.base)}
