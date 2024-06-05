@@ -15,13 +15,17 @@ export default function ReelSlider() {
   };
 
   const slide_img = [
+    "/assets/images/slider-gifs/4NewFeaturesOnTheApplyKartApp.gif",
+    "/assets/images/slider-gifs/BenefitsOfTheApplyKartApp.gif",
+    "/assets/images/slider-gifs/BlackMinimalistTechnology.gif",
+    "/assets/images/slider-gifs/BrightFunkyBusinessTips.gif",
+    "/assets/images/slider-gifs/HiringFacebookVideoinWhitePurpleYellowBusinessHipStyle.gif",
+    "/assets/images/slider-gifs/JobsThatRequireNoExperience.gif",
     "/assets/images/reelgif.gif",
     "/assets/images/reel2.gif",
     "/assets/images/reel3.gif",
     "/assets/images/reel4.gif",
     "/assets/images/reel5.gif",
-    "/assets/images/reel2.gif",
-    "/assets/images/reel3.gif",
   ];
 
   return (
@@ -69,7 +73,13 @@ export default function ReelSlider() {
       {slide_img.map((img, i) => {
           return (
             <SwiperSlide key={i}>
-            <div className="doteffect"><div className="carousel-cell sepiaEffect"> <a href="https://play.google.com/store/apps/details?id=com.applykart" target="blank"> <img src={img} alt="" /></a> </div></div> 
+            <div className="doteffect">
+              <div className="carousel-cell sepiaEffect"> 
+                <a href="https://play.google.com/store/apps/details?id=com.applykart" target="blank"> 
+                <img src={img} alt="" className="slider-gif"/>
+                </a> 
+              </div>
+            </div> 
             </SwiperSlide>
           );
         })}
