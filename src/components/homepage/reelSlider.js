@@ -16,15 +16,15 @@ export default function ReelSlider() {
 
   const slide_img = [
     "/assets/images/slider-gifs/4NewFeaturesOnTheApplyKartApp.gif",
+    "/assets/images/reelgif.gif",
     "/assets/images/slider-gifs/BenefitsOfTheApplyKartApp.gif",
+    "/assets/images/reel2.gif",
     "/assets/images/slider-gifs/BlackMinimalistTechnology.gif",
     "/assets/images/slider-gifs/BrightFunkyBusinessTips.gif",
-    "/assets/images/slider-gifs/HiringFacebookVideoinWhitePurpleYellowBusinessHipStyle.gif",
-    "/assets/images/slider-gifs/JobsThatRequireNoExperience.gif",
-    "/assets/images/reelgif.gif",
-    "/assets/images/reel2.gif",
     "/assets/images/reel3.gif",
+    "/assets/images/slider-gifs/HiringFacebookVideoinWhitePurpleYellowBusinessHipStyle.gif",
     "/assets/images/reel4.gif",
+    "/assets/images/slider-gifs/JobsThatRequireNoExperience.gif",
     "/assets/images/reel5.gif",
   ];
 
@@ -45,7 +45,7 @@ export default function ReelSlider() {
       }}
       loop={true}
       slidesPerView="auto"
-      centeredSlides= "true"
+      // centeredSlides= "true"
       effect="slide"
       // coverflowEffect={{
       //   opacity: 0.5
