@@ -140,13 +140,13 @@ const JobsApi = ({ apps }) => {
       )}
       <div className="right_side dashboard" id="right_side">
         <div className="row">
-        {locationdata? (
+        {/* {locationdata? (
           <div className="col-12">
             <div className="dashboard_title_bar mb-0">
               <p className="title my-3">Job In {locationdata?.location}</p>
             </div>
           </div>
-        ):(<></>)}
+        ):(<></>)} */}
           
           <div className="col-xl-12">
             <div className="dashboard_bar style_two job_box d-inline-block w-100 position-relative">

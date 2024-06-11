@@ -168,14 +168,15 @@ export const PostItem = (props) => {
                                 }
                             </div>
                         ))}
-                        {item?.media && item?.media.length > 1 ? (
+                     
+                       {item?.media && item?.media.length > 1 ? (
                             <div>
                                 <Carousel
                                     showArrows={true}
                                     showIndicators={true}
                                     showThumbs={false}
                                     showStatus={false}
-                                    infiniteLoop={true}
+                                    infiniteLoop={false}
                                     dynamicHeight={false}
                                 >
                                     {item?.media.map((mediaItem, i) => (
@@ -358,6 +359,8 @@ export const PostItem = (props) => {
                                                     {item?.originalPost?.postDescription && <LivePreview url={url} />}
                                                 </div>
                                             ))}
+
+                                        {item?.originalPost?.media && item?.originalPost?.media.length > 1 ? (
                                             <Carousel
                                                 showArrows={true}
                                                 showIndicators={true}
@@ -382,6 +385,20 @@ export const PostItem = (props) => {
                                                 }
 
                                             </Carousel>
+                                        ) : (
+
+                                
+                                                        <div className="t-post-media">
+                                                            {item?.originalPost?.media[0]?.fileType === 1 ?
+                                                                <img src={item?.originalPost?.media[0]?.fileName} alt="" />
+                                                                :
+                                                                <video src={item?.originalPost?.media[0]?.fileName} controls></video>
+                                                            }
+                                                        </div>
+                                                   
+                                          
+                                        )
+                                    }
                                         </div>
                                     </div>
                                 </div>
