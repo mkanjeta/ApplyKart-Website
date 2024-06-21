@@ -180,7 +180,16 @@ button {
 }
 
 img {
-  max-width: 100%;
+  /* max-width: 100%; */
+  top: 25px;
+  align-items: center;
+  /* font-size: 15px; */
+  /* line-height: 20px; */
+   max-width: 150px; 
+  /* position: relative; */
+  text-decoration: none; 
+  /* height: 30px; */
+  
 }
 
 .section-bg {
@@ -961,9 +970,14 @@ input[type="number"]::-webkit-inner-spin-button {
   position: absolute;
   top: 0;
   z-index: 100;
+  height: 80px;
   /* background: var(--white-color); */
-  width: 100%;
-  background-color: transparent;
+   width: 100%;
+  /* background-color: transparent;
+  transition-timing-function: ease-out;
+  transition-delay: .15s;
+  transition-duration: .25s;
+  transition-property: height;  */
 }
 
 .header .header-inner {
@@ -1528,6 +1542,7 @@ h4 {
 .main_wrapper {
   position: relative;
   min-height: 100vh;
+  /* width: 100%; */
   /* background-color: var(--white-color); */
   background: rgb(81, 152, 241, 10%);
 }
@@ -3759,7 +3774,7 @@ abbr[title] {
   border: none;
   border-radius: 20px;
   outline: 0;
-  padding-left: 34px;
+  padding-left: 25px;
   background-color: #fff !important;
   font-size: 14px;
   line-height: 20px;
@@ -6639,10 +6654,11 @@ abbr[title] {
   /* border-bottom: 1px solid rgb(112 112 112 / 30%); */
   top: 0px;
   margin-bottom: 32px;
-  padding: 24px 0;
+  /* padding: 24px 0; */
   box-shadow: 0px 8px 16px #0000001A;
   background: #FFFFFF;
 }
+
 
 .main_wrapper .header .nav-brand {
   max-width: 186px;
@@ -7296,14 +7312,18 @@ abbr[title] {
 .menu-wrap {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
   /* margin: 0 0 30px; */
 }
 
 .menu-wrap .main-menu {
   display: flex;
   align-items: center;
-  gap: 16px;
-  width: 100%;
+  /* gap: 16px; */
+  /* width: 100%; */
+  right: 236px;
+  margin-right:0px;
   justify-content: space-between;
 }
 
@@ -7719,6 +7739,8 @@ abbr[title] {
   font-weight: 400;
   color: #505050;
   margin: 0 0 4px;
+   width: 150px;
+    word-wrap: break-word;
 }
 
 .rs-jobs-list>li .job-info p {
@@ -7729,9 +7751,13 @@ abbr[title] {
   margin: 0 0 4px;
 }
 
-.rs-jobs-list>li .job-pay {
+/* .rs-jobs-list>li .job-pay {
   display: flex;
   justify-content: space-between;
+} */
+
+.rs-jobs-list>li .job-pay span{
+  margin-left: 10px;
 }
 
 .profile-suggestions {
@@ -8864,3 +8890,58 @@ display: inline-block;
     height: 250px;
   }
 }
+
+.icon-edit-profile{
+  
+  /* width: 30px;
+  height: 30px;
+  display: grid;
+  place-content: center;
+  background-color: #ffffff;
+  border-radius: 50%;
+  /* color: #1f47e3; */
+  font-size: 20px;
+  /* line-height: normal; */
+  transition: 0.3s all;
+  cursor: pointer;
+  /* box-shadow: 0px 10px 20px #00000029;  */
+}
+
+.hover{
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  .menumobile .main-menu>li:hover, .menumobile .main-menu>li.active {
+    border-color: transparent;
+}
+
+.menumobile .mobilehide{
+  display: none;
+}
+
+
+
+  .profile-img .icon {
+    bottom: 5px; /* Adjust icon position for smaller screens */
+    right: 5px;
+    padding: 3px;
+  }
+  /* .rs-jobs-list>li .job-info .job-company{
+  width: 100%;
+  } */
+}
+
+@media (max-width: 480px) {
+
+
+  .profile-img .icon {
+    bottom: 3px; /* Adjust icon position for smaller screens */
+    right: 3px;
+    padding: 2px;
+  }
+}
+
+
+

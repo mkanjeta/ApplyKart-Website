@@ -206,6 +206,7 @@ function getMonthName(month) {
             <div className="topBar">
               <div className="company_info">
                 <div className="image">
+                  <h2>Hello</h2>
                   {/* <img
                     src={
                       jobBrowse?.companyLogo

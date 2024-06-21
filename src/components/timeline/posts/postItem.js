@@ -103,7 +103,7 @@ export const PostItem = (props) => {
                                 <span>
                                     <i className="fa fa-repeat"></i>
                                 </span>
-                                <span style={{ marginLeft: "3px !important;" }}><span className="fw-bold text-capitalize">{`${item?.firstName} ${item.lastName}`}</span> has reposted this</span>
+                                <span style={{ marginLeft: "3px" }}><span className="fw-bold text-capitalize">{`${item?.firstName} ${item.lastName}`}</span> has reposted this</span>
                             </>
                         )}
                     </div>

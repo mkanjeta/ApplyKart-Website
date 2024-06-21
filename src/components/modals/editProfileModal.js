@@ -94,6 +94,7 @@ function EditProfileModal(props) {
                     return (
                         <form className='form_box' onSubmit={handleSubmit}>
                             <div className="timeline-modal-layout">
+                                
                                 <h4 className='title-header'>Edit Profile</h4>
                                 <div className='profileCardBox py-4 pb-5 rounded-0 mb-0'>
                                     <div className="imageBox mb-0">
@@ -152,7 +153,7 @@ function EditProfileModal(props) {
                                                     className="form-control"
                                                     autoComplete="off"
                                                     placeholder="Email address"
-                                                    readOnly
+                                                    // readOnly
                                                 />
                                                 <ErrorMessage
                                                     component="div"

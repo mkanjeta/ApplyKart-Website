@@ -76,23 +76,23 @@ const NavBar = () => {
                         <li><Link href="/terms"><a><span>Terms & Conditions</span></a></Link></li>
                     </ul>
                 </li>
-                <li>
+                <li class="mobilehide">
                 <form onSubmit={handleSearch}>
-                  <div className="search-job-w flex-row mb-0">
+                  <div className="search-job-w flex-row mb-0 hide-mobile">
                     <div className="job-title1 mb-0">
-                      <span className="job-search-icons" style={{top:"13px",left:"9px"}}>
+                      {/* <span className="job-search-icons" style={{top:"13px",left:"9px"}}>
                         <img
                           src={"/assets/images/icon-search.svg"}
                           alt="search"
                         />
-                      </span>
+                      </span> */}
                       <input
                         type="text"
                         className="banner-searchbar"
                         placeholder="Search Jobs By Title"
                         value={search}
                         list="titles"
-                        style={{minHeight:"33px",padding:"0px 10px 0px 30px"}}
+                        style={{minHeight:"33px",padding:"0px 10px 0px 30px", border:'2px solid blue'}}
                         onChange={(e) => {
                           setSearch(e.target.value);
                         }}

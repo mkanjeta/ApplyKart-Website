@@ -56,6 +56,7 @@ function AttachPhotoModal(props) {
     return (
         <ModalLayout action={props.action} state={props.state} size={props.size}>
             <div className="timeline-modal-layout">
+                
                 <h4 className='title-header'>
                     <button type='button' className='back-button' onClick={props.action}>
                         <i className="fal fa-chevron-left" />
