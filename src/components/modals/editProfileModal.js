@@ -123,7 +123,10 @@ function EditProfileModal(props) {
                                                     className="form-control"
                                                     autoComplete="off"
                                                     placeholder="First name"
+                                                    // value='firsName'
+                                                    
                                                 />
+                                                
                                                 <ErrorMessage
                                                     component="div"
                                                     className="invalid-feedback d-block"

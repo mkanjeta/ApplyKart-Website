@@ -19,7 +19,7 @@
 
   .search-job-w input {
     padding: 10px 25px;
-    width: 100%;
+    /* width: 100%; */
     border-radius: 20px;
     background-color: #ded4ff;
     padding-left: 2.7rem;

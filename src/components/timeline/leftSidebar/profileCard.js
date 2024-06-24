@@ -18,7 +18,20 @@ export const ConnectButton = ({ connectionStatus, userId }) => {
   const { removeRequest, connectRequest } = useSelector(({ networkReducer }) => networkReducer);
 
   // console.log(removeRequest, connectRequest)
-
+  const {
+    myProfile,
+    updateMyProfile,
+    myExperience,
+    myPortfolio,
+    updateSkills,
+    updatePortfolio,
+    addPortfolio,
+    updateExperience,
+    updateEducation,
+    loading,
+    updateJobPreferences,
+    updateJobAvailability,
+  } = useSelector(({ myProfileReducer }) => myProfileReducer);
   useEffect(() => {
     if (removeRequest?.success || connectRequest?.success) {
       dispatch(
@@ -203,7 +216,7 @@ const ProfileCard = props => {
             }}
           />
         </div>
-        
+
         <div className="pc-footer">
           <ul className="follow-info">
             <li>
@@ -234,13 +247,19 @@ const ProfileCard = props => {
       </div>
 
       {viewCardModal ? (
-        <MyVcard action={handleToggleViewCardModal} data={item} state={viewCardModal} userName={userName} size={'md'} />
+        <MyVcard
+          action={handleToggleViewCardModal}
+          data={myProfile}
+          state={viewCardModal}
+          userName={userName}
+          size={'md'}
+        />
       ) : null}
 
       {editProfileModal ? (
         <EditProfileModal
           action={handleToggleEditProfileModal}
-          data={item}
+          data={myProfile}
           dataTwo={data}
           state={editProfileModal}
           size={'md'}

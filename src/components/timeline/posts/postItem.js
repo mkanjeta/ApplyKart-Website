@@ -254,7 +254,7 @@ export const PostItem = (props) => {
                                         style={{
                                             position: 'relative',
                                             maxWidth: '80%',
-                                            maxHeight: '80%',
+                                            maxHeight: '100%',
                                             overflow: 'auto',
                                             background: '#fff',
                                             borderRadius: '8px',

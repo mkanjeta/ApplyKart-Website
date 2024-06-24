@@ -5,6 +5,8 @@ import NotificationBar from '../notification-bar';
 import NavBar from 'components/shared/navbar';
 import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';
+import jobTitles from '../../../../public/assets/titles.json';
+
 // import { Link } from 'react-router-dom';
 const TimelineHeader = () => {
   const router = useRouter();
@@ -14,17 +16,14 @@ const TimelineHeader = () => {
   const [notificationBar, setNotificationBar] = useState(false);
   const [search, setSearch] = useState(() => '');
   const [showSearch, setShowSearch] = useState(false);
+  const [change, onChange] = useState(false);
   const handleToggleNotificationBar = () => {
     setNotificationBar(!notificationBar);
   };
 
   const handleSearchClick = () => {
     console.log('here');
-    return (
-      <>
-        
-      </>
-    );
+    return <></>;
   };
 
   const [searchBar, setSearchBar] = useState(false);
@@ -90,6 +89,21 @@ const TimelineHeader = () => {
   //   inputBox.classList.remove('open')
   //   });
 
+  const handleSearch = e => {
+    e.preventDefault();
+    let obj = {
+      search: search,
+      WorkLocation: '',
+    };
+    // dispatch(getJobBrowseList(obj));
+    // router?.push(`/dashboard?search=${search}&location=${location}`);
+    window.location.href = `/dashboard?search=${search}&location=`;
+  };
+
+  const handleIconClick = () => {
+    setShowSearch(prev => !prev);
+  };
+
   return (
     <>
       <header className="header">
@@ -97,7 +111,7 @@ const TimelineHeader = () => {
           <div>
             <Link href={'/timeline'}>
               <a className="logo" href="#">
-                <img src="/assets/images/dark-logo.svg" alt="applykar-logo" />
+                <img src="/assets/images/dark-logo.svg" alt="applykar-logo" style={{ maxWidth: '150px' }} />
               </a>
             </Link>
           </div>
@@ -176,8 +190,12 @@ const TimelineHeader = () => {
           {localStorageData && (
             <>
               <div className="menu-row d-flex">
-                <span className=" d-lg-none search-bar" >
-                  <img src={'/assets/images/icon-search.svg'} style={{ width: '18px' }} alt="search" onClick={() => setShowSearch((prev) => !prev)}/>
+                <span className="d-lg-none search-bar" onClick={handleIconClick}>
+                  {showSearch ? (
+                    <i className="fas fa-times" style={{ width: '18px' }}></i>
+                  ) : (
+                    <i className="fas fa-search" style={{ width: '18px' }}></i>
+                  )}
                 </span>
 
                 {/* <div className='searchbar' /> */}
@@ -204,7 +222,14 @@ const TimelineHeader = () => {
                   <Dropdown.Toggle as="div" id="dropdown-basic">
                     <i className="fa fa-bars" style={{ fontSize: '20px' }}></i>
                   </Dropdown.Toggle>
-                  <Dropdown.Menu as="ul" className="w-100 mt-2 custom-submenu" style={{ minWidth: '12rem' }}>
+                  <Dropdown.Menu
+                    as="ul"
+                    className="w-100 mt-2 custom-submenu"
+                    style={{ minWidth: '12rem' }}
+                    onClick={e => {
+                      e.preventDefault();
+                    }}
+                  >
                     <li>
                       <Dropdown.Item href="/timeline/my-profile">
                         <div className="row">
@@ -223,17 +248,19 @@ const TimelineHeader = () => {
                             {name}
                           </span>
                         </div>
-                        <div
-                          className="content-area navMobile menumobile d-block d-md-none"
-                          // style={{
-                          //   width: 'calc(100% - 700px)',
-                          //   flex: '1 1 auto',
-                          //   marginLeft: 'calc(100% - 1000px)'
-                          // }}
-                        >
-                          <NavBar />
-                        </div>
                       </Dropdown.Item>
+                    </li>
+                    <li>
+                      <div
+                        className="content-area navMobile menumobile d-block d-md-none"
+                        // style={{
+                        //   width: 'calc(100% - 700px)',
+                        //   flex: '1 1 auto',
+                        //   marginLeft: 'calc(100% - 1000px)'
+                        // }}
+                      >
+                        <NavBar />
+                      </div>
                     </li>
                     <li>
                       <Dropdown.Item href="/timeline/my-profile">My Profile</Dropdown.Item>
@@ -258,24 +285,38 @@ const TimelineHeader = () => {
             </>
           )}
         </div>
+        {/* <li class="mobilehide"> */}
+        {/* <form onSubmit={handleSearch}> */}
+        <div className="container mt-0 ">
+          <div className="row search-bar-icon">
+            {showSearch && (
+              <div className="input-container">
+                <input
+                  type="text"
+                  className="banner-searchbar combine-search-bar"
+                  placeholder="Search Jobs By Title"
+                  value={search}
+                  list="titles"
+                  style={{ minHeight: '33px', padding: '0px 10px 0px 30px', border: '2px solid #1F47E3' }}
+                  onChange={e => {
+                    setSearch(e.target.value);
+                  }}
+                />
+                <datalist id="titles">
+                  {search &&
+                    search.length > 3 &&
+                    jobTitles.titles.map((item, key) => <option key={key} value={_.capitalize(item)} />)}
+                </datalist>
 
-        <div className="container mt-2">
-          <div className="row">
-              {showSearch && <input
-                type="text"
-                className="banner-searchbar"
-                placeholder="Search Jobs By Title"
-                value={search}
-                list="titles"
-                style={{ minHeight: '33px', padding: '0px 10px 0px 30px', border: '2px solid #1F47E3' }}
-                onChange={e => {
-                  setSearch(e.target.value);
-              }}
-              
-            />}
-
+                <span className="btn-right-arrow combine-btn-right-arrow">
+                  <img src={'/assets/images/right-arrow.svg'} alt="right-arrow" onClick={handleSearch} />
+                </span>
+              </div>
+            )}
           </div>
         </div>
+        {/* </form> */}
+        {/* </li> */}
       </header>
       {notificationBar ? <NotificationBar action={handleToggleNotificationBar} state={notificationBar} /> : null}
     </>

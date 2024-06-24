@@ -130,8 +130,8 @@ body {
 .image-fit {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  /* object-fit: cover; */
+  /* object-position: center; */
 }
 
 .image-fit-thumbnail {
@@ -180,12 +180,12 @@ button {
 }
 
 img {
-  /* max-width: 100%; */
+  max-width: 100%;
   top: 25px;
   align-items: center;
   /* font-size: 15px; */
   /* line-height: 20px; */
-   max-width: 150px; 
+   /* max-width: 150px;  */
   /* position: relative; */
   text-decoration: none; 
   /* height: 30px; */
@@ -3373,9 +3373,11 @@ label.agree-data {
   font-weight: 500;
 }
 
-#dropdown-condition::after {
+/* #dropdown-condition::after {
   content: none;
-}
+} */
+
+
 
 #dropdown-condition:focus {
   box-shadow: none !important;
@@ -7143,25 +7145,26 @@ abbr[title] {
 .timeline-item .timeline-body .t-post-content .t-post-media img,
 .timeline-item .timeline-body .t-post-content .t-post-media video {
   width: 100%;
-  max-width: none;
+  max-width: 80%;
   min-height: 100%;
   left: 50%;
   position: absolute;
-  /* top: 50%;
-  transform: translate(-50%, -50%); */
+ /* top: 50%; */
+  /* transform: translate(-50%, -50%);  */
   top: 100%;
   transform: translate(-50%, -100%);
 }
 
 .timeline-item .timeline-body .t-post-content .t-post-media video {
-  position: relative;
-  top: 0;
-  left: 0;
-  transform: none;
-  object-fit: cover;
-  width: auto;
-  height: 100%;
-  max-width: 100%;
+  position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: none;
+    -o-object-fit: cover;
+    object-fit: contain;
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .timeline-footer {
@@ -7406,6 +7409,11 @@ abbr[title] {
   display: block;
 }
 
+@media (max-width:768px){
+  .menu-wrap .main-menu>li>.sub-menu {
+    display: block;
+  }
+}
 .custom-submenu {
   padding: 0;
   border: none;
@@ -8943,5 +8951,26 @@ display: inline-block;
   }
 }
 
+.input-container {
+  position: relative;
+}
+
+.combine-search-bar {
+   width: 100%; /*Adjust width as needed */
+  padding-right: 40px; /* Adjust padding to make space for the arrow */
+}
+
+.combine-btn-right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust the positioning as needed */
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.combine-btn-right-arrow img {
+  width: 20px; /* Adjust size as needed */
+  height: 20px; /* Adjust size as needed */
+}
 
 
