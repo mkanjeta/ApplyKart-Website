@@ -48,8 +48,13 @@ const NavBar = () => {
                     <Link href='/timeline'><a><i className="icon-home_selected"/>Home</a></Link>
                 </li>
                 <li className="has-sub-menu">
-                    <a onClick={(e) => {e.preventDefault()}}><i className="icon-job_unselected"/>My Jobs</a>
-                    <ul className="sub-menu">
+                    <a onClick={e => {
+              e.preventDefault();
+              document.querySelector('#jobs-dropdown')?.classList.toggle('d-none');
+              document.querySelector('.navMobile #jobs-dropdown')?.classList.toggle('d-none');
+            }}><i className="icon-job_unselected"/>My Jobs</a>
+                    <ul className="sub-menu d-none" id="jobs-dropdown">
+
                         <li onClick={() => handleJobClick("APPLIED_JOB")}><a><span>Applied Jobs</span></a></li>
                         <li onClick={() => handleJobClick("ALL_JOB")}><a><span>All Jobs</span></a></li>
                         <li onClick={() => handleJobClick("POST_NEW_JOB")}><a><span>Post a new job</span></a></li>
@@ -69,14 +74,18 @@ const NavBar = () => {
                 </li>
                 
                 <li className="has-sub-menu">
-                    <a href="#"><i className="icon-legal_unselected"/>Legal</a>
-                    <ul className="sub-menu">
+                    <a onClick={e => {
+              e.preventDefault();
+              document.querySelector('#legal-dropdown')?.classList.toggle('d-none');
+              document.querySelector('.navMobile #legal-dropdown')?.classList.toggle('d-none');
+            }}><i className="icon-legal_unselected"/>Legal</a>
+                    <ul className="sub-menu d-none" id="legal-dropdown">
                         <li><Link href="/contact"><a><span>Contact Us</span></a></Link></li>
                         <li><Link href="/privacy"><a><span>Privacy Policy</span></a></Link></li>
                         <li><Link href="/terms"><a><span>Terms & Conditions</span></a></Link></li>
                     </ul>
                 </li>
-                <li>
+                <li className='mobilehide'>
                 <form onSubmit={handleSearch}>
                   <div className="search-job-w flex-row mb-0">
                     <div className="job-title1 mb-0">

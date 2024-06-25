@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import { createChannelForUser } from "redux/actions/workActions";
 import * as networkAction from "../../../redux/actions/networkActions";
 import * as timeLineAction from '../../../redux/actions/timelineActions';
+import Link from "next/link";
 
 export const ConnectButton = ({ connectionStatus, userId }) => {
     // console.log("connection status ==>>", connectionStatus)
@@ -140,8 +141,28 @@ const ProfileCard = (props) => {
             <div className="profile-card mdx-sticky">
                 <div className="pc-head">
                     <div className="p-user-name">
-                        <h4 className="text-capitalize">{userName}</h4>
-                        <p>{userDetail?.designation}</p>
+                        {
+                            Object.keys(applyKartData).length > 0 && (applyKartData?.userId != userDetail?.userId) && (
+                                <div>
+                                  
+                                    <h4 className="text-capitalize">{userName}</h4>
+                                    <p>{userDetail?.designation}</p>
+
+                                  
+                                </div>
+                            )
+                        }
+                        {
+                           applyKartData?.userId == userDetail?.userId && (
+                                <div>
+                                  
+                                    <Link href='/timeline/my-profile'><a>  <h4 className="text-capitalize">{userName}</h4>
+                                    <p>{userDetail?.designation}</p></a></Link>
+
+                                  
+                                </div>
+                            )
+                        }
                     </div>
                     <div className="percentage-bar">
                         <CircularProgressbar value={myProfile?.profileCompletedPercentage || 0} text={`${myProfile?.profileCompletedPercentage || 0}%`} styles={buildStyles({
@@ -156,14 +177,31 @@ const ProfileCard = (props) => {
                     </div>
                 </div>
                 <div className="profile-img">
-                    <img
-                        src={userDetail?.profilePic?.trim() || "/assets/images/profile.jpg"}
-                        alt={userDetail?.firstName}
-                        onError={(e) => {
-                            e.target.onerror = null; // Avoid potential infinite loop
-                            e.target.src = "/assets/images/profile.jpg"; // Fallback image in case of an error
-                        }}
-                    />
+                {
+                            Object.keys(applyKartData).length > 0 && (applyKartData?.userId != userDetail?.userId) && (
+                               <img
+                                src={userDetail?.profilePic?.trim() || "/assets/images/profile.jpg"}
+                                alt={userDetail?.firstName}
+                                onError={(e) => {
+                                    e.target.onerror = null; // Avoid potential infinite loop
+                                    e.target.src = "/assets/images/profile.jpg"; // Fallback image in case of an error
+                                }}
+                            />
+                            )
+                        }
+                        {
+                           applyKartData?.userId == userDetail?.userId && (
+                            <Link href='/timeline/my-profile'><a>  <img
+                            src={userDetail?.profilePic?.trim() || "/assets/images/profile.jpg"}
+                            alt={userDetail?.firstName}
+                            onError={(e) => {
+                                e.target.onerror = null; // Avoid potential infinite loop
+                                e.target.src = "/assets/images/profile.jpg"; // Fallback image in case of an error
+                            }}
+                        /> </a></Link>
+                            )
+                        }
+
                 </div>
 
                 <div className="pc-footer">
