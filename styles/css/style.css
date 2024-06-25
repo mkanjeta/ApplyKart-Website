@@ -7139,6 +7139,7 @@ abbr[title] {
   overflow: hidden;
   width: 100%;
   height: 350px;
+  background: #000;
   /* padding-bottom: 46%; */
 }
 
