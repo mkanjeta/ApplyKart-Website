@@ -14,7 +14,8 @@ const LocationMap = dynamic(() => import("./map/DetailsMap").then((module) => {
 
 const DashboardComp = (props) => {
   const router = useRouter();
-  const { jobBrowseListById } = props;
+  const { jobBrowseListById,hideMap } = props;
+  if(!hideMap)hideMap = false;
   const dispatch = useDispatch();
   const [jobBrowse, setJobBrowse] = useState(jobBrowseListById);
 
@@ -202,7 +203,7 @@ function getMonthName(month) {
             <></>
           )}
 
-          <div className="content_area">
+          <div className="content_area" style={hideMap ? {width:"100%"} : {}}>
             <div className="topBar">
               <div className="company_info">
                 <div className="image">
@@ -258,20 +259,32 @@ function getMonthName(month) {
                 )}
               </p>
             </div>
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              flexWrap: 'wrap'
-            }}>
-              <label style={{ marginRight: '10px'}}>Location</label>
-              <button type="button" className="btn btn-light-info" style={{padding: '1px 11px'}}>
-                {jobBrowse?.location
-                  ? getLocation(jobBrowse?.location, jobBrowse?.currencyType)
-                  : "Not Available"}
-              </button>
-            </div>
+            {hideMap ? <></> : (
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                flexWrap: 'wrap'
+              }}>
+                <label style={{ marginRight: '10px'}}>Location</label>
+                <button type="button" className="btn btn-light-info" style={{padding: '1px 11px'}}>
+                  {jobBrowse?.location
+                    ? getLocation(jobBrowse?.location, jobBrowse?.currencyType)
+                    : "Not Available"}
+                </button>
+              </div>
+            )}
             <div className="action_tags_area">
               <ul>
+              {!hideMap ? <></> : (
+                <li>
+                  <label>Location</label>
+                  <button type="button" className="btn btn-light-info ">
+                  {jobBrowse?.location
+                  ? getLocation(jobBrowse?.location, jobBrowse?.currencyType)
+                  : "Not Available"}
+                  </button>
+                </li>
+              )}
                 <li>
                   <label>Min Salary</label>
                   <button type="button" className="btn btn-light-warning ">
@@ -342,6 +355,7 @@ function getMonthName(month) {
               </button>
             </div>
           </div>
+          {hideMap ? <></> : (
           <div className="map_area">
             {latLong?.office && <LocationMap
               mapLat={getLatitute(jobBrowse?.latitude, jobBrowse?.currencyType)}
@@ -349,6 +363,7 @@ function getMonthName(month) {
               latLong={latLong}
             />}
           </div>
+          )}
         </div>
       </div>
     </div >

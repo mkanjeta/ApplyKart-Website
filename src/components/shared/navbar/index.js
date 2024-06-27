@@ -1,19 +1,22 @@
-import React,{ useState } from 'react';
+import React,{ useEffect, useState } from 'react';
 import { useRouter } from "next/router";
 import Link from 'next/link';
 import Autocomplete from "react-google-autocomplete";
 import jobTitles from "../../../../public/assets/titles.json"
 import _ from "lodash";
 
-const NavBar = () => {
+const NavBar = (props) => {
     const router = useRouter();
-
     const [search, setSearch] = useState(() => "");
     const [location, setLocation] = useState(() => {
       return router.query.location ? router.query.location : ''
     });
     const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
+    useEffect(()=>{
+      setSearch(props.searchText)
+    },[props.searchText]);
+    
     function handleJobClick (jobType)  {
         if(jobType == "APPLIED_JOB") {
             window.location.href = "/jobs"
@@ -38,7 +41,7 @@ const NavBar = () => {
         };
         // dispatch(getJobBrowseList(obj));
         // router?.push(`/dashboard?search=${search}&location=${location}`);
-        window.location.href = `/dashboard?search=${search}&location=`;
+        window.location.href = `/search?search=${search}`;
       };
 
     return (
@@ -98,7 +101,7 @@ const NavBar = () => {
                       <input
                         type="text"
                         className="banner-searchbar"
-                        placeholder="Search Jobs By Title"
+                        placeholder="Search Applykart"
                         value={search}
                         list="titles"
                         style={{minHeight:"33px",padding:"0px 10px 0px 30px"}}
@@ -117,7 +120,7 @@ const NavBar = () => {
                       // onClick={handleSearch}
                       style={{fontSize:"12px",lineHeight:"12px",padding:"5px 10px"}}
                     >
-                      <span className="d-sm-block d-none">Search Job &nbsp;</span>
+                      <span className="d-sm-block d-none">Search &nbsp;</span>
                       <span className="btn-right-arrow">
                         <img
                           src={"/assets/images/right-arrow.svg"}

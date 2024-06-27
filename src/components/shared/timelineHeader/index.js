@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import jobTitles from '../../../../public/assets/titles.json';
 
 // import { Link } from 'react-router-dom';
-const TimelineHeader = () => {
+const TimelineHeader = (props) => {
   const router = useRouter();
   const [localStorageData, setLocalStorageData] = useState('');
   const [profile, setProfile] = useState(() => '/assets/images/placeholder.jpg');
@@ -31,6 +31,10 @@ const TimelineHeader = () => {
   //   setSearchBar(!searchBar);
   // }
 
+  useEffect(()=>{
+    setSearch(props.searchText)
+  },[props.searchText]);
+  
   useEffect(() => {
     if (typeof window !== 'undefined') {
       setLocalStorageData(localStorage?.getItem('applyKart'));
@@ -96,8 +100,8 @@ const TimelineHeader = () => {
       WorkLocation: '',
     };
     // dispatch(getJobBrowseList(obj));
-    // router?.push(`/dashboard?search=${search}&location=${location}`);
-    window.location.href = `/dashboard?search=${search}&location=`;
+    router?.push(`/search?search=${search}`);
+    // window.location.href = `/search?search=${search}`;
   };
 
   const handleIconClick = () => {
@@ -160,7 +164,7 @@ const TimelineHeader = () => {
               //   marginLeft: 'calc(100% - 1000px)'
               // }}
             >
-              <NavBar />
+              <NavBar searchText={search} />
             </div>
           )}
 
@@ -294,7 +298,7 @@ const TimelineHeader = () => {
                 <input
                   type="text"
                   className="banner-searchbar combine-search-bar"
-                  placeholder="Search Jobs By Title"
+                  placeholder="Search Applykart"
                   value={search}
                   list="titles"
                   style={{ minHeight: '33px', padding: '0px 10px 0px 30px', border: '2px solid #1F47E3' }}

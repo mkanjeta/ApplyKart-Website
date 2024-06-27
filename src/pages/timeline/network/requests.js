@@ -19,13 +19,15 @@ function Requests(props) {
     }, [networkRequests, props])
 
     useEffect(() => {
-        dispatch(action.getNetworkRequestsList({
-            pageNo: pageNo + 1,
-            pageSize: pageSize,
-            type: "Requests",
-            searchText: searchText
-        }));
-    }, [pageNo, pageSize, searchText.length > 3]);
+        if(searchText.length > 3){
+            dispatch(action.getNetworkRequestsList({
+                pageNo: pageNo + 1,
+                pageSize: pageSize,
+                type: "Requests",
+                searchText: searchText
+            }));
+        }
+    }, [pageNo, pageSize, searchText]);
     useEffect(() => {
         if (acceptRequest?.success) {
             dispatch({ type: ACCEPT_REQUEST_CLEAR });

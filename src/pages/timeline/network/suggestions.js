@@ -18,7 +18,15 @@ function Suggestions(props) {
             pageSize: pageSize,
             searchText: searchText
         }));
-    }, [pageNo, pageSize, searchText.length > 3]);
+    },[])
+    useEffect(() => {
+        if(searchText.length > 3)
+        dispatch(action.getNetworkSuggestionsList({
+            pageNo: pageNo + 1,
+            pageSize: pageSize,
+            searchText: searchText
+        }));
+    }, [pageNo, pageSize, searchText]);
     useEffect(() => {
         if (networkSuggestions) {
             props.setCount(networkSuggestions);
@@ -49,7 +57,7 @@ function Suggestions(props) {
                 <div className="row">
                     <div className="col-md-6">
                         <div className="input-group mb-4">
-                            <input type="text" className='form-control' placeholder='Search...' value={searchText} onChange={(event) => setSearchText(event.target.value)} />
+                            <input type="text" className='form-control' placeholder='Search...' value={searchText} onChange={(event) => {if(event.target.value.length > 3);setSearchText(event.target.value)}} />
                         </div>
                     </div>
                 </div>
