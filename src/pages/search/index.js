@@ -100,6 +100,7 @@ const Searchpage = () => {
                       type="button"
                       className={`connect-btn mb-0 primary`}
                       style={{ marginLeft: "auto" }}
+                      onClick={()=>{router.push("/dashboard?search="+router?.query?.search)}}
                     >
                       View All
                     </button>
@@ -138,6 +139,7 @@ const Searchpage = () => {
                     type="button"
                     className={`connect-btn mb-0 primary`}
                     style={{ marginLeft: "auto" }}
+                    onClick={()=>{router.push("/timeline/network")}}
                   >
                     View All
                   </button>
