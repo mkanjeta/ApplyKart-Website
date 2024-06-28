@@ -9077,3 +9077,47 @@ display: inline-block;
   }
   
 }
+
+.newssection {
+  background: linear-gradient(269deg, #75E6FF 1%, #CD63FF 100%);
+}
+.newssection .slider-inner{
+  padding: 30px;
+  height: 100%;
+  box-shadow: 0px 15px 30px #0000001a;
+  border-radius: 24px;
+  margin: 5px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  /* background-color: #9b00e4; */
+  color: var(--black-color);
+    overflow: hidden;
+}
+.prologimage{
+  width: 60% !important;
+}
+.urgentimage{
+  width: 75%;
+}
+
+.startupimage , .issuewireimage{
+  width: 100%;
+}
+
+.newssection .category-slider-text{
+  margin-top: 10px;
+  cursor: context-menu;
+}
+.newssection .category-slider-text p{
+  color: #fff;
+  margin: 10px;
+}
+
+.newssection .btn-right-arrow{
+  filter: invert(1);
+}
+
+.newssection .swiper-button-next:after, .newssection .swiper-button-prev:after {
+  font-size: 18px;
+  font-weight: 600;
+}

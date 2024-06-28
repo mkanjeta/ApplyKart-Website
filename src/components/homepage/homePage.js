@@ -14,6 +14,7 @@ import DownloadApp from "./downloadApp";
 import AppFooter from "./AppFooter";
 import JobPageLinks from "./jobPageLinks";
 import ReelSlider from "./reelSlider";
+import Newssection from "./newssection";
 
 const HomePage = () => {
   useEffect(() => {
@@ -47,7 +48,9 @@ const HomePage = () => {
       <HowItWork />
       <SearchJob />
       {/* <AdvertisingJob /> */}
+      <Newssection />
       <Faqs />
+      
       <DownloadApp />
       <JobPageLinks />
       <AppFooter />
