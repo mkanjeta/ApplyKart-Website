@@ -27,7 +27,8 @@ const Searchpage = () => {
     if (router?.query?.search && router?.query?.search.trim() != "") {
       let obj = {
         search: router?.query?.search,
-        pageNo: 1
+        pageNo: 1,
+        pageSize: 5
       };
       dispatch(getJobBrowseList(obj));
       dispatch(action.getNetworkSuggestionsList({
@@ -40,6 +41,7 @@ const Searchpage = () => {
       let obj = {
         search: "",
         pageNo:1,
+        pageSize: 5
       };
       dispatch(getJobBrowseList(obj));
       dispatch(action.getNetworkSuggestionsList({

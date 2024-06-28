@@ -76,6 +76,7 @@ function* handleGetJobBrowseList(action) {
   const userId = JSON.parse(applyKart)?.userId;
   let loggedIn = 0;
   let pageNo = action.payload.pageNo ? action.payload.pageNo : 1;
+  let pageSize = action.payload.pageSize ? action.payload.pageSize : 50;
 
   let client = null;
 
@@ -92,9 +93,9 @@ function* handleGetJobBrowseList(action) {
     let url = ``;
     // console.log("isCreatedJobHit ==>>", isCreatedJobHit)
     if (isCreatedJobHit) {
-      url = `/jobseeker/jobs?pageNo=${pageNo}&pageSize=50&Search=${"postedjobs"}`;
+      url = `/jobseeker/jobs?pageNo=${pageNo}&pageSize=${pageSize}&Search=${"postedjobs"}`;
     } else {
-      url = `/jobseeker/jobs?pageNo=${pageNo}&pageSize=50`;
+      url = `/jobseeker/jobs?pageNo=${pageNo}&pageSize=${pageSize}`;
     }
 
     console.log(action?.payload)

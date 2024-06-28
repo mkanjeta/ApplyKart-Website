@@ -95,6 +95,12 @@ const TimelineHeader = (props) => {
 
   const handleSearch = e => {
     e.preventDefault();
+    if(!search || !search.length){
+      document.querySelector('#searchTextMobile').placeholder = 'Please enter search text';
+      document.querySelector('#searchTextMobile').style.border = '1px solid red';
+
+      return false;
+    }
     let obj = {
       search: search,
       WorkLocation: '',
@@ -297,6 +303,7 @@ const TimelineHeader = (props) => {
               <div className="input-container">
                 <input
                   type="text"
+                  id="searchTextMobile"
                   className="banner-searchbar combine-search-bar"
                   placeholder="Search Applykart"
                   value={search}
@@ -304,6 +311,7 @@ const TimelineHeader = (props) => {
                   style={{ minHeight: '33px', padding: '0px 10px 0px 30px', border: '2px solid #1F47E3' }}
                   onChange={e => {
                     setSearch(e.target.value);
+                    document.querySelector('#searchTextMobile').style.border = '';
                   }}
                 />
                 <datalist id="titles">

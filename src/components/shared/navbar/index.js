@@ -35,6 +35,12 @@ const NavBar = (props) => {
 
     const handleSearch = (e) => {
         e.preventDefault();
+        if(!search || !search.length){
+          document.querySelector('#searchText').placeholder = 'Please enter search text';
+          document.querySelector('#searchText').style.border = '1px solid red';
+
+          return false;
+        }
         let obj = {
           search: search,
           WorkLocation: "",
@@ -99,6 +105,7 @@ const NavBar = (props) => {
                         />
                       </span>
                       <input
+                        id='searchText'
                         type="text"
                         className="banner-searchbar"
                         placeholder="Search Applykart"
@@ -107,6 +114,7 @@ const NavBar = (props) => {
                         style={{minHeight:"33px",padding:"0px 10px 0px 30px"}}
                         onChange={(e) => {
                           setSearch(e.target.value);
+                          document.querySelector('#searchText').style.border = '';
                         }}
                       />
                       <datalist id="titles">
