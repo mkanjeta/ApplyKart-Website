@@ -235,7 +235,7 @@ const TimelineHeader = (props) => {
                     }}
                   >
                     <li>
-                      <Dropdown.Item href="/timeline/my-profile">
+                      <Dropdown.Item onClick={()=>{router.push("/timeline/my-profile")}}>
                         <div className="row">
                           <div className="profile-img col-4 p-1">
                             <img
@@ -267,16 +267,16 @@ const TimelineHeader = (props) => {
                       </div>
                     </li>
                     <li>
-                      <Dropdown.Item href="/timeline/my-profile">My Profile</Dropdown.Item>
+                      <Dropdown.Item onClick={()=>{router.push("/timeline/my-profile")}}>My Profile</Dropdown.Item>
                     </li>
                     <li>
-                      <Dropdown.Item href="/profile/my-vcard">My V-Card</Dropdown.Item>
+                      <Dropdown.Item onClick={()=>{router.push("/profile/my-vcard")}}>My V-Card</Dropdown.Item>
                     </li>
                     <li>
-                      <Dropdown.Item href="/profile/calendar">Calendar</Dropdown.Item>
+                      <Dropdown.Item onClick={()=>{router.push("/profile/calendar")}}>Calendar</Dropdown.Item>
                     </li>
                     <li>
-                      <Dropdown.Item href="/jobs/favorite">Favorite</Dropdown.Item>
+                      <Dropdown.Item onClick={()=>{router.push("/jobs/favorite")}}>Favorite</Dropdown.Item>
                     </li>
                     <li>
                       <Dropdown.Item as={'button'} onClick={handleLogout}>
