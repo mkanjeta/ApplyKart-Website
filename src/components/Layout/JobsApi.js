@@ -151,7 +151,7 @@ const JobsApi = ({ apps }) => {
           <div className="col-xl-12">
             <div className="dashboard_bar style_two job_box d-inline-block w-100 position-relative">
               <div className="desc_area ">
-                <h5 className="jobtitle">Description</h5>
+                {/* <h5 className="jobtitle">Description</h5>` */}
                 <div className="text">
                   <div
                     dangerouslySetInnerHTML={{

@@ -42,13 +42,14 @@ const HomePage = () => {
       />
       <Banner />
       <ReelSlider />
+      <Newssection />
       <WhyChoose />
       <TopCompanies />
       <ChooseJob />
       <HowItWork />
       <SearchJob />
       {/* <AdvertisingJob /> */}
-      <Newssection />
+
       <Faqs />
       
       <DownloadApp />

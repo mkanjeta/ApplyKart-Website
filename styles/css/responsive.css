@@ -6,7 +6,7 @@
   }
 }
 
-@media (max-width: 1400px) {
+@media (min-width: 992px) {
   .download-app {
     margin-bottom: 0;
   }
@@ -19,7 +19,7 @@
 
   .search-job-w input {
     padding: 10px 25px;
-    width: 100%;
+    /* width: 100%; */
     border-radius: 20px;
     background-color: #ded4ff;
     padding-left: 2.7rem;
@@ -41,6 +41,7 @@
 
   .search-job-w .job-title1 {
     border-right: 0;
+    /* min-width: 100%; */
   }
 
   .job-search-icons {
@@ -828,5 +829,12 @@
 @media (max-width: 1399px) {
   .main_wrapper .container {
     max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px){
+  .main_wrapper .container {
+    max-width: 100%;
+    /* margin-left: 50px; */
   }
 }

@@ -54,14 +54,14 @@ const NavBar = (props) => {
         <div className="menu-wrap">
             <ul className="main-menu">
                 <li className={router.pathname === '/timeline' ? "active":''}>
-                    <Link href='/timeline'><a><i className="icon-home_selected"/>Home</a></Link>
+                    <Link href='/timeline'><a><i className="icon-home_selected fw-bold"/>Home</a></Link>
                 </li>
                 <li className="has-sub-menu">
                     <a onClick={e => {
               e.preventDefault();
               document.querySelector('#jobs-dropdown')?.classList.toggle('d-none');
               document.querySelector('.navMobile #jobs-dropdown')?.classList.toggle('d-none');
-            }}><i className="icon-job_unselected"/>My Jobs</a>
+            }}><i className="icon-job_unselected fw-bold"/>My Jobs</a>
                     <ul className="sub-menu d-none" id="jobs-dropdown">
 
                         <li onClick={() => handleJobClick("APPLIED_JOB")}><a><span>Applied Jobs</span></a></li>
@@ -72,13 +72,13 @@ const NavBar = (props) => {
                 </li>
                 <li className={router.pathname === '/timeline/network' ? "active":''}>
                     {/* <Link href={"/timeline/network"}>Network</Link> */}
-                    <Link href="/timeline/network"><a><i className="icon-network_selected"/>Network</a></Link>
+                    <Link href="/timeline/network"><a><i className="icon-network_selected fw-bold"/>Network</a></Link>
                 </li>
 
                 {/* Messages only enable for localhost or production server, not for http protocal */}
                 <li className={router.pathname === "/chat" ? "active" : ""} onClick={handleChatClick}>
                     {/* <Link href=""> */}
-                        <a><i className="icon-message_unselected"/>Messages</a>
+                        <a><i className="icon-message_unselected fw-bold"/>Messages</a>
                     {/* </Link> */}
                 </li>
                 
@@ -87,7 +87,7 @@ const NavBar = (props) => {
               e.preventDefault();
               document.querySelector('#legal-dropdown')?.classList.toggle('d-none');
               document.querySelector('.navMobile #legal-dropdown')?.classList.toggle('d-none');
-            }}><i className="icon-legal_unselected"/>Legal</a>
+            }}><i className="icon-legal_unselected fw-bold"/>Legal</a>
                     <ul className="sub-menu d-none" id="legal-dropdown">
                         <li><Link href="/contact"><a><span>Contact Us</span></a></Link></li>
                         <li><Link href="/privacy"><a><span>Privacy Policy</span></a></Link></li>
