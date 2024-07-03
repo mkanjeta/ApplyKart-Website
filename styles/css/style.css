@@ -8923,6 +8923,23 @@ display: inline-block;
   cursor: pointer;
 }
 
+@media (max-width: 1200px) {
+  .menumobile .mobilehide{
+    display: none;
+  }
+  .menumobile .menu-wrap .main-menu{
+    flex-wrap: wrap;
+  }
+  .menumobile .dropdown .custom-submenu{
+    transform: translate3d(-170px, 22px, 0px);
+  }
+  .menumobile .fixed-sidebar {
+    width: 70%;
+  }
+  .menumobile .menu-wrap .main-menu>li {
+    flex: 1 1;
+  }
+}
 @media (max-width: 768px) {
 
   .menumobile .main-menu>li:hover, .menumobile .main-menu>li.active {

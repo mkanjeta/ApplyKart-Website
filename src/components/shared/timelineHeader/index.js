@@ -163,7 +163,7 @@ const TimelineHeader = (props) => {
 
           {localStorageData && (
             <div
-              className="content-area d-none d-md-block"
+              className="content-area d-none d-xl-block"
               // style={{
               //   width: 'calc(100% - 700px)',
               //   flex: '1 1 auto',
@@ -200,7 +200,7 @@ const TimelineHeader = (props) => {
           {localStorageData && (
             <>
               <div className="menu-row d-flex">
-                <span className="d-lg-none search-bar" onClick={handleIconClick}>
+                <span className="d-xl-none search-bar" onClick={handleIconClick}>
                   {showSearch ? (
                     <i className="fas fa-times" style={{ width: '18px' }}></i>
                   ) : (
@@ -262,7 +262,7 @@ const TimelineHeader = (props) => {
                     </li>
                     <li>
                       <div
-                        className="content-area navMobile menumobile d-block d-md-none"
+                        className="content-area navMobile menumobile d-block d-xl-none"
                         // style={{
                         //   width: 'calc(100% - 700px)',
                         //   flex: '1 1 auto',
