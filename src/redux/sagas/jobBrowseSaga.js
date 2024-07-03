@@ -102,12 +102,12 @@ function* handleGetJobBrowseList(action) {
     if (action.payload.search && action.payload.search != "undefined") {
       url = url + `&Search=${action.payload.search}`;
     }
-    // if (action.payload && action.payload.WorkLocation) {
-    //   url =
-    //     url +
-    //     `&Nearby=${action.payload.WorkLocation.split(",")[0]
-    //     }&WorkLocation=${action.payload.WorkLocation.split(",")[0]}`;
-    // }
+    if (action.payload && action.payload.WorkLocation) {
+      url =
+        url +
+        `&Nearby=${action.payload.WorkLocation.split(",")[0]
+        }&WorkLocation=${action.payload.WorkLocation.split(",")[0]}`;
+    }
 
     if (action.payload && action.payload.minSalary) {
       url = url + `&minSalary=${action.payload.minSalary}`;
