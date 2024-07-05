@@ -13,7 +13,7 @@ import * as Yup from "yup";
 import { contactUs } from "redux/actions/authActions";
 
 export default function BlogsView(props) {
-  const db_url = "http://twiloapi.buraaq.in/api/v1";
+  const db_url = "https://betaapi.burhaniguards.org/api/v1";
   const [isLoading, setLoading] = useState(false);
   const [blogData, setBlogData] = useState(null);
 
