@@ -11,6 +11,10 @@ import { Row, Dropdown, Alert, Modal, Col, Form } from "react-bootstrap";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import { contactUs } from "redux/actions/authActions";
+import DownloadApp from "components/homepage/downloadApp";
+import JobPageLinks from "components/homepage/jobPageLinks";
+import AppFooter from "components/homepage/AppFooter";
+import Head from "next/head";
 
 export default function BlogsView(props) {
   const db_url = "https://betaapi.burhaniguards.org/api/v1";
@@ -123,6 +127,16 @@ export default function BlogsView(props) {
 
   return (
     <Fragment>
+       <Head>
+        <title>{blogData?.metaTitle}</title>
+         <meta name='description' content={blogData?.metaDescription} />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={blogData?.metaTitle} />
+        <meta property='og:description' content={blogData?.metaDescription} />
+        <meta property="og:image" content={blogData?.image ? blogData?.image : "https://applykart.co/assets/images/applykart-logo.png"} />
+        <meta property="og:url" content={"https://applykart.co/blogs/"+blogData?.slugName} />
+      </Head>
       <div className="main_wrapper wrapper_style_two blogsingle">
         <TimelineHeader />
         <div className="terms-condition-container">
@@ -133,7 +147,7 @@ export default function BlogsView(props) {
               Welcome to ApplyKart!
             </p> */}
             {isLoading ? (
-              <h1>Loading</h1>
+              <p>Loading</p>
             ) : (
               <>
                 {!isLoading && !blogData ? (
@@ -295,7 +309,7 @@ export default function BlogsView(props) {
                         <img className="w-100" src={blogData?.image} 
                          onError={(e) => {
                           e.target.onerror = null;
-                          e.target.src = "";
+                          e.target.src = "https://applykart.co/assets/images/applykart-logo.png";
                         }}
                       />
               <div className="blogcontent" id="html-canvas"
@@ -319,6 +333,9 @@ export default function BlogsView(props) {
             </div>
           </div>
         </div>
+        <DownloadApp />
+      <JobPageLinks />
+      <AppFooter />
       </div>
     </Fragment>
   );
