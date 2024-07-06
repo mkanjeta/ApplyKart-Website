@@ -147,7 +147,14 @@ export default function BlogsView(props) {
               Welcome to ApplyKart!
             </p> */}
             {isLoading ? (
-              <p>Loading</p>
+             <div className="loader blob-loader-bg">
+             <div className="bg-blur position-absolute"></div>
+             <div className="loading position-absolute" style={{width:"100%",height:"100%"}}>
+               <span className="blob1 blob"></span>
+               <span className="blob2 blob"></span>
+               <span className="blob3 blob"></span>
+             </div>
+           </div>
             ) : (
               <>
                 {!isLoading && !blogData ? (
