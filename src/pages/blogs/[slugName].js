@@ -37,7 +37,6 @@ export default function BlogsView(props) {
   return (
     <Fragment>
       <div className="main_wrapper wrapper_style_two">
-        <TimelineHeader />
         <div className="terms-condition-container">
           <div className="container">
             <h3 className="text-center faq-ask-que my-3">Blogs</h3>
@@ -61,10 +60,10 @@ export default function BlogsView(props) {
                       </div>
                       {/* MIDDLE SECTION VIEW */}
                       <div className="col-md-6">
-                        <div
+                        {/* <div
                           id="html-canvas"
                           dangerouslySetInnerHTML={{ __html: blogData }}
-                        ></div>
+                        ></div> */}
                       </div>
 
                       {/*   RIGHT SECTION VIEW */}
