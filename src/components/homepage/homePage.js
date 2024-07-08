@@ -42,7 +42,7 @@ const HomePage = () => {
       />
       <Banner />
       <ReelSlider />
-      <Newssection />
+      {/* <Newssection /> */}
       <WhyChoose />
       <TopCompanies />
       <ChooseJob />
