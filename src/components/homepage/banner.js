@@ -197,7 +197,7 @@ const Banner = () => {
                     </span>
                   </h1>
                 </div>
-                <form onSubmit={handleSearch}>
+                <form onSubmit={handleSearch} className="bannersearch">
                   <div className="search-job-w activeusers">
                     <div
                       className="job-title1"  id="jobtitle1"

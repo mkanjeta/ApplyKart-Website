@@ -9415,11 +9415,11 @@ p {
 .toc-container ul {
   list-style-type: none;
   padding-left: 20px;
- 
+
 }
 
 .toc-container li {
-  margin-bottom: 5px;  
+  margin-bottom: 5px;
   font-size: 16px;
 }
 
@@ -9433,7 +9433,7 @@ p {
   text-decoration: underline;
 }
 
-.toccontent{
+.toccontent {
   background: #fff;
   width: 100%;
   padding: 10px 16px;
@@ -9442,7 +9442,7 @@ p {
   border-radius: 10px;
 }
 
-.writtenbyblog{
+.writtenbyblog {
   background: #fff;
   width: 100%;
   padding: 10px 16px;
@@ -9451,12 +9451,13 @@ p {
   border-radius: 10px;
 }
 
-.written{
+.written {
   font-size: 20px;
   font-weight: 600;
   color: #000;
 }
-.writtenbyblog .author_name{
+
+.writtenbyblog .author_name {
   color: #000;
   font-size: 20px;
   font-weight: 600;
@@ -9464,21 +9465,22 @@ p {
   margin: 5px;
 }
 
-.writtenbyblog .author_details{
+.writtenbyblog .author_details {
   color: #000;
   font-size: 14px;
   font-weight: 500;
 }
-.writtenbyblog .author_img{
-max-width: 100%;
-width: 96px;
-height: 96px;
-border-radius: 50%;
-overflow: hidden;
-margin: 0 auto 16px;
+
+.writtenbyblog .author_img {
+  max-width: 100%;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 16px;
 }
 
-.referform{
+.referform {
   background: #fff;
   width: 100%;
   padding: 15px 16px;
@@ -9486,31 +9488,36 @@ margin: 0 auto 16px;
   box-shadow: 0px 3px 20px #00000029;
   border-radius: 10px;
 }
-.referform .form-control{
+
+.referform .form-control {
   border-radius: 10px;
 }
 
-.blogsingle h1{
- font-size: 34px;
- font-weight: bold;
- font-family: "Inter", sans-serif;
+.blogsingle h1 {
+  font-size: 34px;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
 }
-.blogsingle h2{
+
+.blogsingle h2 {
   font-size: 30px;
   font-weight: bold;
   font-family: "Inter", sans-serif;
 }
-.blogsingle h3{
+
+.blogsingle h3 {
   font-size: 20px;
   font-weight: bold;
   font-family: "Inter", sans-serif;
 }
-.blogsingle h4{
+
+.blogsingle h4 {
   font-size: 18px;
   font-weight: bold;
   font-family: "Inter", sans-serif;
 }
-.blogsingle .content-wrap .content-area p{
+
+.blogsingle .content-wrap .content-area p {
   font-size: 16px;
   font-family: "Inter", sans-serif;
   color: #000;
@@ -9519,37 +9526,44 @@ margin: 0 auto 16px;
 
 
 @media (max-width: 1199px) {
-  .blogsingle .content-wrap .left-sidebar,  .blogsingle .content-wrap .right-sidebar {
-      width: 100%;
-      min-width: auto;
-      margin: 20px 0;
+
+  .blogsingle .content-wrap .left-sidebar,
+  .blogsingle .content-wrap .right-sidebar {
+    width: 100%;
+    min-width: auto;
+    margin: 20px 0;
   }
+
   .blogsingle .content-wrap .content-area {
     order: 2;
     width: 100%;
     margin: 0 !important;
-}
+  }
 
-.toc-container {
-  margin: 0;
-}
+  .toc-container {
+    margin: 0;
+  }
 }
 
 @media (max-width: 768px) {
 
-  .blogsingle h1{
+  .blogsingle h1 {
     font-size: 24px
-   }
-   .blogsingle h2{
-     font-size: 22px;
-   }
-   .blogsingle h3{
-     font-size: 20px;
-   }
-   .blogsingle h4{
-     font-size: 18px;
-   }
-   .blogsingle .content-wrap .content-area p{
+  }
+
+  .blogsingle h2 {
+    font-size: 22px;
+  }
+
+  .blogsingle h3 {
+    font-size: 20px;
+  }
+
+  .blogsingle h4 {
+    font-size: 18px;
+  }
+
+  .blogsingle .content-wrap .content-area p {
     font-size: 16px;
   }
 }
@@ -9578,4 +9592,56 @@ margin: 0 auto 16px;
 
 .card-view-image {
   height: 150px;
+}
+
+.news-timeline-slick>.slick-list>.slick-track {
+  align-items: center;
+  display: flex;
+}
+
+.news-timeline-slick .newsimgs{
+  width: 200px;
+}
+.newsslider{
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.newsparent{
+  position: absolute;
+}
+.newscoverage{
+  padding-top: 45%;
+  padding-bottom: 10%;
+  position: relative;
+  z-index: 999999;
+  background-color: white;
+  box-shadow: 1px 12px 14px 17px white;
+}
+
+@media (max-width: 767px) {
+  .news-timeline-slick .newsimgs{
+    width: 150px;
+  }
+  .newscoverage {
+    padding-top: 30%;
+}
+
+  .bannersearch .banner-searchbar, .bannersearch .banner-searchbar2{
+  padding: 10px 0 10px 50px;
+  width: 100%;
+
+  }
+  .bannersearch .search-job-w {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    background: transparent;
+    justify-content: center;
+}
+
+.bannersearch .search-job-w .job-title1, .bannersearch .search-job-w .job-title2{
+  width: 100%;
+}
+
 }

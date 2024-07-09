@@ -1,6 +1,6 @@
 const Card = ({ redirect, description, image }) => {
   return (
-    <div className="col-lg-4 col-md-12" news-date="May 16, 2024">
+    <div className="col-lg-4 col-md-12">
       <div className="col-wrapper p-2 rounded-4 shadow h-100 bg-white card-view-wrapper">
         <div className="image-container d-flex justify-content-center card-view-image">
           <img decoding="async" src={image} alt="" />

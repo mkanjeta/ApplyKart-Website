@@ -497,6 +497,7 @@ export default function CardView(props) {
               {items.map((e) => {
                 return (
                   <Card
+                    key={e.id}
                     description={e.title}
                     redirect={e.link}
                     image={e.image}
