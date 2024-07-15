@@ -22,7 +22,7 @@ const TermsConditionPage = () => {
         <TimelineHeader />
         <div className="terms-condition-container">
           <div className="container">
-            <h3 className="text-center faq-ask-que my-3">Terms and Condition</h3>
+            <h1 className="text-center faq-ask-que my-3">Terms and Condition</h1>
             <p className="terms-condition-slogen text-center">
               Welcome to ApplyKart!
             </p>

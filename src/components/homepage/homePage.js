@@ -524,7 +524,7 @@ const HomePage = () => {
           property="og:image"
           content="https://applykart.co/assets/images/applykart-logo.png"
         />
-        <meta property="og:url" content="https://applykart.co/" />
+        <meta property="og:url" content="https://www.applykart.co/" />
 
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />

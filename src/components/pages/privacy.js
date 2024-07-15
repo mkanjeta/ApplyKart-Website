@@ -22,7 +22,7 @@ const PrivacyPolicyPage = () => {
       <TimelineHeader />
       <div className="terms-condition-container">
         <div className="container">
-          <h3 className="text-center faq-ask-que my-3">Privacy Policy</h3>
+          <h1 className="text-center faq-ask-que my-3">Privacy Policy</h1>
           <p className="terms-condition-slogen text-center">
             ApplyKart Pty Ltd (ABN 80 655 593 972) (we, us or our), understands
             that protecting your personal information is important. This Privacy

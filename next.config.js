@@ -64,6 +64,11 @@ module.exports = {
         permanent: true,
       },
       {
+        source: '/jobs/Jobs in Chatswood',
+        destination: '/jobs/jobs-in-chatswood/',
+        permanent: true,
+      },
+      {
         source: '/jobs/best-jobs-in-Bella-Vista',
         destination: '/jobs/best-jobs-in-bella-vista-nsw/',
         permanent: true,
@@ -245,7 +250,7 @@ module.exports = {
       },
       {
         source: '/jobs/Environmental-Scientist',
-        destination: '/jobs/best-environmental-scientist jobs-australia/',
+        destination: '/jobs/best-environmental-scientist-jobs-australia/',
         permanent: true,
       },
       {

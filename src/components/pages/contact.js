@@ -74,7 +74,7 @@ const ContactUs = () => {
         <div className="contact-us-container">
           <div className="container">
             <div className="header-text">
-              <h3 className="faq-ask-que mb-3">Contact us</h3>
+              <h1 className="faq-ask-que mb-3">Contact us</h1>
               <p>Let us know how we can help and we'll be in touch shortly!</p>
             </div>
 

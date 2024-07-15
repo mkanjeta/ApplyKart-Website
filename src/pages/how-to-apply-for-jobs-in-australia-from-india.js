@@ -37,7 +37,7 @@ const HomePage = () => {
         <meta property="og:type" content="website" />
         <meta property='og:description' content='Explore step-by-step procedures and valuable tips on applying for various job roles in Australia from India. Discover visa requirements, resume tips, networking strategies, and specific job role insights.'/>
         <meta property="og:image" content="https://applykart.co/assets/images/applykart-logo.png" />
-        <meta property="og:url" content="https://applykart.co/" />
+        <meta property="og:url" content="https://www.applykart.co/how-to-apply-for-jobs-in-australia-from-india/" />
 
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
