@@ -613,7 +613,8 @@ const JobDetails = () => {
 
                 <div className="desc_area ">
                   <h5 className="jobtitle">Description</h5>
-                  <p className="text ">{jobDetail?.description ? jobDetail?.description : 'No Description'}</p>
+                  <div className="jobDescription" dangerouslySetInnerHTML={{__html:  jobDetail?.description ? jobDetail?.description : 'No Description'}}/>
+                  {/* <p className="text ">{jobDetail?.description ? jobDetail?.description : 'No Description'}</p> */}
                 </div>
                 {jobDetail?.job_Type
                   ? jobDetail?.job_Type.map((item, index) => {
