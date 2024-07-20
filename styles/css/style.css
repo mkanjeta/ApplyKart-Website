@@ -9635,8 +9635,9 @@ font-weight: 600;
 }
 .jobcontentpage h2,.jobDescription h2 {
   font-size: 1.8rem;
-  font-family: 'Inter';
+  font-family: "Inter", sans-serif;
   font-weight: 500;
+  margin-bottom: 7px;
 }
 
 .jobDescription p {
