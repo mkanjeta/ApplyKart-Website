@@ -16,6 +16,21 @@ function generateSiteMap(slugs) {
         <lastmod>2024-01-19T13:18:48+00:00</lastmod>
         <priority>1.00</priority>
     </url>
+    <url>
+        <loc>https://applykart.co/terms</loc>
+        <lastmod>2024-01-19T13:18:48+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://applykart.co/privacy</loc>
+        <lastmod>2024-01-19T13:18:48+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://applykart.co/contact</loc>
+        <lastmod>2024-01-19T13:18:48+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
      ${slugs ? slugs.map((slug) => {
          return `
            <url>
