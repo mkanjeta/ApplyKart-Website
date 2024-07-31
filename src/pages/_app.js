@@ -134,7 +134,11 @@ function MyApp({ Component, pageProps }) {
   var origin =  typeof window !== 'undefined' && window.location.origin ? window.location.origin : '';
   const URL = origin+router.asPath;
 
-  
+  const [language, setLanguage] = useState('en-au');
+
+  useEffect(() => {
+    document.documentElement.setAttribute('lang', language);
+  }, [language]);
   
   return (
     <>
