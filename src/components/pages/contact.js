@@ -10,6 +10,7 @@ import * as Yup from "yup";
 import { useSelector, useDispatch } from "react-redux";
 import { contactUs } from "redux/actions/authActions";
 import TimelineHeader from "components/shared/timelineHeader";
+import AppFooter from "../homepage/AppFooter";
 
 const initialValues = {
   firstName: "",
@@ -287,6 +288,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
+      <AppFooter />
     </Fragment>
   );
 };

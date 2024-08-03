@@ -1,7 +1,9 @@
 import { Fragment } from "react";
 import Header from "components/shared/header";
 import Footer from "components/shared/footer";
+import AppFooter from "../homepage/AppFooter";
 import Head from "next/head";
+
 
 const AboutPage = () => {
   return (
@@ -11,13 +13,15 @@ const AboutPage = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Header
-        styleClass="style_two"
-        logoUrl="assets/images/white-logo.svg"
-        hideButtons={1}
+        styleClass="style_two bg-transparent position-absolute"
+        logoUrl="assets/images/black-logo.svg"
+        hideButtons={0}
+        isCommonPage={1}
       />
+     
 
       {/* Content Box */}
-      <div className="about-us-container">
+      <div className="about-us-container pt-5">
         <div className="container">
           <h3 className="text-center faq-ask-que my-3">About us</h3>
           <p className="about-us-slogen text-center">
@@ -74,6 +78,7 @@ const AboutPage = () => {
 
       {/* <Banner/> */}
       {/* <Footer /> */}
+      <AppFooter />
     </Fragment>
   );
 };

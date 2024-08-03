@@ -66,7 +66,7 @@ const Header = (props) => {
             <span>
               {router.asPath === "/" ||
               router.asPath === "/login" ||
-              router.pathname === "/jobs/[id]" ? (
+              router.pathname === "/jobs/[id]" ||  props.isCommonPage ? (
                 <>
                   {router.asPath === "/login" ? null : (
                     <>

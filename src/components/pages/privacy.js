@@ -3,6 +3,7 @@ import Header from "components/shared/header";
 import Footer from "components/shared/footer";
 import Head from "next/head";
 import TimelineHeader from "components/shared/timelineHeader";
+import AppFooter from "../homepage/AppFooter";
 
 const PrivacyPolicyPage = () => {
   return (
@@ -35,7 +36,7 @@ const PrivacyPolicyPage = () => {
           <div className="terms-condition-content my-3">
             <h6 className="my-2 about-company">The information we collect</h6>
             <div className="terms-condition-text">
-              <p>
+              <div>
                 Personal information: is information or an opinion, whether true
                 or not and whether recorded in a material form or not, about an
                 individual who is identified or reasonably identifiable.
@@ -108,7 +109,7 @@ const PrivacyPolicyPage = () => {
                     </ol>
                   </li>
                 </ol>
-              </p>
+              </div>
             </div>
           </div>
 
@@ -117,7 +118,7 @@ const PrivacyPolicyPage = () => {
               How we collect personal information
             </h6>
             <div className="terms-condition-text">
-              <p>
+              <div>
                 We collect personal information in a variety of ways, including:
                 <ol>
                   <li>
@@ -147,7 +148,7 @@ const PrivacyPolicyPage = () => {
                     networking sites such as LinkedIn.
                   </li>
                 </ol>
-              </p>
+              </div>
             </div>
           </div>
 
@@ -156,11 +157,12 @@ const PrivacyPolicyPage = () => {
               Why we collect, hold, use and disclose personal information
             </h6>
             <div className="terms-condition-text">
-              <p>
+              <div>
                 We have set out below, in a table format, a description of the
                 purposes for which we plan to collect, hold, use and disclose
                 your personal information.
                 <table>
+                  <tbody>
                   <tr>
                     <th>Purpose of use / disclosure</th>
                     <th>Type of Personal Information</th>
@@ -325,8 +327,9 @@ const PrivacyPolicyPage = () => {
                       </ol>
                     </td>
                   </tr>
+                  </tbody>  
                 </table>
-              </p>
+              </div>
             </div>
           </div>
 
@@ -335,7 +338,7 @@ const PrivacyPolicyPage = () => {
               Our disclosures of personal information to third parties
             </h6>
             <div className="terms-condition-text">
-              <p>
+              <div>
                 We may disclose personal information to:
                 <ol>
                   <li>our employees, contractors and/or related entities;</li>
@@ -380,7 +383,7 @@ const PrivacyPolicyPage = () => {
                     such as where we receive a subpoena.
                   </li>
                 </ol>
-              </p>
+              </div>
 
               <p>
                 <b>Google Analytics: </b>We may have enabled Google Analytics
@@ -613,6 +616,7 @@ const PrivacyPolicyPage = () => {
       {/* <Banner/> */}
       {/* <Footer /> */}
     </div>
+    <AppFooter />
     </Fragment >
   );
 };
