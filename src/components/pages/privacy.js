@@ -8,15 +8,17 @@ import AppFooter from "../homepage/AppFooter";
 const PrivacyPolicyPage = () => {
   return (
     <Fragment>
-      {/* <Head>
-        <title>ApplyKart</title>
+      <Head>
+        <title> Privacy Policy | ApplyKart</title>
+        <meta name="description" content="Find jobs with ApplyKart"></meta>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta property="og:title" content="Privacy Policy | ApplyKart" />
+        <meta property="og:description" content="Find jobs with ApplyKart" />
+        <meta property="og:image" content="https://www.applykart.co/assets/images/dark-logo.svg" />
+        <meta property="og:url" content="https://www.applykart.co/privacy" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en-au" />
       </Head>
-      <Header
-        styleClass="style_two"
-        logoUrl="assets/images/dark-logo.svg"
-        hideButtons={1}
-      /> */}
 
       {/* Content Box */}
       <div className="main_wrapper wrapper_style_two">

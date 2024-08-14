@@ -1,8 +1,9 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState, Fragment } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Sidebar from "components/shared/sidebar";
 import { Dropdown } from "react-bootstrap";
 import Header from "components/shared/header";
+import Head from "next/head";
 import TimelineHeader from "components/shared/timelineHeader";
 // For map
 import dynamic from "next/dynamic";
@@ -88,16 +89,28 @@ const JobsApi = ({ apps }) => {
 
   useEffect(() => {
     setData(apps[0]?.jobs ? apps[0]?.jobs : []);
-
     if (typeof window !== "undefined") {
       const applyKart = localStorage.getItem("applyKart");
       const data = JSON.parse(applyKart);
       setaccessToken(data?.encryptedToken);
       setSeekerId(data?.userId);
     }
-  }, [apps[0]]);
 
+  }, [apps[0]]);
+  const baseUrl = "https://applykart.co/jobs/";
+  const dynamicPart = apps[1].data.slug;
+  const fullUrl = `${baseUrl}${dynamicPart}`;
+ 
   return (
+    <Fragment>
+     <Head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta property="og:title" content={apps[1].data.meta_title} />
+        <meta property="og:description" content={apps[1].data.meta_keyword} />
+        <meta property="og:url" content={fullUrl} />
+        <meta property="og:type" content="article" />
+        <meta property="og:locale" content="en-au" />
+    </Head>
     <main className="main_wrapper">
       <div
         className="left_side sidebar"
@@ -153,6 +166,7 @@ const JobsApi = ({ apps }) => {
               <div className="desc_area ">
                 {/* <h5 className="jobtitle">Description</h5>` */}
                 <div className="text">
+                
                   <div
                     dangerouslySetInnerHTML={{
                       __html: apps[1].data.description,
@@ -316,6 +330,7 @@ const JobsApi = ({ apps }) => {
         
       </div>
     </main>
+    </Fragment>
   );
 };
 

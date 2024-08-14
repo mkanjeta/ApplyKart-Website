@@ -19,6 +19,17 @@ const TermsConditionPage = () => {
       /> */}
 
       {/* Content Box */}
+      <Head>
+        <title> Terms and Condition | ApplyKart</title>
+        <meta name="description" content="Find jobs with ApplyKart"></meta>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta property="og:title" content="Terms and Condition | ApplyKart" />
+        <meta property="og:description" content="Find jobs with ApplyKart" />
+        <meta property="og:image" content="https://www.applykart.co/assets/images/dark-logo.svg" />
+        <meta property="og:url" content="https://www.applykart.co/terms" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en-au" />
+      </Head>
       <div className="main_wrapper wrapper_style_two">
         <TimelineHeader />
         <div className="terms-condition-container">
