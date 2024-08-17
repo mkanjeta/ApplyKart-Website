@@ -528,6 +528,12 @@ const HomePage = () => {
 
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+
+        <meta name="twitter:card" content="website" />
+        <meta name="twitter:site" content="https://applykart.co/" />
+        <meta name="twitter:title" content="Find jobs with ApplyKart" />
+        <meta name="twitter:description" content="An all-in-one professional networking platform to connect, engage and find jobs with the help of AI!" />
+        <meta name="twitter:image" content="https://applykart.co/assets/images/applykart-logo.png" />
       </Head>
       <Header
         styleClass="style_two bg-transparent position-absolute"

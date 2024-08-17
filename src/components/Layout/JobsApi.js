@@ -110,6 +110,13 @@ const JobsApi = ({ apps }) => {
         <meta property="og:url" content={fullUrl} />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="en-au" />
+        <meta name="twitter:card" content="article" />
+        <meta name="twitter:site" content="https://applykart.co/" />
+        <meta name="twitter:title" content={apps[1].data.meta_title} />
+        <meta name="twitter:description" content={apps[1].data.meta_keyword} />
+        <meta name="twitter:image" content="https://applykart.co/assets/images/applykart-logo.png" />
+
+
     </Head>
     <main className="main_wrapper">
       <div

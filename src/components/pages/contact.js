@@ -76,10 +76,15 @@ const ContactUs = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta property="og:title" content=" Contact Us | ApplyKart" />
         <meta property="og:description" content="Find jobs with ApplyKart" />
-        <meta property="og:image" content="https://www.applykart.co/assets/images/dark-logo.svg" />
+        <meta property="og:image" content="https://applykart.co/assets/images/applykart-logo.png" />
         <meta property="og:url" content="https://www.applykart.co/contact" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en-au" />
+        <meta name="twitter:card" content="website" />
+        <meta name="twitter:site" content="https://applykart.co/" />
+        <meta name="twitter:title" content="Contact Us | ApplyKart" />
+        <meta name="twitter:description" content="Find jobs with ApplyKart" />
+        <meta name="twitter:image" content="https://applykart.co/assets/images/applykart-logo.png" />
       </Head>
       <div className="main_wrapper wrapper_style_two">
         <TimelineHeader />

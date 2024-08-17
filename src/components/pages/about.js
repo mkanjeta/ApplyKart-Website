@@ -9,8 +9,20 @@ const AboutPage = () => {
   return (
     <Fragment>
       <Head>
-        <title>ApplyKart</title>
+      <title> About Us | ApplyKart</title>
+        <meta name="description" content="Find jobs with ApplyKart"></meta>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta property="og:title" content=" About Us | ApplyKart" />
+        <meta property="og:description" content="Find jobs with ApplyKart" />
+        <meta property="og:image" content="https://applykart.co/assets/images/applykart-logo.png" />
+        <meta property="og:url" content="https://www.applykart.co/about" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en-au" />
+        <meta name="twitter:card" content="website" />
+        <meta name="twitter:site" content="https://applykart.co/" />
+        <meta name="twitter:title" content="About Us | ApplyKart" />
+        <meta name="twitter:description" content="Find jobs with ApplyKart" />
+        <meta name="twitter:image" content="https://applykart.co/assets/images/applykart-logo.png" />
       </Head>
       <Header
         styleClass="style_two bg-transparent position-absolute"
