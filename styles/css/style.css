@@ -3270,7 +3270,7 @@ label.agree-data {
 /* end */
 
 /* about-us page and Terms-condition 05-07-2022  */
-.about-us-container,
+.about-us-container, .academy-us-container,
 .terms-condition-container,
 .contact-us-container {
   min-height: 100vh;
@@ -9523,6 +9523,99 @@ p {
   font-family: "Inter", sans-serif;
   color: #000;
   font-weight: 400;
+}
+
+.academy-us-container {
+  background-image: url("/assets/images/academybg.png");
+  background-size: cover;
+  background-position: top;
+}
+
+.academyprofile {
+  width: 50px;
+  height: 50px;
+  padding: 2px;
+  border-radius: 50%;
+  background-image: url(/assets/images/academyprofile-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+.academy-us-container .doteffect::before, .academy-us-container .doteffect::after{
+  display: none;
+}
+.academy-us-container .reelslider .swiper-slide {
+  padding: 0;
+}
+.mockmasterimage{
+  background-image: url(/assets/images/mockmaster.png);
+  background-size: auto;
+  background-position: top;
+  min-height: 155px;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
+.couponcode{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  padding-bottom: 15px;
+}
+.mockmaster_link{
+  color: #fff;
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #FFB774 0%, #F68DFF 60%);
+  box-shadow: -30px 0px 20px -10px rgba(112, 135, 255, 0.7) inset;
+  border-style: solid;
+  border-width: 0px 0px 0px 0px;
+  border-color: #FFB774;
+  border-radius: 30px 30px 30px 30px;
+  padding: 5px;
+  font-weight: 600;
+}
+
+.iconbox{
+  padding: 20px;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+.iconbox i{
+  color: #fff;
+}
+.explore-description h6{
+  font-weight: 500;
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+.explore-description p{
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+
+
+
+ .rt-course-box {
+  background: #1F1F1F;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+.authordetail p{
+  font-size: 12px;
+}
+.courseprice{
+  font-size: 14px;
+}
+.courseprice span{
+  font-size: 10px;
 }
 
 
