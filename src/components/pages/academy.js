@@ -46,7 +46,7 @@ const AcademyPage = () => {
         <div className="mockmasterimage">
             <div className="couponcode">
                 <p className="text-dark text-center fs-5 fw-bold mb-0">your code : 210678</p>
-                <Link href="/" className="mockmaster_link">Start Your Free PTE Mock Test Now</Link>
+                <Link href="/" ><button className="mockmaster_link">Start Your Free PTE Mock Test Now</button></Link>
             </div>
         </div>
 
