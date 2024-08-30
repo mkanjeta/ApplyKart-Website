@@ -54,8 +54,8 @@ export default function Academyreels() {
               speed={6000}
               breakpoints={{
                 300: {
-                  slidesPerView: 3,
-                  spaceBetween: 15,
+                  slidesPerView: 2,
+                  spaceBetween: 10,
                 },
                 920: {
                   slidesPerView: 3,
@@ -75,7 +75,7 @@ export default function Academyreels() {
                   <SwiperSlide key={i}>
                     <div className="doteffect">
                       <div className="carousel-cell sepiaEffect">
-                          <img src={img} alt="" className="slider-gif" />
+                          <img src={img} alt="" className="academyslider-gif" />
                       </div>
                     </div>
                   </SwiperSlide>

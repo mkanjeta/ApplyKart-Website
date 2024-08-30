@@ -5,7 +5,8 @@ import Academyreels from "./academyreels";
 import Link from "next/link";
 
 
-const AcademyPage = () => {
+const AcademyPage = ({coupon}) => {
+ 
   return (
     <Fragment>
       <Head>
@@ -57,8 +58,8 @@ const AcademyPage = () => {
             <h2><span>PTE MOCK TEST</span></h2>
         </div>
             <div className="couponcode mt-3">
-                <p className="text-dark text-center d-block fs-5 fw-bold mb-0">Your Code : 210678</p>
-              <Link passHref href={"https://app.mockmaster.ai/user/signin"}><button className="mockmaster_link">Start Your Free PTE Mock Test Now</button></Link>
+            {  coupon != '-' && <p className="text-dark text-center d-block fs-5 fw-bold mb-0 pte_coupon_code">Your Code : {coupon}</p> }
+             <Link passHref href={"https://app.mockmaster.ai/user/signin"} target="_blank" rel="noopener noreferrer"><button className="mockmaster_link">Start Your Free PTE Mock Test Now</button></Link>
             </div>
         </div>
 
@@ -74,19 +75,13 @@ const AcademyPage = () => {
       <SwiperSlide >
         <div className="rt-course-box">
             <div className="courseurl"> 
-             <img src="/assets/images/pte-naati.png" className="w-100" />
+             <img src="/assets/images/course1.jpg" className="w-100" />
               <div className="rt-course-desc mt-4 mb-2">
                 <p className=" text-warning mt-1 fs-6 mb-0 text-start">Portal + Video Course</p>
                 <p className="fs-6 text-white text-start mb-3">Lifetime Portal Memebership English</p>
 
               <div className="d-flex align-items-center justify-content-between">
-                  <div className="d-flex align-items-center">
-                    <img src="/assets/images/academyprofile.png" className="img-fluid rounded-circle h-100" alt="Academy Profile" />
-                      <div className="authordetail mx-1">
-                        <p className="text-white mb-0">MALCOLM</p>
-                        <p className="text-white mb-0">15k+ Enrolled</p>
-                      </div>
-                  </div>  
+                <p className="text-white mb-0 authordetail mx-1">15k+ Enrolled</p>
                 <p className="text-white mb-0 courseprice">$448 <span className="text-white mb-0 text-decoration-line-through fw-normal">$549</span></p>
                </div>
             </div>
@@ -98,19 +93,13 @@ const AcademyPage = () => {
         <div className="rt-course-box">
             <div className="courseurl">
             
-             <img src="/assets/images/pte-naati.png" className="w-100" />
+             <img src="/assets/images/course3.jpg" className="w-100" />
               <div className="rt-course-desc mt-4 mb-2">
                 <p className=" text-warning mt-1 fs-6 text-start mb-0">Portal + Video Course</p>
                 <p className="fs-6 text-white text-start mb-3">Lifetime Portal Memebership Punjabi</p>
 
               <div className="d-flex align-items-center justify-content-between">
-                  <div className="d-flex align-items-center">
-                    <img src="/assets/images/academyprofile.png" className="img-fluid rounded-circle h-100" alt="Academy Profile" />
-                      <div className="authordetail mx-1">
-                        <p className="text-white mb-0">MALCOLM</p>
-                        <p className="text-white mb-0">9572+ Enrolled</p>
-                      </div>
-                  </div>  
+                        <p className="text-white mb-0 authordetail mx-1">9572+ Enrolled</p>
                 <p className="text-white mb-0 courseprice">$448 <span className="text-white mb-0 text-decoration-line-through fw-normal">$549</span></p>
                </div>
             </div>
@@ -122,21 +111,15 @@ const AcademyPage = () => {
         <div className="rt-course-box">
             <div className="courseurl">
             
-             <img src="/assets/images/pte-naati.png" className="w-100" />
+             <img src="/assets/images/course2.jpg" className="w-100" />
               <div className="rt-course-desc mt-4 mb-2">
                 <p className=" text-warning mt-1 text-start fs-6 mb-0">Portal + Video Course</p>
-                <p className="fs-6 text-white text-start mb-4">1 Month Membership English</p>
+                <p className="fs-6 text-white text-start mb-3">1 Month Membership English</p>
 
               <div className="d-flex align-items-center justify-content-between">
-                  <div className="d-flex align-items-center">
-                    <img src="/assets/images/academyprofile.png" className="img-fluid rounded-circle h-100" alt="Academy Profile" />
-                      <div className="authordetail mx-1 mt-3">
-                        <p className="text-white mb-0">MALCOLM</p>
-                        <p className="text-white mb-0">15k+ Enrolled</p>
-                      </div>
-                  </div>  
-                <p className="text-white mb-0 courseprice">$169 <span className="text-white mb-0 text-decoration-line-through fw-normal">$299</span></p>
-               </div>
+                  <p className="text-white mb-0 authordetail mx-1">8976k+ Enrolled</p>
+                  <p className="text-white mb-0 courseprice">$169 <span className="text-white mb-0 text-decoration-line-through fw-normal">$299</span></p>
+              </div>
             </div>
             </div>
         </div>
@@ -145,19 +128,13 @@ const AcademyPage = () => {
       <SwiperSlide >
         <div className="rt-course-box">
             <div className="courseurl">
-             <img src="/assets/images/pte-naati.png" className="w-100" />
+             <img src="/assets/images/course4.jpg" className="w-100" />
               <div className="rt-course-desc mt-4 mb-2">
                 <p className=" text-warning mt-1 text-start fs-6 mb-0">Portal + Video Course</p>
-                <p className="fs-6 text-white text-start mb-4">1 Month Membership Punjabi </p>
+                <p className="fs-6 text-white text-start mb-3">1 Month Membership Punjabi </p>
 
               <div className="d-flex align-items-center justify-content-between">
-                  <div className="d-flex align-items-center">
-                    <img src="/assets/images/academyprofile.png" className="img-fluid rounded-circle h-100" alt="Academy Profile" />
-                      <div className="authordetail mx-1 mt-3">
-                        <p className="text-white mb-0">MALCOLM</p>
-                        <p className="text-white mb-0">15k+ Enrolled</p>
-                      </div>
-                  </div>  
+                    <p className="text-white mb-0 authordetail mx-1">12k+ Enrolled</p>
                 <p className="text-white mb-0 courseprice">$169 <span className="text-white mb-0 text-decoration-line-through fw-normal">$299</span></p>
                </div>
             </div>
