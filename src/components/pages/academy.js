@@ -45,7 +45,7 @@ const AcademyPage = () => {
         
         <div className="mockmasterimage">
             <div className="couponcode">
-                <p className="text-dark text-center fs-5 fw-bold mb-0">your code : 210678</p>
+                <p className="text-dark text-center d-block fs-5 fw-bold mb-0">your code : 210678</p>
                 <Link href="/" ><button className="mockmaster_link">Start Your Free PTE Mock Test Now</button></Link>
             </div>
         </div>
@@ -65,8 +65,8 @@ const AcademyPage = () => {
             
              <img src="/assets/images/pte-naati.png" className="w-100" />
               <div className="rt-course-desc my-4">
-                <p className=" text-warning mt-1 fs-6 mb-0">PTE</p>
-                <p className="fs-6 text-white mb-2">UNLIMITED -  2 MONTHS</p>
+                <p className=" text-warning mt-1 fs-6 mb-0 text-start">PTE</p>
+                <p className="fs-6 text-white text-start mb-2">UNLIMITED -  2 MONTHS</p>
 
               <div className="d-flex align-items-center justify-content-between">
                   <div className="d-flex align-items-center">
@@ -91,8 +91,8 @@ const AcademyPage = () => {
             
              <img src="/assets/images/pte-naati.png" className="w-100" />
               <div className="rt-course-desc my-4">
-                <p className=" text-warning mt-1 fs-6 mb-0">NAATI</p>
-                <p className="fs-6 text-white mb-2">UNLIMITED - 1 MONTHS</p>
+                <p className=" text-warning mt-1 fs-6 text-start mb-0">NAATI</p>
+                <p className="fs-6 text-white text-start mb-2">UNLIMITED - 1 MONTHS</p>
 
               <div className="d-flex align-items-center justify-content-between">
                   <div className="d-flex align-items-center">
@@ -117,8 +117,8 @@ const AcademyPage = () => {
             
              <img src="/assets/images/pte-naati.png" className="w-100" />
               <div className="rt-course-desc my-4">
-                <p className=" text-warning mt-1 fs-6 mb-0">PTE</p>
-                <p className="fs-6 text-white mb-2">UNLIMITED -  2 MONTHS</p>
+                <p className=" text-warning mt-1 text-start fs-6 mb-0">PTE</p>
+                <p className="fs-6 text-white text-start mb-2">UNLIMITED -  2 MONTHS</p>
 
               <div className="d-flex align-items-center justify-content-between">
                   <div className="d-flex align-items-center">
@@ -142,8 +142,8 @@ const AcademyPage = () => {
             
              <img src="/assets/images/pte-naati.png" className="w-100" />
               <div className="rt-course-desc my-4">
-                <p className=" text-warning mt-1 fs-6 mb-0">PTE</p>
-                <p className="fs-6 text-white mb-2">UNLIMITED -  2 MONTHS</p>
+                <p className=" text-warning mt-1 text-start fs-6 mb-0">PTE</p>
+                <p className="fs-6 text-white text-start mb-2">UNLIMITED -  2 MONTHS</p>
 
               <div className="d-flex align-items-center justify-content-between">
                   <div className="d-flex align-items-center">

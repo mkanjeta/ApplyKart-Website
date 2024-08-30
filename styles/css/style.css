@@ -9598,13 +9598,11 @@ p {
   margin-bottom: 5px;
 }
 
-
-
-
  .rt-course-box {
   background: #1F1F1F;
   border-radius: 10px;
-  padding: 10px;
+  padding: 15px 5px 5px 5px;
+  text-align: center;
 }
 
 
