@@ -9,29 +9,8 @@ const AcademyPage = ({coupon}) => {
  
   return (
     <Fragment>
-      <Head>
-      <title>ApplyKart Academy | ApplyKart</title>
-        <meta name="description" content="Find jobs with ApplyKart"></meta>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta property="og:title" content=" ApplyKart Academy | ApplyKart" />
-        <meta property="og:description" content="Find jobs with ApplyKart" />
-        <meta property="og:image" content="https://applykart.co/assets/images/applykart-logo.png" />
-        <meta property="og:url" content="https://www.applykart.co/academy" />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="en-au" />
-        <meta name="twitter:card" content="website" />
-        <meta name="twitter:site" content="https://applykart.co/" />
-        <meta name="twitter:title" content="ApplyKart Academy | ApplyKart" />
-        <meta name="twitter:description" content="Find jobs with ApplyKart" />
-        <meta name="twitter:image" content="https://applykart.co/assets/images/applykart-logo.png" />
-      </Head>
-     
-
-      {/* Content Box */}
       <div className="academy-us-container pt-5 pb-3">
-
       <div className="d-flex justify-content-evenly align-items-end">
-
           <img src="/assets/images/academyprofile.jpg" className="img-fluid academyprofile" alt="Academy Profile" />
           <img src="/assets/images/white-logo.svg" className="w-50" />
           <p className="fs-4 fw-normal mb-0 text-white">academy</p>
@@ -143,7 +122,10 @@ const AcademyPage = ({coupon}) => {
       </SwiperSlide>
     </Swiper>
 
-        <p className="fs-2 fw-normal mb-1 mt-4 text-center text-white">Learn from reels, just for you </p>
+       <div className="d-flex align-items-center justify-content-between mx-3 mt-4">
+            <p className="fs-6 fw-normal text-center text-white mb-0">Learn from reels, just for you </p>
+            <p className="reels_viewall text-decoration-underline fw-bold fs-6 text-white mb-0">View All</p>
+        </div>
         <Academyreels />
 
        </div>
