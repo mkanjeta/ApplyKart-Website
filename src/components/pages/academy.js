@@ -27,7 +27,7 @@ const AcademyPage = () => {
      
 
       {/* Content Box */}
-      <div className="academy-us-container pt-5">
+      <div className="academy-us-container pt-5 pb-3">
 
       <div className="d-flex justify-content-evenly align-items-end">
 
@@ -75,9 +75,9 @@ const AcademyPage = () => {
         <div className="rt-course-box">
             <div className="courseurl"> 
              <img src="/assets/images/pte-naati.png" className="w-100" />
-              <div className="rt-course-desc my-4">
+              <div className="rt-course-desc mt-4 mb-2">
                 <p className=" text-warning mt-1 fs-6 mb-0 text-start">Portal + Video Course</p>
-                <p className="fs-6 text-white text-start mb-3">Lifetime Portal Memebership Punjabi</p>
+                <p className="fs-6 text-white text-start mb-3">Lifetime Portal Memebership English</p>
 
               <div className="d-flex align-items-center justify-content-between">
                   <div className="d-flex align-items-center">
@@ -87,7 +87,7 @@ const AcademyPage = () => {
                         <p className="text-white mb-0">15k+ Enrolled</p>
                       </div>
                   </div>  
-                <p className="text-white mb-0 courseprice">$448 <span className="text-white mb-0">$549</span></p>
+                <p className="text-white mb-0 courseprice">$448 <span className="text-white mb-0 text-decoration-line-through fw-normal">$549</span></p>
                </div>
             </div>
             </div>
@@ -99,7 +99,7 @@ const AcademyPage = () => {
             <div className="courseurl">
             
              <img src="/assets/images/pte-naati.png" className="w-100" />
-              <div className="rt-course-desc my-4">
+              <div className="rt-course-desc mt-4 mb-2">
                 <p className=" text-warning mt-1 fs-6 text-start mb-0">Portal + Video Course</p>
                 <p className="fs-6 text-white text-start mb-3">Lifetime Portal Memebership Punjabi</p>
 
@@ -111,7 +111,7 @@ const AcademyPage = () => {
                         <p className="text-white mb-0">9572+ Enrolled</p>
                       </div>
                   </div>  
-                <p className="text-white mb-0 courseprice">$448 <span className="text-white mb-0">$549</span></p>
+                <p className="text-white mb-0 courseprice">$448 <span className="text-white mb-0 text-decoration-line-through fw-normal">$549</span></p>
                </div>
             </div>
             </div>
@@ -123,19 +123,19 @@ const AcademyPage = () => {
             <div className="courseurl">
             
              <img src="/assets/images/pte-naati.png" className="w-100" />
-              <div className="rt-course-desc my-4">
+              <div className="rt-course-desc mt-4 mb-2">
                 <p className=" text-warning mt-1 text-start fs-6 mb-0">Portal + Video Course</p>
-                <p className="fs-6 text-white text-start mb-3">1 Month Membership English</p>
+                <p className="fs-6 text-white text-start mb-4">1 Month Membership English</p>
 
               <div className="d-flex align-items-center justify-content-between">
                   <div className="d-flex align-items-center">
                     <img src="/assets/images/academyprofile.png" className="img-fluid rounded-circle h-100" alt="Academy Profile" />
-                      <div className="authordetail mx-1">
+                      <div className="authordetail mx-1 mt-3">
                         <p className="text-white mb-0">MALCOLM</p>
                         <p className="text-white mb-0">15k+ Enrolled</p>
                       </div>
                   </div>  
-                <p className="text-white mb-0 courseprice">$169 <span className="text-white mb-0">$299</span></p>
+                <p className="text-white mb-0 courseprice">$169 <span className="text-white mb-0 text-decoration-line-through fw-normal">$299</span></p>
                </div>
             </div>
             </div>
@@ -146,19 +146,19 @@ const AcademyPage = () => {
         <div className="rt-course-box">
             <div className="courseurl">
              <img src="/assets/images/pte-naati.png" className="w-100" />
-              <div className="rt-course-desc my-4">
+              <div className="rt-course-desc mt-4 mb-2">
                 <p className=" text-warning mt-1 text-start fs-6 mb-0">Portal + Video Course</p>
-                <p className="fs-6 text-white text-start mb-3">1 Month Membership Punjabi</p>
+                <p className="fs-6 text-white text-start mb-4">1 Month Membership Punjabi </p>
 
               <div className="d-flex align-items-center justify-content-between">
                   <div className="d-flex align-items-center">
                     <img src="/assets/images/academyprofile.png" className="img-fluid rounded-circle h-100" alt="Academy Profile" />
-                      <div className="authordetail mx-1">
+                      <div className="authordetail mx-1 mt-3">
                         <p className="text-white mb-0">MALCOLM</p>
                         <p className="text-white mb-0">15k+ Enrolled</p>
                       </div>
                   </div>  
-                <p className="text-white mb-0 courseprice">$169 <span className="text-white mb-0">$299</span></p>
+                <p className="text-white mb-0 courseprice">$169 <span className="text-white mb-0 text-decoration-line-through fw-normal">$299</span></p>
                </div>
             </div>
             </div>
