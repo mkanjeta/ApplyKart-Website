@@ -9555,12 +9555,10 @@ p {
   background-repeat: no-repeat;
   display: flex;
   align-items: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;  
 }
 .couponcode{
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  flex-wrap: wrap;
   padding-bottom: 15px;
 }
 .mockmaster_link{
