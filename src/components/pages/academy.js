@@ -1,7 +1,7 @@
 import Head from "next/head";
-import ReelSlider from "components/homepage/reelSlider";
 import React, {Fragment } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Academyreels from "./academyreels";
 import Link from "next/link";
 
 
@@ -43,12 +43,25 @@ const AcademyPage = () => {
 
        </div>
         
-        <div className="mockmasterimage">
+        {/* <div className="mockmasterimage">
             <div className="couponcode">
                 <p className="text-dark text-center d-block fs-5 fw-bold mb-0">your code : 210678</p>
                 <Link href="/" ><button className="mockmaster_link">Start Your Free PTE Mock Test Now</button></Link>
             </div>
+        </div> */}
+
+
+        <div className="mockmasterimage">
+          <div className="platform-heading">
+            <h5 className="mb-1 mt-2 fw-700">Mock Master's Free</h5>
+            <h2><span>PTE MOCK TEST</span></h2>
         </div>
+            <div className="couponcode mt-3">
+                <p className="text-dark text-center d-block fs-5 fw-bold mb-0">Your Code : 210678</p>
+              <Link passHref href={"https://app.mockmaster.ai/user/signin"}><button className="mockmaster_link">Start Your Free PTE Mock Test Now</button></Link>
+            </div>
+        </div>
+
 
         <p className="fs-2 fw-normal my-3 text-center text-white">Top ONLINE Courses for you</p>
 
@@ -60,13 +73,11 @@ const AcademyPage = () => {
     >
       <SwiperSlide >
         <div className="rt-course-box">
-        <Link href="/" passHref>
-            <a className="courseurl">
-            
+            <div className="courseurl"> 
              <img src="/assets/images/pte-naati.png" className="w-100" />
               <div className="rt-course-desc my-4">
-                <p className=" text-warning mt-1 fs-6 mb-0 text-start">PTE</p>
-                <p className="fs-6 text-white text-start mb-2">UNLIMITED -  2 MONTHS</p>
+                <p className=" text-warning mt-1 fs-6 mb-0 text-start">Portal + Video Course</p>
+                <p className="fs-6 text-white text-start mb-3">Lifetime Portal Memebership Punjabi</p>
 
               <div className="d-flex align-items-center justify-content-between">
                   <div className="d-flex align-items-center">
@@ -76,23 +87,21 @@ const AcademyPage = () => {
                         <p className="text-white mb-0">15k+ Enrolled</p>
                       </div>
                   </div>  
-                <p className="text-white mb-0 courseprice">$99 <span className="text-white mb-0">$145</span></p>
+                <p className="text-white mb-0 courseprice">$448 <span className="text-white mb-0">$549</span></p>
                </div>
             </div>
-            </a>
-            </Link>
+            </div>
         </div>
       </SwiperSlide>
 
       <SwiperSlide >
         <div className="rt-course-box">
-        <Link href="/" passHref>
-            <a className="courseurl">
+            <div className="courseurl">
             
              <img src="/assets/images/pte-naati.png" className="w-100" />
               <div className="rt-course-desc my-4">
-                <p className=" text-warning mt-1 fs-6 text-start mb-0">NAATI</p>
-                <p className="fs-6 text-white text-start mb-2">UNLIMITED - 1 MONTHS</p>
+                <p className=" text-warning mt-1 fs-6 text-start mb-0">Portal + Video Course</p>
+                <p className="fs-6 text-white text-start mb-3">Lifetime Portal Memebership Punjabi</p>
 
               <div className="d-flex align-items-center justify-content-between">
                   <div className="d-flex align-items-center">
@@ -102,23 +111,21 @@ const AcademyPage = () => {
                         <p className="text-white mb-0">9572+ Enrolled</p>
                       </div>
                   </div>  
-                <p className="text-white mb-0 courseprice">$75 <span className="text-white mb-0">$130</span></p>
+                <p className="text-white mb-0 courseprice">$448 <span className="text-white mb-0">$549</span></p>
                </div>
             </div>
-            </a>
-            </Link>
+            </div>
         </div>
       </SwiperSlide>
 
       <SwiperSlide >
         <div className="rt-course-box">
-        <Link href="/" passHref>
-            <a className="courseurl">
+            <div className="courseurl">
             
              <img src="/assets/images/pte-naati.png" className="w-100" />
               <div className="rt-course-desc my-4">
-                <p className=" text-warning mt-1 text-start fs-6 mb-0">PTE</p>
-                <p className="fs-6 text-white text-start mb-2">UNLIMITED -  2 MONTHS</p>
+                <p className=" text-warning mt-1 text-start fs-6 mb-0">Portal + Video Course</p>
+                <p className="fs-6 text-white text-start mb-3">1 Month Membership English</p>
 
               <div className="d-flex align-items-center justify-content-between">
                   <div className="d-flex align-items-center">
@@ -128,22 +135,20 @@ const AcademyPage = () => {
                         <p className="text-white mb-0">15k+ Enrolled</p>
                       </div>
                   </div>  
-                <p className="text-white mb-0 courseprice">$99 <span className="text-white mb-0">$145</span></p>
+                <p className="text-white mb-0 courseprice">$169 <span className="text-white mb-0">$299</span></p>
                </div>
             </div>
-            </a>
-            </Link>
+            </div>
         </div>
       </SwiperSlide>
 
       <SwiperSlide >
         <div className="rt-course-box">
-            <a className="courseurl">
-            
+            <div className="courseurl">
              <img src="/assets/images/pte-naati.png" className="w-100" />
               <div className="rt-course-desc my-4">
-                <p className=" text-warning mt-1 text-start fs-6 mb-0">PTE</p>
-                <p className="fs-6 text-white text-start mb-2">UNLIMITED -  2 MONTHS</p>
+                <p className=" text-warning mt-1 text-start fs-6 mb-0">Portal + Video Course</p>
+                <p className="fs-6 text-white text-start mb-3">1 Month Membership Punjabi</p>
 
               <div className="d-flex align-items-center justify-content-between">
                   <div className="d-flex align-items-center">
@@ -153,53 +158,17 @@ const AcademyPage = () => {
                         <p className="text-white mb-0">15k+ Enrolled</p>
                       </div>
                   </div>  
-                <p className="text-white mb-0 courseprice">$99 <span className="text-white mb-0">$145</span></p>
+                <p className="text-white mb-0 courseprice">$169 <span className="text-white mb-0">$299</span></p>
                </div>
             </div>
-            </a>
+            </div>
         </div>
       </SwiperSlide>
     </Swiper>
 
         <p className="fs-2 fw-normal mb-1 mt-4 text-center text-white">Learn from reels, just for you </p>
-        <ReelSlider />
+        <Academyreels />
 
-     <div className="explore pb-4">
-
-        <p className="fs-2 fw-normal mb-3 mt-4 mx-3 text-white">Explore More Resources </p>
-
-        <div className="explore-iconlist">
-            <div className="d-flex my-4">
-                <div className="iconbox" style={{background: "#056325"}}>
-                  <img src="/assets/images/fd.svg" />
-                </div>
-                <div className="explore-description">
-                <h6>Fundamental of Designing</h6>
-                    <p>12 Lesson</p>
-                </div>
-            </div>
-
-            <div className="d-flex my-4">
-                <div className="iconbox" style={{background: "#C04152"}}>
-                <img src="/assets/images/adt.svg" />
-                </div>
-                <div className="explore-description">
-                    <h6>Fundamental of Designing</h6>
-                    <p>12 Lesson</p>
-                </div>
-            </div>
-
-            <div className="d-flex my-4">
-                <div className="iconbox" style={{background: "#D4CCFC"}}>
-                  <i className="fas fa-code"></i>
-                </div>
-                <div className="explore-description">
-                <h6>Fundamental of Designing</h6>
-                    <p>12 Lesson</p>
-                </div>
-            </div>
-        </div>
-    </div>
        </div>
    
     </Fragment>
