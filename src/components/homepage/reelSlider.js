@@ -75,7 +75,6 @@ export default function ReelSlider() {
               }}
               freeMode="true"
               grabCursor="true"
-              freeModeMomentum="false"
             >
               {slide_img.map((img, i) => {
                 return (

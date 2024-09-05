@@ -37,7 +37,9 @@ const AcademyPage = ({coupon}) => {
             <h2><span>PTE MOCK TEST</span></h2>
         </div>
             <div className="couponcode mt-3">
-            {  coupon != '-' && <p className="text-dark text-center d-block fs-5 fw-bold mb-0 pte_coupon_code">Your Code : {coupon}</p> }
+
+
+            {  coupon != '-' && <div className="pte_coupon_code mb-3"><p className="text-dark text-center d-block fs-4 fw-bold mb-2">Unlock Additional Mock Test Using This Code :</p><p className="text-dark text-center fs-4 fw-bold d-inline border border-2 border-black p-1 ">{coupon} </p></div> }
              <Link passHref href={"https://app.mockmaster.ai/user/signin"} target="_blank" rel="noopener noreferrer"><button className="mockmaster_link">Start Your Free PTE Mock Test Now</button></Link>
             </div>
         </div>
@@ -56,12 +58,12 @@ const AcademyPage = ({coupon}) => {
             <div className="courseurl"> 
              <img src="/assets/images/course1.jpg" className="w-100" />
               <div className="rt-course-desc mt-4 mb-2">
-                <p className=" text-warning mt-1 fs-6 mb-0 text-start">Portal + Video Course</p>
-                <p className="fs-6 text-white text-start mb-3">Lifetime Portal Memebership English</p>
+                <p className=" text-warning mt-1 fs-6 mb-0 text-start">3 Months</p>
+                <p className="fs-6 text-white text-start mb-3">PTE Practice Pro:<br /> Interactive AI PTE Portal <br /> English</p>
 
               <div className="d-flex align-items-center justify-content-between">
                 <p className="text-white mb-0 authordetail mx-1">15k+ Enrolled</p>
-                <p className="text-white mb-0 courseprice">$448 <span className="text-white mb-0 text-decoration-line-through fw-normal">$549</span></p>
+                <p className="text-white mb-0 courseprice">$49 <span className="text-white mb-0 text-decoration-line-through fw-normal">$98</span></p>
                </div>
             </div>
             </div>
@@ -74,12 +76,12 @@ const AcademyPage = ({coupon}) => {
             
              <img src="/assets/images/course3.jpg" className="w-100" />
               <div className="rt-course-desc mt-4 mb-2">
-                <p className=" text-warning mt-1 fs-6 text-start mb-0">Portal + Video Course</p>
-                <p className="fs-6 text-white text-start mb-3">Lifetime Portal Memebership Punjabi</p>
+                <p className=" text-warning mt-1 fs-6 text-start mb-0">6 Months</p>
+                <p className="fs-6 text-white text-start mb-3">PTE Success Bundle: Comprehensive AI Portal & Video Course English</p>
 
               <div className="d-flex align-items-center justify-content-between">
                         <p className="text-white mb-0 authordetail mx-1">9572+ Enrolled</p>
-                <p className="text-white mb-0 courseprice">$448 <span className="text-white mb-0 text-decoration-line-through fw-normal">$549</span></p>
+                <p className="text-white mb-0 courseprice">$99 <span className="text-white mb-0 text-decoration-line-through fw-normal">$198</span></p>
                </div>
             </div>
             </div>
@@ -92,12 +94,12 @@ const AcademyPage = ({coupon}) => {
             
              <img src="/assets/images/course2.jpg" className="w-100" />
               <div className="rt-course-desc mt-4 mb-2">
-                <p className=" text-warning mt-1 text-start fs-6 mb-0">Portal + Video Course</p>
-                <p className="fs-6 text-white text-start mb-3">1 Month Membership English</p>
+                <p className=" text-warning mt-1 text-start fs-6 mb-0">3 Months</p>
+                <p className="fs-6 text-white text-start mb-3">PTE Practice Pro: <br />Interactive AI PTE Portal <br />Punjabi</p>
 
               <div className="d-flex align-items-center justify-content-between">
                   <p className="text-white mb-0 authordetail mx-1">8976k+ Enrolled</p>
-                  <p className="text-white mb-0 courseprice">$169 <span className="text-white mb-0 text-decoration-line-through fw-normal">$299</span></p>
+                  <p className="text-white mb-0 courseprice">$49 <span className="text-white mb-0 text-decoration-line-through fw-normal">$98</span></p>
               </div>
             </div>
             </div>
@@ -109,12 +111,12 @@ const AcademyPage = ({coupon}) => {
             <div className="courseurl">
              <img src="/assets/images/course4.jpg" className="w-100" />
               <div className="rt-course-desc mt-4 mb-2">
-                <p className=" text-warning mt-1 text-start fs-6 mb-0">Portal + Video Course</p>
-                <p className="fs-6 text-white text-start mb-3">1 Month Membership Punjabi </p>
+                <p className=" text-warning mt-1 text-start fs-6 mb-0">6 Months</p>
+                <p className="fs-6 text-white text-start mb-3">PTE Success Bundle: Comprehensive AI Portal & Video Course Punabi </p>
 
               <div className="d-flex align-items-center justify-content-between">
                     <p className="text-white mb-0 authordetail mx-1">12k+ Enrolled</p>
-                <p className="text-white mb-0 courseprice">$169 <span className="text-white mb-0 text-decoration-line-through fw-normal">$299</span></p>
+                <p className="text-white mb-0 courseprice">$99 <span className="text-white mb-0 text-decoration-line-through fw-normal">$198</span></p>
                </div>
             </div>
             </div>

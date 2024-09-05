@@ -9806,3 +9806,10 @@ font-weight: 600;
 
 }
 
+.video-js .vjs-big-play-button {
+  font-size: 2em !important;
+  height: 1.5em !important;
+  width: 2em !important;
+  left: 60% !important;
+  padding: 0 !important;
+}
