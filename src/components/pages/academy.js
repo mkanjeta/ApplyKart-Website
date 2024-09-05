@@ -20,7 +20,7 @@ const AcademyPage = ({coupon}) => {
         <h1 className="text-white fw-bold" style={{ fontSize: "36px" }}>Unlock your PTE learning.</h1>
 
         <p className="text-white fw-normal">More than <span className="text-warning">15K+</span> practice questions waiting for you.</p>
-
+        <p className="text-white fw-normal">You can login to mockmaster using the same applykart credentials.</p>
        </div>
         
         {/* <div className="mockmasterimage">
