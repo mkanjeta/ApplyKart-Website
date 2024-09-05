@@ -45,7 +45,7 @@ export default function Academyreels() {
               ]}
               onSwiper={(swiper) => console.log(swiper)}
               onSlideChange={handleSlideChange}
-              autoplay={autoplay}
+              autoplay={false}
               loop={false}
               effect="slide"
               speed={6000}
