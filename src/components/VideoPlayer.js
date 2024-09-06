@@ -9,7 +9,8 @@ const VideoPlayer = ({ src }) => {
     if (videoRef.current) {
       const player = videojs(videoRef.current, {
         controls: true,
-        autoplay: false,
+        autoplay: true,
+        muted: true,
         preload: 'auto',
         sources: [{
           src,
@@ -27,7 +28,7 @@ const VideoPlayer = ({ src }) => {
 
   return (
     <div data-vjs-player>
-      <video ref={videoRef} height={250} width={"auto"} className="video-js vjs-default-skin" />
+      <video ref={videoRef} autoPlay height={"350px"} style={{width: "100%"}} className="video-js vjs-default-skin" />
     </div>
   );
 };

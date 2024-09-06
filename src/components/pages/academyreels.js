@@ -24,10 +24,7 @@ export default function Academyreels() {
   };
 
   const slide_img = [
-    "videos/2024-08-29T11:06:17.244Z.m3u8",
-    "videos/2024-08-29T11:06:17.238Z.m3u8",
     "videos/2024-08-29T11:06:17.217Z.m3u8",
-    "videos/2024-08-29T11:06:17.226Z.m3u8",
   ];
 
   return (
@@ -39,22 +36,22 @@ export default function Academyreels() {
   modules={[Navigation, A11y, Autoplay, EffectFade, EffectCoverflow]}
   onSwiper={(swiper) => console.log(swiper)}
   onSlideChange={handleSlideChange}
-  autoplay={false}
+  autoplay={true}
   loop={false}
   effect="slide"
   speed={6000}
   spaceBetween={0}
   breakpoints={{
     300: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 0,
     },
     920: {
-      slidesPerView: 3,
+      slidesPerView: 1,
       spaceBetween: 0,
     },
     1340: {
-      slidesPerView: 5,
+      slidesPerView: 1,
       spaceBetween: 0,
     },
   }}
@@ -67,6 +64,9 @@ export default function Academyreels() {
         <div className="doteffect">
           <div className="carousel-cell sepiaEffect video-academy">
             <VideoPlayer key={i} src={`https://share.applykart.co/${url}`} />
+            {/* <video controls autoPlay playsInline>
+              <source src="https://share.applykart.co/videos/2024-08-29T11:06:17.217Z.m3u8"  width={"280px"} height={"280px"} type="application/x-mpegURL" />
+            </video> */}
           </div>
         </div>
       </SwiperSlide>
